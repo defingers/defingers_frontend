@@ -1,1 +1,9 @@
+/* Import Google Fonts for Tailwind custom font classes */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Poppins:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --font-poppins: "Poppins", sans-serif;
+    --font-outfit: "Outfit", sans-serif;
+    --font-montserrat: "Montserrat", sans-serif;
+}
