@@ -1,23 +1,5 @@
 import React, { useState } from 'react';
 
-const faqs = [
-	{
-		question: 'How long does a cloud migration take?',
-		answer:
-			'The duration depends on the complexity and size of your infrastructure. Most migrations are completed within a few weeks after assessment and planning.',
-	},
-	{
-		question: 'Will my business experience downtime during migration?',
-		answer:
-			'We meticulously plan migrations to minimize or eliminate downtime, ensuring business continuity throughout the process.',
-	},
-	{
-		question: 'How do you ensure data security during the migration?',
-		answer:
-			'We use industry best practices, encryption, and secure transfer protocols to protect your data at every stage of migration.',
-	},
-];
-
 const ChevronDown = ({ open }) => (
 	<svg
 		width='24'
@@ -38,7 +20,7 @@ const ChevronDown = ({ open }) => (
 	</svg>
 );
 
-const Faqs = () => {
+const Faqs = ({ serviceContent }) => {
 	const [openIdx, setOpenIdx] = useState(null);
 
 	const handleToggle = (idx) => {
@@ -53,7 +35,7 @@ const Faqs = () => {
 				</h2>
 				{/* Mobile: card style, Desktop: simple list */}
 				<div className='space-y-4 md:space-y-0'>
-					{faqs.map((faq, idx) => (
+					{serviceContent.faqs.map((faq, idx) => (
 						<div
 							key={idx}
 							className={`${
@@ -76,7 +58,7 @@ const Faqs = () => {
 									{faq.answer}
 								</div>
 							)}
-							{idx <= faqs.length - 1 && (
+							{idx <= serviceContent.faqs.length - 1 && (
 								<hr className='hidden md:block border-t border-gray-200 mt-2 md:mt-0' />
 							)}
 						</div>

@@ -6,15 +6,15 @@ import ServiceAdvantage from "../components/services-components/ServiceAdvantage
 import Faqs from "../components/services-components/Faqs";
 import SecondCta from "../components/services-components/SecondCta";
 
-const ServicesPage = () => {
+const ServicesPage = ({ serviceContent }) => {
     return (
         <>
-            <HeroSection />
-            <ServiceTransition />
-            <Keybenefits />
-            <ServiceAdvantage />
-            <Faqs />
-            <SecondCta />
+            <HeroSection serviceContent={serviceContent} />
+            <ServiceTransition serviceContent={serviceContent} />
+            <Keybenefits serviceContent={serviceContent} />
+            <ServiceAdvantage serviceContent={serviceContent} />
+            <Faqs serviceContent={serviceContent} />
+            <SecondCta serviceContent={serviceContent} />
 
         </>
     );

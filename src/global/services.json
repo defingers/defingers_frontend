@@ -1,0 +1,150 @@
+[
+    {
+        "id": 1,
+        "serviceImage": "cloudMigration",
+        "serviceName": "Cloud Migration",
+        "imageKey": "cloudMigration",
+        "serviceDescription": "Seamless, secure, and cost-optimized cloud transformation.",
+        "serviceTransition": {
+            "serviceTransitionImage":"cloudTransition",
+            "HeadingTag": "Transition to the Cloud with Confidence",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "Cloud migration is more than just moving data; it's about transforming your business. Our expert team ensures a smooth, secure, and efficient transition to leading cloud platforms like AWS, Azure, and Google Cloud. We handle every aspect of the migration process, from initial assessment and planning to post-migration optimization and management.",
+                "phase2": "Our goal is to empower your business with the scalability, flexibility, and cost-efficiency of the cloud, while minimizing disruption to your ongoing operations. We tailor every migration project to your specific needs, ensuring your applications and data are securely and effectively moved to their new cloud environment."
+            },
+            "bulletContent": [
+                "End-to-End Migration Strategy",
+                "Multi-Cloud & Hybrid Solutions",
+                "Post-Migration Performance Tuning"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "Unlock Key Cloud Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Zero Downtime",
+                    "desc": "Meticulously planned migrations to ensure business continuity."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Cost Savings",
+                    "desc": "Optimize your IT spend by paying only for the resources you use."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Scalable Solutions",
+                    "desc": "Scale your infrastructure on-demand to meet business needs."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "cloudAdvantages",
+            "headingTag": "The Cloud Compass Advantage",
+            "content": "With certified experts and a portfolio of successful migrations, we are your trusted partner for cloud transformation. We combine technical expertise with a deep understanding of business objectives to deliver solutions that drive real value.",
+            "operation": [
+                {
+                    "Number": "100+",
+                    "Description": "Migrations Completed"
+                },
+                {
+                    "Number": "99.9%",
+                    "Description": "Client Satisfaction"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "How long does a cloud migration take?",
+                "answer": "The duration depends on the complexity and size of your infrastructure. Most migrations are completed within a few weeks after assessment and planning."
+            },
+            {
+                "question": "Will my business experience downtime during migration?",
+                "answer": "We meticulously plan migrations to minimize or eliminate downtime, ensuring business continuity throughout the process."
+            },
+            {
+                "question": "How do you ensure data security during the migration?",
+                "answer": "We use industry best practices, encryption, and secure transfer protocols to protect your data at every stage of migration."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Transform Your Cloud Migration?",
+            "desc": "Let's discuss how our cloud solutions can help you achieve your business goals."
+        }
+    },
+    {
+        "id": 2,
+        "serviceImage": "IT Infrastructure",
+        "serviceName": "IT Infrastructure",
+        "imageKey": "IT Infrastructure",
+        "serviceDescription": "Robust and scalable IT infrastructure solutions.",
+        "serviceTransition": {
+            "serviceTransitionImage":"cloudTransition",
+            "HeadingTag": "Transitioning to IT Infrastructure",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "IT infrastructure transformation is more than just moving data; it's about transforming your business. Our expert team ensures a smooth, secure, and efficient transition to leading cloud platforms like AWS, Azure, and Google Cloud. We handle every aspect of the migration process, from initial assessment and planning to post-migration optimization and management.",
+                "phase2": "Our goal is to empower your business with the scalability, flexibility, and cost-efficiency of the cloud, while minimizing disruption to your ongoing operations. We tailor every migration project to your specific needs, ensuring your applications and data are securely and effectively moved to their new cloud environment."
+            },
+            "bulletContent": [
+                "End-to-End Migration Strategy",
+                "Multi-Cloud & Hybrid Solutions",
+                "Post-Migration Performance Tuning"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "Key Benefits of IT Infrastructure Transformation",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Zero Downtime",
+                    "desc": "Meticulously planned migrations to ensure business continuity."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Cost Savings",
+                    "desc": "Optimize your IT spend by paying only for the resources you use."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Scalable Solutions",
+                    "desc": "Scale your infrastructure on-demand to meet business needs."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "cloudAdvantages",
+            "headingTag": "The Cloud Compass Advantage",
+            "content": "With certified experts and a portfolio of successful migrations, we are your trusted partner for cloud transformation. We combine technical expertise with a deep understanding of business objectives to deliver solutions that drive real value.",
+            "operation": [
+                {
+                    "Number": "100+",
+                    "Description": "Migrations Completed"
+                },
+                {
+                    "Number": "99.9%",
+                    "Description": "Client Satisfaction"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "How long does a cloud migration take?",
+                "answer": "The duration depends on the complexity and size of your infrastructure. Most migrations are completed within a few weeks after assessment and planning."
+            },
+            {
+                "question": "Will my business experience downtime during migration?",
+                "answer": "We meticulously plan migrations to minimize or eliminate downtime, ensuring business continuity throughout the process."
+            },
+            {
+                "question": "How do you ensure data security during the migration?",
+                "answer": "We use industry best practices, encryption, and secure transfer protocols to protect your data at every stage of migration."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Transform Your Cloud Migration?",
+            "desc": "Let's discuss how our cloud solutions can help you achieve your business goals."
+        }
+    }
+]
