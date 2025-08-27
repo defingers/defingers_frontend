@@ -3,7 +3,6 @@
         "id": 1,
         "serviceImage": "cloudMigration",
         "serviceName": "Cloud Migration",
-        "imageKey": "cloudMigration",
         "serviceDescription": "Seamless, secure, and cost-optimized cloud transformation.",
         "serviceTransition": {
             "serviceTransitionImage":"cloudTransition",
@@ -77,7 +76,6 @@
         "id": 2,
         "serviceImage": "IT Infrastructure",
         "serviceName": "IT Infrastructure",
-        "imageKey": "IT Infrastructure",
         "serviceDescription": "Robust and scalable IT infrastructure solutions.",
         "serviceTransition": {
             "serviceTransitionImage":"cloudTransition",

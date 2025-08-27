@@ -5,8 +5,8 @@ import cloudMigration from "./cloud-migration.png";
 import cloudTransition from '../images/cloud-service.png';
 
 //IT infrastructure
-
-
+import ItRecruitment from '../images/it-recruitment.png';
+import ItFocused from '../images/it-focused.png';
 
 
 const Images = {
@@ -17,6 +17,8 @@ const Images = {
 
 
     //IT infrastructure
+    "ItRecruitment": ItRecruitment,
+    "ItFocused": ItFocused
 };
 
 export default Images;
