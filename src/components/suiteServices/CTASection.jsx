@@ -19,7 +19,7 @@ const CTASection = () => {
         {/* Right Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
           <button className="bg-[#FF8C00] hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors duration-200 whitespace-nowrap">
-            Book a Free Consultation
+            Book Consultation
           </button>
           <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold text-center transition-colors duration-200 whitespace-nowrap">
             Explore Services

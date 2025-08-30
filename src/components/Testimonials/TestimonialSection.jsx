@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import TestimonialCard from './TestimonialCard.jsx';
 import StatsSection from './StatsSection.jsx';
+import dummyTestimonialImage from '../../assets/testimonial_dummy.svg'
+
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
@@ -15,7 +17,7 @@ const TestimonialSection = () => {
       clientTitle: "CTO",
       company: "InnovateCore Solutions",
       projectValue: "$2.5M",
-      imageSrc: "/path/to/testimonial-image-1.jpg"
+      imageSrc: dummyTestimonialImage
     },
     {
       rating: 5,
@@ -25,7 +27,7 @@ const TestimonialSection = () => {
       clientTitle: "CEO",
       company: "Digital Dynamics Inc",
       projectValue: "$1.8M",
-      imageSrc: "/path/to/testimonial-image-2.jpg"
+      imageSrc: dummyTestimonialImage
     },
     {
       rating: 5,
@@ -35,7 +37,7 @@ const TestimonialSection = () => {
       clientTitle: "CTO",
       company: "Future Tech Solutions",
       projectValue: "$3.2M",
-      imageSrc: "/path/to/testimonial-image-3.jpg"
+      imageSrc: dummyTestimonialImage
     }
   ];
 
@@ -86,7 +88,7 @@ const TestimonialSection = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-orange-500' : 'bg-gray-300'
+                    index === currentIndex ? 'bg-[#FF8C00] opacity-70' : 'bg-gray-300 opacity-50'
                   }`}
                 />
               ))}

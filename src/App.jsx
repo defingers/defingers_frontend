@@ -1,10 +1,9 @@
 import './App.css'
 import StoryAchievementSection from './components/Achievements/StoryAchievementSection'
 import Footer from './components/Footer'
-// import StorySection from './components/Achievements/StorySection'
 import HeroSection from './components/HeroSection'
 import IndustriesSection from './components/IndustriesSection/IndustriesSection'
-import Navbar from './components/Navbar'
+import Navbar from './components/Navbar/Navbar'
 import ServicesLayout from './components/suiteServices/ServicesLayout'
 import TestimonialSection from './components/Testimonials/TestimonialSection'
 import TrustedCompanies from './components/TrustedCompanies/TrustedCompanies'
@@ -14,7 +13,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar/>
       <div>
         <HeroSection />
         <ServicesLayout />
