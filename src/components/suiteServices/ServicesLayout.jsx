@@ -71,12 +71,12 @@ const ServicesLayout = () => {
           </p>
         </div>
 
-        {/* Tab Navigation - Smaller and More Compact */}
+        {/* Tab Navigation - Responsive Width */}
         <div className="flex justify-center mb-8">
-          <div className="bg-gray-100 rounded-lg p-1 inline-flex">
+          <div className="bg-gray-100 rounded-lg p-1 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl flex">
             <button
               onClick={() => setActiveTab('services')}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              className={`flex-1 px-6 py-2 sm:px-8 sm:py-2 md:px-12 md:py-2 lg:px-16 lg:py-2 rounded-md text-sm sm:text-base font-medium transition-all duration-200 ${
                 activeTab === 'services'
                   ? 'bg-white text-gray-900 shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
@@ -86,7 +86,7 @@ const ServicesLayout = () => {
             </button>
             <button
               onClick={() => setActiveTab('consulting')}
-              className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+              className={`flex-1 px-6 py-2 sm:px-8 sm:py-2 md:px-12 md:py-2 lg:px-16 lg:py-2 rounded-md text-sm sm:text-base font-medium transition-all duration-200 ${
                 activeTab === 'consulting'
                   ? 'bg-white text-gray-900 shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
