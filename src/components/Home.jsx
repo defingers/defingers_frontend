@@ -17,7 +17,7 @@ const Home = () => {
             
                 <div className="flex gap-4 mb-4">
                     <button
-                        className="bg-orange-400 text-white px-4 py-2 rounded font-bold"
+                        className="bg-orange-400 text-white px-4 py-2 rounded font-bold cursor-pointer"
                         onClick={() => {
                             setSelectedService('Cloud Migration');
                             navigate('/service/1');
@@ -26,7 +26,7 @@ const Home = () => {
                         Cloud Migration
                     </button>
                     <button
-                        className="bg-orange-400 text-white px-4 py-2 rounded font-bold"
+                        className="bg-orange-400 text-white px-4 py-2 rounded font-bold cursor-pointer"
                         onClick={() => {
                             setSelectedService('IT Infrastructure');
                             navigate('/service/2');
@@ -36,10 +36,10 @@ const Home = () => {
                     </button>
                    
                     <button
-                        className="bg-orange-400 text-white px-4 py-2 rounded font-bold"
+                        className="bg-orange-400 text-white px-4 py-2 rounded font-bold cursor-pointer"
                         onClick={() => {
                             setSelectedService('Data Lake Management');
-                            navigate('/consultancy');
+                            navigate('/consultancy/1');
                         }}
                     >
                         IT Recruitment
