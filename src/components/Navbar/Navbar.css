@@ -307,8 +307,57 @@
   }
 }
 
+/* Adjust spacing for smaller desktop screens */
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .navbar-center {
+    flex: 2.5; /* Give more space to center section */
+  }
+  
+  .navbar-left,
+  .navbar-right {
+    flex: 0.75; /* Reduce space for left/right sections */
+  }
+  
+  .desktop-nav {
+    gap: 1rem; /* Further reduce gap to 1rem */
+  }
+  
+  .nav-link {
+    padding: 0.5rem 0.6rem; /* Further reduce horizontal padding */
+    font-size: 0.9rem; /* Smaller font */
+    white-space: nowrap; /* Prevent text wrapping */
+  }
+  
+  .brand-name {
+    font-size: 0.8rem; /* Smaller brand name */
+  }
+  
+  .quote-button {
+    padding: 0.4rem 0.8rem; /* Smaller button */
+    font-size: 0.85rem;
+  }
+}
+
 .nav-item {
   position: relative;
+}
+
+/* Active state indicator line */
+.nav-item:not(.dropdown)::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 3px;
+  background-color: #FF8C00;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.nav-item:not(.dropdown).active::after {
+  width: 80%;
 }
 
 .nav-link {

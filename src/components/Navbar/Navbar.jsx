@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,6 +25,10 @@ const Navbar = () => {
 
   const closeMenu = () => {
     setIsMenuOpen(false);
+  };
+
+  const handleNavClick = (section) => {
+    setActiveSection(section);
   };
 
   return (
@@ -46,11 +51,11 @@ const Navbar = () => {
             <div className="navbar-center">
               <nav className="desktop-nav">
                 <div
-                  className="nav-item dropdown"
+                  className={`nav-item dropdown ${activeSection === "services" ? "active" : ""}`}
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <a href="#" className="nav-link">
+                  <a href="#" className="nav-link" onClick={() => handleNavClick("services")}>
                     Services
                     <IoChevronForward
                       className={`dropdown-arrow ${
@@ -59,18 +64,18 @@ const Navbar = () => {
                     />
                   </a>
                 </div>
-                <div className="nav-item">
-                  <a href="#" className="nav-link">
+                <div className={`nav-item ${activeSection === "partners" ? "active" : ""}`}>
+                  <a href="#" className="nav-link" onClick={() => handleNavClick("partners")}>
                     Partners
                   </a>
                 </div>
-                <div className="nav-item">
-                  <a href="#" className="nav-link">
+                <div className={`nav-item ${activeSection === "contacts" ? "active" : ""}`}>
+                  <a href="#" className="nav-link" onClick={() => handleNavClick("contacts")}>
                     Contacts
                   </a>
                 </div>
-                <div className="nav-item">
-                  <a href="#" className="nav-link">
+                <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>
+                  <a href="#" className="nav-link" onClick={() => handleNavClick("about")}>
                     About Us
                   </a>
                 </div>
