@@ -1,7 +1,6 @@
 // import './App.css'
 
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
 import ServicesPage from './pages/ServicesPage.jsx'
 import serviceContent from './global/services.json'
 import consultancyContent from './global/consultancy.json'
@@ -25,7 +24,7 @@ function ConsultancyRoutePage() {
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+    
       <Routes>
        <Route path="/" element={<Home />} />
         <Route 
