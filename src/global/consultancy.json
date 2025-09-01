@@ -1,0 +1,59 @@
+[
+    {
+        "id": 1,
+        "consultancyImage": "ItRecruitment",
+        "consultancyName": "IT Recruitment",
+        "consultancyDescription": "Hire the best tech talent, fast and hassle-free.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"consultancyFocusedImage",
+            "headingTag": "Client-Focused Solutions",
+            "content": {
+                "desc": "Finding the right talent is crucial. We specialize in sourcing, vetting, and placing top-tier IT professionals who align with your company culture and technical needs. From developers to project managers, we build your dream team.",
+                "highliter":"200+ Successful Placements"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "Unlock Key Cloud Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Verified Talent Pool"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Quick Onboarding"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Industry Expertise"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "consultancyAdvantageImage",
+            "headingTag": "Why Choose Our Consulting?",
+            "content": "We offer a tailored approach, a global network of professionals, and dedicated account managers to ensure your success. Our focus is on building long-term partnerships and delivering measurable results for your business.",
+            "chips": [
+                "Global Network",
+                "Tailored Approach",
+                "Dedicated Account Managers"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What roles do you specialize in?",
+                "answer": "We specialize in various IT roles, including software developers, data scientists, project managers, and more."
+            },
+            {
+                "question": "How long does the recruitment process take?",
+                "answer": "The recruitment process duration varies based on the role and client requirements. However, we strive to present qualified candidates within a few days of the initial consultation."
+            }
+        ],
+        "secondCta": {
+            "text": "Get the Right Talent for Your Business Today"
+        }
+    }
+]
