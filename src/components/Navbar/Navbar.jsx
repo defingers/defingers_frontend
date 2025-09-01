@@ -27,8 +27,26 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const handleNavClick = (section) => {
+  const handleNavClick = (section, event) => {
+    if (event) {
+      event.preventDefault();
+    }
     setActiveSection(section);
+    
+    // Handle smooth scroll to section for Partners
+    if (section === "partners") {
+      const element = document.getElementById("trusted-companies-section");
+      if (element) {
+        // Add a small delay to ensure any dropdown closes first
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+          });
+        }, 100);
+      }
+    }
   };
 
   return (
@@ -55,7 +73,7 @@ const Navbar = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <a href="#" className="nav-link" onClick={() => handleNavClick("services")}>
+                  <a href="#" className="nav-link" onClick={(e) => handleNavClick("services", e)}>
                     Services
                     <IoChevronForward
                       className={`dropdown-arrow ${
@@ -65,17 +83,17 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "partners" ? "active" : ""}`}>
-                  <a href="#" className="nav-link" onClick={() => handleNavClick("partners")}>
+                  <a href="#trusted-companies-section" className="nav-link" onClick={(e) => handleNavClick("partners", e)}>
                     Partners
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "contacts" ? "active" : ""}`}>
-                  <a href="#" className="nav-link" onClick={() => handleNavClick("contacts")}>
+                  <a href="#" className="nav-link" onClick={(e) => handleNavClick("contacts", e)}>
                     Contacts
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>
-                  <a href="#" className="nav-link" onClick={() => handleNavClick("about")}>
+                  <a href="#" className="nav-link" onClick={(e) => handleNavClick("about", e)}>
                     About Us
                   </a>
                 </div>

@@ -10,14 +10,14 @@ import SecondCta from "../components/consultancy-components/SecondCta";
 
 const ConsultancyPage = ({ consultancyContent }) => {
     return (
-        <>
+        <div className="py-5">
             <HeroSection consultancyContent={consultancyContent} />
             <ConsultancyFocused consultancyContent={consultancyContent} />
             <Keybenefits consultancyContent={consultancyContent} />
             <WhyChooseConsultancy consultancyContent={consultancyContent} />
             <Faqs consultancyContent={consultancyContent} />
             <SecondCta consultancyContent={consultancyContent} />
-        </>
+        </div>
     );
 };
 

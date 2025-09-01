@@ -44,9 +44,9 @@ const StoryAchievementSection = () => {
         </svg>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 py-10">
           <h1 className="text-l sm:text-1xl md:text-2xl lg:text-3xl font-bold text-[#FF8C00] mb-2">
             Our Story & Achievement
           </h1>
@@ -57,7 +57,7 @@ const StoryAchievementSection = () => {
         </div>
 
         {/* Milestone Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto relative z-20">
           {milestones.map((milestone, index) => (
             <MilestoneCard
               key={index}
@@ -69,12 +69,12 @@ const StoryAchievementSection = () => {
         </div>
 
         {/* Image Section */}
-        <div className="image-section-responsive">
-          <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-100">
+        <div className="image-section-responsive w-full mx-auto -mt-16 relative z-10">
+          <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-100 mx-4">
             <img 
               src={groupImage}
               alt="Team meeting in conference room"
-              className="w-full h-auto max-h-64 sm:max-h-80 md:max-h-96 lg:max-h-[500px] object-contain md:object-cover mx-auto"
+              className="w-full h-auto max-h-96 sm:max-h-[500px] md:max-h-[600px] lg:max-h-[700px] object-contain md:object-cover mx-auto"
               onError={(e) => {
                 e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='800' height='400' viewBox='0 0 800 400'%3E%3Crect width='800' height='400' fill='%23f3f4f6'/%3E%3Ctext x='400' y='200' font-family='Arial, sans-serif' font-size='18' fill='%236b7280' text-anchor='middle' dy='.3em'%3ETeam Meeting Image%3C/text%3E%3C/svg%3E";
               }}

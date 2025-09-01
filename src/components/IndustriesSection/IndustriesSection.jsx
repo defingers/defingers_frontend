@@ -76,7 +76,7 @@ const IndustriesSection = () => {
             </div>
 
             {/* Industry Cards Grid - 2 rows x 3 columns */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
               {industriesData.map((industry) => (
                 <IndustryCard
                   key={industry.id}

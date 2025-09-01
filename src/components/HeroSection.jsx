@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section className="hero">
       <div className="hero-container">
         {/* LEFT SIDE */}
-        <div className="hero-left">
+        <div className="hero-left px-12">
           <h1 className="hero-heading">
             <span className="black">Transform</span>{" "}
             <span className="orange">Your Cloud Journey.</span>{" "}
