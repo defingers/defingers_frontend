@@ -1,30 +1,15 @@
 import './App.css'
-import StoryAchievementSection from './components/Achievements/StoryAchievementSection'
-import Footer from './components/Footer'
-import HeroSection from './components/HeroSection'
-import IndustriesSection from './components/IndustriesSection/IndustriesSection'
-import Navbar from './components/Navbar/Navbar'
-import ServicesLayout from './components/suiteServices/ServicesLayout'
-import TestimonialSection from './components/Testimonials/TestimonialSection'
-import TrustedCompanies from './components/TrustedCompanies/TrustedCompanies'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from './pages/HomePage'
 
 
 function App() {
-
   return (
-    <>
-      <Navbar/>
-      <div>
-        <HeroSection />
-        <ServicesLayout />
-        <IndustriesSection/>
-        <TrustedCompanies />
-        <StoryAchievementSection />
-        <TestimonialSection />
-      </div>
-      <Footer/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
-
 export default App
