@@ -1,3 +1,7 @@
+
+import './App.css'
+
+import HomePage from './pages/HomePage'
 // import './App.css'
 import StoryAchievementSection from './components/Achievements/StoryAchievementSection'
 import Footer from './components/Footer'
@@ -32,6 +36,11 @@ function App() {
   return (
     <BrowserRouter>
 
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+      </Routes>
+
+
     
       <Routes>
       <Navbar />
@@ -55,8 +64,8 @@ function App() {
         <TestimonialSection />
       </div>
       <Footer/>
+
     </BrowserRouter>
   )
 }
-
 export default App

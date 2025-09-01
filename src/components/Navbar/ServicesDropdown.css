@@ -1,0 +1,321 @@
+/* Services Dropdown - Desktop Only */
+.services-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 60;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.services-dropdown-open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* Hide on mobile/tablet */
+@media (max-width: 1023px) {
+  .services-dropdown {
+    display: none;
+  }
+}
+
+/* Dropdown Container - Matches navbar width */
+.dropdown-container {
+    width: 100%;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85));
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border-top: none;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 0 0 1rem 1rem;
+}
+
+/* Dropdown Content Layout */
+.dropdown-content {
+  display: flex;              /* use flex for proper alignment */
+  flex-direction: row;
+  min-height: 350px;
+  padding: 2rem;
+  gap: 2rem;
+  overflow: hidden;           /* prevent content from overflowing */
+  box-sizing: border-box;
+}
+/* Left Section - Service Categories */
+.dropdown-left {
+  flex: 1;                    /* takes equal space */
+  max-width: 35%;             /* left side smaller */
+  overflow-y: auto;           /* scroll if too tall */
+  padding-right: 1rem;
+  /* border-right: 1px solid rgba(0, 0, 0, 0.1); */
+}
+.service-categories {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.category-item {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.category-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Right Section - Featured Content */
+.dropdown-right {
+  flex: 2;                    /* more space for content + image */
+  overflow: hidden;           /* contain content inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featured-item {
+  width: 100%;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 0.75rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1280px) {
+  .dropdown-content {
+    padding: 1.5rem 0;
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .dropdown-content {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+  
+  .dropdown-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 1rem;
+  }
+}
+
+/* Wrapper for category + submenu */
+.category-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-wrapper:not(:hover) .submenu {
+  display: none; /* collapse submenu when not hovered */
+}
+
+/* Category item */
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  /* border: 1px solid rgba(255, 255, 255, 0.15); */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-item:hover,
+.category-item.active {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Category content with icon */
+.category-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.category-icon {
+  font-size: 1.2rem;
+  color: #FF8C00;
+  transition: color 0.3s ease;
+}
+
+.category-item:hover .category-icon,
+.category-item.active .category-icon {
+  color: #FF8C00;
+}
+
+/* Arrow rotation */
+.category-arrow {
+  font-size: 1.2rem;
+  color: #FF8C00;
+  transition: transform 0.2s ease;
+}
+.arrow-open {
+  transform: rotate(90deg);
+  color: #FF8C00;
+}
+
+/* Submenu list under each category */
+.submenu {
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Submenu item */
+.submenu-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  /* border: 1px solid rgba(255, 255, 255, 0.1); */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #374151;
+  font-weight: 500;
+}
+
+.submenu-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateX(4px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Selected state - F9AA4A background with reduced opacity and FF8C00 text */
+.submenu-item.selected {
+  background: rgba(249, 170, 74, 0.3);
+  color: #FF8C00;
+  /* border: 1px solid rgba(249, 170, 74, 0.5); */
+  border-radius: 0.5rem;
+  box-shadow: 0 6px 20px rgba(249, 170, 74, 0.1);
+  transform: translateX(6px);
+  font-weight: 600;
+}
+
+.submenu-item.selected:hover {
+  background: rgba(249, 170, 74, 0.4);
+  /* border: 1px solid rgba(249, 170, 74, 0.6); */
+  transform: translateX(8px);
+  box-shadow: 0 8px 25px rgba(249, 170, 74, 0.3);
+}
+
+/* Submenu icon styling */
+.submenu-icon {
+  font-size: 1rem;
+  color: #6b7280;
+  transition: color 0.3s ease;
+  flex-shrink: 0;
+}
+
+.submenu-item:hover .submenu-icon {
+  color: #FF8C00;
+}
+
+.submenu-item.selected .submenu-icon {
+  color: #FF8C00;
+}
+
+/* Add subtle animation for better UX */
+.submenu-item span {
+  transition: transform 0.2s ease;
+}
+
+.submenu-item:hover span {
+  transform: translateX(2px);
+}
+
+.submenu-item.selected span {
+  font-weight: 600;
+}
+
+
+/* Slight overlap to avoid 1px border gap under navbar */
+.services-dropdown {
+  top: calc(100% - 1px);
+}
+
+/* smoother hit area, ensure interactive */
+.services-dropdown,
+.dropdown-container {
+  pointer-events: auto;
+}
+
+/* Custom Scrollbar Styling */
+.dropdown-left::-webkit-scrollbar,
+.submenu::-webkit-scrollbar {
+  width: 6px;
+  height: 0px; /* Remove horizontal scrollbar */
+}
+
+.dropdown-left::-webkit-scrollbar-track,
+.submenu::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.dropdown-left::-webkit-scrollbar-thumb,
+.submenu::-webkit-scrollbar-thumb {
+  background: rgba(200, 200, 200, 0.4);
+  border-radius: 10px;
+  border: none;
+}
+
+.dropdown-left::-webkit-scrollbar-thumb:hover,
+.submenu::-webkit-scrollbar-thumb:hover {
+  background: rgba(180, 180, 180, 0.6);
+}
+
+/* Remove horizontal scrollbars completely */
+.dropdown-left::-webkit-scrollbar:horizontal,
+.submenu::-webkit-scrollbar:horizontal {
+  display: none;
+}
+
+/* Firefox scrollbar styling */
+.dropdown-left,
+.submenu {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(200, 200, 200, 0.4) transparent;
+  overflow-x: hidden; /* Hide horizontal overflow */
+}

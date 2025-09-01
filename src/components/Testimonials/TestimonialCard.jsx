@@ -34,24 +34,24 @@ const TestimonialCard = ({
           <div className="flex flex-col sm:flex-row justify-between items-start">
             <div className="mb-4 sm:mb-0">
               <div className="font-semibold text-gray-900 text-base">
-                {clientName} <span className="text-orange-500 text-sm font-medium">{clientTitle}</span>
+                {clientName} <span className="text-[#FF8C00] text-sm font-medium">{clientTitle}</span>
               </div>
               <div className="text-gray-700 text-base font-medium">{company}</div>
             </div>
             
             <div className="text-right">
-              <div className="text-orange-500 text-2xl font-bold">{projectValue}</div>
+              <div className="text-[#FF8C00] text-2xl font-bold">{projectValue}</div>
               <div className="text-gray-400 text-sm">Project Value</div>
             </div>
           </div>
         </div>
         
         {/* Image Side */}
-        <div className="w-full lg:w-80 h-64 lg:h-auto">
+        <div className="w-full lg:w-80 h-64 lg:h-auto p-4">
           <img 
             src={imageSrc}
             alt="Client testimonial"
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover rounded-lg"
           />
         </div>
       </div>
