@@ -1,4 +1,4 @@
-import React from "react";
+import Navbar from "../components/Navbar/Navbar";
 import HeroSection from "../components/consultancy-components/HeroSection";
 import ConsultancyFocused from "../components/consultancy-components/ConsultancyFocused";
 import Keybenefits from "../components/consultancy-components/Keybenefits";

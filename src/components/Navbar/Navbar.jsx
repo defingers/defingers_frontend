@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import "./Navbar.css";
-import logo from "@/assets/logo.jpg";
+import logo from "../../assets/images/logo.jpg";
 import { IoChevronForward } from "react-icons/io5";
 import ServicesDropdown from "./ServicesDropdown";
 

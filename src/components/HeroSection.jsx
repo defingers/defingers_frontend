@@ -1,6 +1,6 @@
-import React from "react";
+
 import "./HeroSection.css";
-import RobotHand from "@/assets/RobotHand.png";
+import RobotHand from "../assets/images/robotHand.png";
 
 const HeroSection = () => {
   

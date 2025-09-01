@@ -12,14 +12,14 @@ import TrustedCompanies from '../components/TrustedCompanies/TrustedCompanies'
 const HomePage = () => {
   return (
     <>
-      <Navbar />
+     
       <HeroSection />
       <ServicesLayout />
       <IndustriesSection />
       <TrustedCompanies />
       <StoryAchievementSection />
       <TestimonialSection />
-      <Footer />
+      
     </>
   );
 };
