@@ -1,8 +1,12 @@
 // import './App.css'
+import StoryAchievementSection from './components/Achievements/StoryAchievementSection'
+import Footer from './components/Footer'
+// import StorySection from './components/Achievements/StorySection'
 
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import ServicesPage from './pages/ServicesPage.jsx'
 import serviceContent from './global/services.json'
+import IndustriesSection from './components/IndustriesSection/IndustriesSection'
 import consultancyContent from './global/consultancy.json'
 import Home from './components/Home.jsx'
 import ConsultancyPage from "./pages/consultancyPage.js";
@@ -19,13 +23,21 @@ function ConsultancyRoutePage() {
   const consultancy = consultancyContent.find(c => String(c.id) === String(id));
   if (!consultancy) return <div>Consultancy not found</div>;
   return <ConsultancyPage consultancyContent={consultancy} />;
-}
+}import ServicesLayout from './components/suiteServices/ServicesLayout'
+import TestimonialSection from './components/Testimonials/TestimonialSection'
+import TrustedCompanies from './components/TrustedCompanies/TrustedCompanies'
+
 
 function App() {
   return (
     <BrowserRouter>
+
     
       <Routes>
+      <Navbar />
+      <div>
+        <Routes>
+
        <Route path="/" element={<Home />} />
         <Route 
           path="/service/:id" 
@@ -36,6 +48,13 @@ function App() {
           element={<ConsultancyRoutePage />} 
         />
       </Routes>
+        <ServicesLayout />
+        <IndustriesSection/>
+        <TrustedCompanies />
+        <StoryAchievementSection />
+        <TestimonialSection />
+      </div>
+      <Footer/>
     </BrowserRouter>
   )
 }
