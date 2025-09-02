@@ -1,7 +1,9 @@
 // import './App.css'
 
+import Footer from './components/Footer'
+// import StorySection from './components/Achievements/StorySection'
+
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx";
 import ServicesPage from './pages/ServicesPage.jsx'
 import serviceContent from './global/services.json'
 import consultancyContent from './global/consultancy.json'
@@ -20,22 +22,26 @@ function ConsultancyRoutePage() {
   const consultancy = consultancyContent.find(c => String(c.id) === String(id));
   if (!consultancy) return <div>Consultancy not found</div>;
   return <ConsultancyPage consultancyContent={consultancy} />;
-}
+} 
+
 
 function App() {
   return (
     <BrowserRouter>
-      <Navbar />
+
       <Routes>
-       <Route path="/" element={<Home />} />
-        <Route 
-          path="/service/:id" 
-          element={<ServiceRoutePage />} 
+   
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/service/:id"
+          element={<ServiceRoutePage />}
         />
-        <Route 
-          path="/consultancy/:id" 
-          element={<ConsultancyRoutePage />} 
+        <Route
+          path="/consultancy/:id"
+          element={<ConsultancyRoutePage />}
         />
+
+    
       </Routes>
     </BrowserRouter>
   )

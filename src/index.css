@@ -7,3 +7,17 @@
     --font-outfit: "Outfit", sans-serif;
     --font-montserrat: "Montserrat", sans-serif;
 }
+/* Global styles to prevent horizontal scrollbar */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+#root {
+  overflow-x: hidden;
+  max-width: 100%;
+}
