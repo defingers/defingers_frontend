@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import services from '../global/services.json';
-import Navbar from './Navbar';
 
 const Home = () => {
     const [selectedService, setSelectedService] = useState(services[0]?.serviceName || '');

@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Averia+Serif+Libre:wght@300;400;700&display=swap');
+
+.hero {
+  width: 100%;
+  max-width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  margin-top: 2.5rem;
+  box-sizing: border-box;
+}
+
+.hero-container {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* LEFT SIDE */
+.hero-left {
+  flex: 0 0 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Heading – restricted to 2 lines */
+.hero-heading {
+  font-family: 'Outfit', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+  max-width: 95%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;     /* force max 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hero-heading .black {
+  color: #000000;
+}
+
+.hero-heading .orange {
+  color: #ff8c00;
+}
+
+/* Subtext just below heading */
+.hero-subtext {
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #374151;
+  max-width: 90%;
+}
+
+/* Buttons centered in wrapper */
+.hero-buttons {
+  display: flex;
+  justify-content: flex-start;   /* centers buttons horizontally */
+  gap: 1rem;
+  }
+
+.btn {
+  font-family: 'Outfit', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 120px;
+  padding: 0.65rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-gold {
+  background-color: #ffd700;
+  color: #000;
+}
+
+.btn-orange {
+  background-color: #ff8c00;
+}
+
+/* RIGHT SIDE */
+.hero-right {
+  flex: 0 0 50%;
+  background: linear-gradient(135deg, #FEF4E8 0%, #FDF2E9 50%, #FCF1E8 100%);
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50%;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  
+  /* Add subtle shadow for depth */
+  box-shadow: 
+    inset 15px 0 30px rgba(255, 140, 0, 0.08),
+    -5px 0 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Add spherical curve enhancement */
+.hero-right::before {
+  content: '';
+  position: absolute;
+  left: -25%;
+  top: -10%;
+  width: 50%;
+  height: 120%;
+  background: radial-gradient(
+    ellipse 100% 80% at 80% 50%, 
+    rgba(255, 140, 0, 0.12) 0%, 
+    rgba(255, 140, 0, 0.06) 40%, 
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+.hero-right-content {
+  position: relative;             /* positioning context */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.hero-image-wrapper {
+  display: flex;
+  justify-content: flex-end;   /* push image to the right */
+  align-items: center;
+  width: 100%;                 /* wrapper takes full width */
+  height: 100%;                /* keep proportion */
+}
+.hero-image {
+  width: 100%;                  /* let image scale to wrapper width */
+  height: auto;
+  max-width: 100%;              /* no shrinking */
+  max-height: 90%;              /* prevent overflow */
+  object-fit: contain;
+}
+.hero-caption {
+  position: absolute;
+  bottom: 10%;                     /* keep it floated up */
+  left: 58%;                       /* push more towards right */
+  transform: translateX(-50%);
+  font-family: 'Averia Serif Libre', serif;
+  font-size: 1.8rem;               /* increased from 1.5rem */
+  font-weight: 700;
+  color: #000000;                  /* black text */
+  -webkit-text-stroke: 1px #FF8C00; /* orange stroke */
+  line-height: 1.2;                /* tighter line height for 2 lines */
+  max-width: 75%;                  /* slightly reduced for better fit */
+  text-align: center;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;           /* max 2 lines */
+  line-clamp: 2;                   /* standard property */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ================================
+   RESPONSIVE BREAKPOINTS STRUCTURE
+   ================================
+   - Large Desktop: 1920px+        (24" monitors and above)
+   - Desktop/15.6" Laptop: 1366px+ (15.6" laptops, standard desktops)
+   - Medium Laptop: 1280px+        (13-14" laptops)
+   - Small Laptop/Tablet: 1024px+  (tablets in landscape, small laptops)
+   - Tablet Portrait: 768px+       (tablets in portrait)
+   - Mobile Large: 576px+          (large phones)
+   - Mobile Small: 480px and below (small phones)
+   ================================ */
+
+/* ================================
+   DEFAULT STYLES (15.6" LAPTOP OPTIMIZED)
+   ================================ */
+@media (min-width: 1366px) {
+  .hero {
+    height: 85vh;
+    margin-top: 3rem;
+  }
+  
+  .hero-container {
+    width: 100vw;
+    max-width: 100vw;
+    gap: 3rem;
+    padding: 0 0 0 2.5rem;
+    box-sizing: border-box;
+  }
+  
+  .hero-left {
+    flex: 0 0 45%;
+  }
+  
+  .hero-heading {
+    font-size: 2.25rem;
+    max-width: 100%;
+  }
+  
+  .hero-subtext {
+    font-size: 1.1rem;
+    max-width: 95%;
+  }
+  
+  .hero-buttons {
+    gap: 1.5rem;
+  }
+  
+  .btn {
+    min-width: 130px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
+  }
+  
+  .hero-right {
+    flex: 0 0 50%;
+  }
+  
+  .hero-caption {
+    font-size: 2rem;
+  }
+}
+
+/* ================================
+   MEDIUM LAPTOP (13-14 INCH)
+   ================================ */
+@media (max-width: 1365px) and (min-width: 1280px) {
+  .hero {
+    height: 80vh;
+    margin-top: 2.5rem;
+  }
+  
+  .hero-container {
+    width: 100vw;
+    max-width: 100vw;
+    gap: 2.5rem;
+    padding: 0 0 0 2rem;
+    box-sizing: border-box;
+  }
+  
+  .hero-left {
+    flex: 0 0 42%;
+  }
+  
+  .hero-heading {
+    font-size: 2rem;
+  }
+  
+  .hero-subtext {
+    font-size: 1rem;
+  }
+  
+  .hero-caption {
+    font-size: 1.4rem;
+  }
+}
+
+/* ================================
+   SMALL LAPTOP (1280px and below)
+   ================================ */
+@media (max-width: 1279px) and (min-width: 1024px) {
+  .hero {
+    height: 75vh;
+    margin-top: 2rem;
+  }
+  
+  .hero-container {
+    width: 100vw;
+    max-width: 100vw;
+    gap: 2rem;
+    padding: 0 0 0 1.5rem;
+    box-sizing: border-box;
+  }
+  
+  .hero-left {
+    flex: 0 0 40%;
+  }
+  
+  .hero-heading {
+    font-size: 1.8rem;
+  }
+  
+  .hero-subtext {
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    min-width: 125px;
+    padding: 0.7rem 1.4rem;
+  }
+  
+  .hero-caption {
+    font-size: 1.3rem;
+  }
+}
+
+/* ================================
+   TABLET LANDSCAPE (1024px and below)
+   ================================ */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .hero {
+    height: 70vh;
+    margin-top: 1.5rem;
+  }
+  
+  .hero-container {
+    width: 100vw;
+    max-width: 100vw;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 2rem;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
+  .hero-left {
+    flex: unset;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .hero-right {
+    display: none;
+  }
+
+  .hero-heading {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+  
+  .hero-subtext {
+    font-size: 1rem;
+    max-width: 100%;
+  }
+  
+  .hero-buttons {
+    justify-content: center;
+    gap: 1.25rem;
+  }
+}
+
+/* ================================
+   TABLET PORTRAIT (768px and below)
+   ================================ */
+@media (max-width: 767px) and (min-width: 576px) {
+  .hero {
+    height: 65vh;
+    margin-top: 4rem; /* Account for fixed navbar */
+    padding-top: 1rem;
+  }
+  
+  .hero-container {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0 1.5rem;
+    gap: 1.5rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(65vh - 1rem);
+  }
+  
+  .hero-left {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    gap: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-right {
+    display: none;
+  }
+  
+  .hero-heading {
+    font-size: 1.8rem;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-subtext {
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  .btn {
+    min-width: 180px;
+    width: 100%;
+    max-width: 220px;
+  }
+}
+
+/* ================================
+   MOBILE LARGE (576px and below)
+   ================================ */
+@media (max-width: 575px) and (min-width: 480px) {
+  .hero {
+    height: 60vh;
+    margin-top: 4rem; /* Account for fixed navbar */
+    padding-top: 1rem;
+  }
+  
+  .hero-container {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0 1rem;
+    gap: 1.25rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(60vh - 1rem);
+  }
+  
+  .hero-left {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-right {
+    display: none;
+  }
+  
+  .hero-heading {
+    font-size: 1.6rem;
+    line-height: 1.25;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-subtext {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.875rem;
+    width: 100%;
+  }
+  
+  .btn {
+    min-width: 160px;
+    width: 100%;
+    max-width: 200px;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* ================================
+   MOBILE SMALL (480px and below)
+   ================================ */
+@media (max-width: 479px) {
+  .hero {
+    height: 55vh;
+    margin-top: 4rem; /* Account for fixed navbar */
+    padding-top: 1rem;
+  }
+  
+  .hero-container {
+    width: 100vw;
+    max-width: 100vw;
+    padding: 0 0.75rem;
+    gap: 1rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: calc(55vh - 1rem);
+  }
+  
+  .hero-left {
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+    gap: 0.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hero-right {
+    display: none;
+  }
+  
+  .hero-heading {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-subtext {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-buttons {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    width: 100%;
+  }
+  
+  .btn {
+    min-width: 140px;
+    width: 100%;
+    max-width: 180px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
+  }
+}
+
+
+
+/* hero section typing animations */

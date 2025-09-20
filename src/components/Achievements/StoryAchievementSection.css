@@ -1,0 +1,241 @@
+.story-achievement-container {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+}
+
+.curved-background {
+  position: absolute;
+  inset: 0;
+}
+
+.curved-background svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.story-achievement-content {
+  position: relative;
+  z-index: 10;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.story-achievement-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.story-achievement-title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #FF8C00;
+  margin-bottom: 0.5rem;
+}
+
+.story-achievement-description {
+  font-size: 1.125rem;
+  color: #374151;
+  max-width: 56rem;
+  margin: 0 auto;
+  line-height: 1.625;
+}
+
+.milestone-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.image-section-responsive {
+  position: relative;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+/* Mobile and Tablet - no curved design, flat colored background */
+@media (max-width: 1023px) {
+  .curved-background {
+    background-color: #F5E6A8;
+    opacity: 0.8;
+  }
+  
+  .curved-background svg {
+    display: none;
+  }
+
+  .image-section-responsive {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .story-image {
+    height: 20rem;
+  }
+}
+
+/* Large devices and up - curved design starts here */
+@media (min-width: 1024px) {
+  .image-section-responsive {
+    z-index: -1;
+    right: 0;
+    width: 100%;
+    bottom: 6rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+/* Extra large devices */
+@media (min-width: 1280px) {
+  .image-section-responsive {
+    right: 0;
+    width: 100%;
+    bottom: 6rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.image-container {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.story-image {
+  width: 100%;
+  height: 24rem;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-overlay:hover {
+  opacity: 1;
+}
+
+.overlay-content {
+  color: white;
+  text-align: center;
+}
+
+.overlay-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.overlay-subtitle {
+  font-size: 1.125rem;
+}
+
+/* Responsive Design */
+@media (min-width: 640px) {
+  .story-achievement-content {
+    padding: 4rem 1.5rem;
+  }
+  
+  .story-achievement-title {
+    font-size: 1.25rem;
+  }
+  
+  .image-section {
+    right: 1rem;
+    width: 105%;
+    margin-top: -3rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .milestone-cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .story-achievement-title {
+    font-size: 1.5rem;
+  }
+  
+  .image-section {
+    right: 2rem;
+    width: 108%;
+    bottom: 5rem;
+    margin-top: -2rem;
+  }
+  
+  .story-image {
+    height: 31.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .story-achievement-content {
+    padding: 4rem 2rem;
+  }
+  
+  .milestone-cards-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .story-achievement-title {
+    font-size: 1.875rem;
+  }
+  
+  .image-section {
+    right: 3rem;
+    width: 110%;
+    bottom: 6rem;
+    margin-top: -1rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .image-section {
+    right: 3rem;
+    width: 110%;
+    bottom: 6rem;
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 639px) {
+  .image-section {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+    margin-top: 0;
+  }
+  
+  .story-image {
+    height: 20rem;
+  }
+}
