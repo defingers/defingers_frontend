@@ -1,4 +1,3 @@
-
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import serviceContent from './global/services.json'
 import consultancyContent from './global/consultancy.json'
@@ -8,6 +7,7 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar/Navbar.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
 import ConsultancyPage from "./pages/consultancyPage.js";
+import AboutPage from "./pages/AboutUsPage.jsx";
 
 function ServiceRoutePage() {
   const { id } = useParams();
@@ -28,6 +28,7 @@ function App() {
   return (
     <BrowserRouter>
       <Navbar />
+
       <Routes>
         <Route path="/" element={<HomePage />} />
 
@@ -39,8 +40,14 @@ function App() {
           path="/consultancy/:id"
           element={<ConsultancyRoutePage />}
         />
+        <Route
+          path="/about"
+          element={<AboutPage />}
+        />
+
       </Routes>
       <Footer />
+
     </BrowserRouter>
   )
 }
