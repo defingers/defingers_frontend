@@ -8,9 +8,10 @@ import staff5 from "../../assets/images/staff.png";
 import staff6 from "../../assets/images/staff.png";
 import staff7 from "../../assets/images/staff.png";
 
+// Staff data
 const STAFF = [
   {
-    name: "Ritesh",
+    name: "Rakesh",
     title: "Full Stack Developer",
     image: staff1,
     linkedin: "#"
@@ -53,58 +54,77 @@ const STAFF = [
   },
 ];
 
-const getGrid = () => [
-  [null, 0, null],
-  [1, 2, 3],
-  [4, 5, 6]
-];
-
+// Card component
 const StaffCard = ({ name, title, image, linkedin }) => (
-  <div className="relative bg-white rounded-2xl shadow-sm flex flex-col items-center p-2 max-w-[170px] min-w-[150px]">
+  <div className="relative flex flex-col items-center ">
     <img
       src={image}
       alt={name}
-      className="rounded-2xl w-[120px] h-[140px] object-cover mb-2"
+      className="rounded-2xl border-gray-500 border-2 w-[200px] h-[240px] object-cover mb-2"
     />
-    <div className="absolute left-2 bottom-16 flex flex-row items-center gap-1">
-      <span className="bg-yellow-400 text-black text-xs font-bold px-2 py-1 rounded font-outfit">{name}</span>
-      <span className="bg-black text-yellow-400 text-xs font-bold px-2 py-1 rounded font-outfit">{title}</span>
+    <div className="absolute bottom-10 flex flex-row items-center gap-1 bg-black bg-yellow-400 text-xs font-semibold px-2 py-1 rounded-2xl font-outfit">
+      <span className="bg-orange-400 text-xs  font-semibold px-2 py-1 rounded-xl font-outfit">{name}</span>
+      {title}
     </div>
     <a
       href={linkedin}
       target="_blank"
       rel="noopener noreferrer"
-      className="mt-14 text-xs text-black/70 underline flex items-center gap-1"
+      className="bottom-16 text-xs text-black font-bold flex items-center gap-1"
     >
       View linkedin Profile <FaLinkedin className="text-base" />
     </a>
   </div>
 );
 
+// Main Staff section
 const Staff = () => (
-  <section className="bg-[#fcf3e8] w-full py-16 px-4 flex flex-col items-center min-h-[500px]">
-    <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-4 font-poppins text-center">
-      Meet Our Staff
-    </h2>
-    <p className="text-base md:text-lg font-outfit text-black/90 text-center max-w-md mb-10">
-      Our skilled professionals each bring unique expertise and passion to deliver exceptional results for our clients.
-    </p>
-    <div className="flex items-center justify-center w-full">
-      <div className="grid grid-cols-3 grid-rows-3 gap-8">
-        {getGrid().map((row, i) =>
-          row.map((idx, j) =>
-            idx !== null ? (
+  <section className="bg-[#fcf3e8] w-full py-16 px-4 flex flex-col ">
+    <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl mx-auto ">
+      {/* Left Side: Title and Description */}
+      <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:mb-0 md:mr-16">
+        <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-4 font-poppins text-center md:text-left ">
+          Meet Our Staff
+        </h2>
+        <p className="text-base md:text-lg font-outfit text-black/ text-center md:text-left max-w-md mb-10">
+          Our skilled professionals each bring unique expertise and passion to deliver exceptional results for our clients.
+        </p>
+      </div>
+      {/* Right Side: Staff Cards Grid */}
+      <div className="flex-1 flex items-center justify-center w-full">
+        {/* Mobile: 2 cards per row, Desktop: custom absolute grid */}
+        <div className="block md:hidden w-full">
+          <div className="grid grid-cols-2 gap-6">
+            {STAFF.map((member, idx) => (
               <div key={idx} className="flex justify-center items-center">
-                <StaffCard {...STAFF[idx]} />
+                <StaffCard {...member} />
               </div>
-            ) : (
-              <div key={`${i}-${j}`}></div>
-            )
-          )
-        )}
+            ))}
+          </div>
+        </div>
+        <div className="hidden md:block relative min-w-[700px] min-h-[900px]">
+          {/* Column 1 */}
+          <div className="absolute  top-[150px] right-[500px] flex flex-col gap-5">
+            <StaffCard {...STAFF[0]} />
+            <StaffCard {...STAFF[4]} />
+          </div>
+          {/* Column 2 */}
+          <div className="absolute left-[250px]  flex flex-col gap-5">
+            <StaffCard {...STAFF[1]} />
+            <StaffCard {...STAFF[5]} />
+            <StaffCard {...STAFF[6]} />
+          </div>
+          {/* Column 3 */}
+          <div className="absolute left-[500px] top-[150px]  flex flex-col gap-5">
+            <StaffCard {...STAFF[2]} />
+            <StaffCard {...STAFF[3]} />
+          </div>
+        </div>
       </div>
     </div>
   </section>
 );
 
 export default Staff;
+
+
