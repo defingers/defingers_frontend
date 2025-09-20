@@ -2,6 +2,8 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import services from '../global/services.json';
 
+import Partners from './Partners';
+
 const Home = () => {
     const [selectedService, setSelectedService] = useState(services[0]?.serviceName || '');
     const navigate = useNavigate();
@@ -43,8 +45,12 @@ const Home = () => {
                     >
                         IT Recruitment
                     </button>
+                    
                 </div>
             </div>
+
+
+            <Partners/>
         </>
     );
 };

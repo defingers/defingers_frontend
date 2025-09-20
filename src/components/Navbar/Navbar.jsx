@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import {Link} from "react-router-dom";
 import "./Navbar.css";
-import logo from "@/assets/logo.jpg";
+import logo from "../../assets/images/logo.jpg";
 import { IoChevronForward } from "react-icons/io5";
 import ServicesDropdown from "./ServicesDropdown";
 
@@ -27,14 +28,32 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
-  const handleNavClick = (section) => {
+  const handleNavClick = (section, event) => {
+    if (event) {
+      event.preventDefault();
+    }
     setActiveSection(section);
+    
+    // Handle smooth scroll to section for Partners
+    if (section === "partners") {
+      const element = document.getElementById("trusted-companies-section");
+      if (element) {
+        // Add a small delay to ensure any dropdown closes first
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+          });
+        }, 100);
+      }
+    }
   };
 
   return (
     <>
       {/* Main Navbar */}
-      <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+      <nav className={`navbar fixed top-0 left-0 w-full z-50 ${scrolled ? "navbar-scrolled" : ""}`}>
         <div className="navbar-container">
           <div className="navbar-content">
             {/* Left Side - Logo/Brand */}
@@ -43,7 +62,9 @@ const Navbar = () => {
                 <div className="logo-wrapper">
                   <img src={logo} alt="DE FINGERS" className="logo-image" />
                 </div>
-                <span className="brand-name">DE FINGERS</span>
+                <Link to="/" className="no-underline">  
+                  <span className="brand-name">DE FINGERS</span>
+                </Link>
               </div>
             </div>
 
@@ -55,7 +76,7 @@ const Navbar = () => {
                   onMouseEnter={() => setIsServicesOpen(true)}
                   onMouseLeave={() => setIsServicesOpen(false)}
                 >
-                  <a href="#" className="nav-link" onClick={() => handleNavClick("services")}>
+                  <a href="#" className="nav-link" onClick={(e) => handleNavClick("services", e)}>
                     Services
                     <IoChevronForward
                       className={`dropdown-arrow ${
@@ -65,19 +86,23 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "partners" ? "active" : ""}`}>
-                  <a href="#" className="nav-link" onClick={() => handleNavClick("partners")}>
+                  <a href="#trusted-companies-section" className="nav-link" onClick={(e) => handleNavClick("partners", e)}>
                     Partners
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "contacts" ? "active" : ""}`}>
-                  <a href="#" className="nav-link" onClick={() => handleNavClick("contacts")}>
+                  <a href="#" className="nav-link" onClick={(e) => handleNavClick("contacts", e)}>
                     Contacts
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>
-                  <a href="#" className="nav-link" onClick={() => handleNavClick("about")}>
+                  <Link
+                    to="/about"
+                    className="nav-link"
+                    onClick={() => setActiveSection("about")}
+                  >
                     About Us
-                  </a>
+                  </Link>
                 </div>
               </nav>
               <ServicesDropdown

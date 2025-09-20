@@ -58,7 +58,7 @@ const TestimonialSection = () => {
     <section className="bg-gray-50 pb-4 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 py-10">
           <h1 className="text-l sm:text-1xl md:text-2xl lg:text-3xl font-bold text-[#FF8C00] mb-2">
             What Our Clients Say
           </h1>

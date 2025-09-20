@@ -8,7 +8,7 @@ import SecondCta from "../components/services-components/SecondCta";
 
 const ServicesPage = ({ serviceContent }) => {
     return (
-        <>
+        <div className="py-6">
             <HeroSection serviceContent={serviceContent} />
             <ServiceTransition serviceContent={serviceContent} />
             <Keybenefits serviceContent={serviceContent} />
@@ -16,7 +16,7 @@ const ServicesPage = ({ serviceContent }) => {
             <Faqs serviceContent={serviceContent} />
             <SecondCta serviceContent={serviceContent} />
 
-        </>
+        </div>
     );
 };
 

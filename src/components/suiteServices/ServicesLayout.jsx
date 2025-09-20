@@ -98,7 +98,7 @@ const ServicesLayout = () => {
         </div>
 
         {/* Cards Container */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 max-w-6xl mx-auto">
           {currentServices.map((service, index) => (
             <ServiceCard
               key={index}
@@ -110,7 +110,9 @@ const ServicesLayout = () => {
         </div>
 
         {/* CTA Section */}
-        <CTASection />
+        <div className="max-w-6xl mx-auto">
+          <CTASection />
+        </div>
 
         {/* Bottom spacing */}
         <div className="mt-16"></div>

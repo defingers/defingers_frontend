@@ -6,20 +6,22 @@ import Navbar from '../components/Navbar/Navbar'
 import ServicesLayout from '../components/suiteServices/ServicesLayout'
 import TestimonialSection from '../components/Testimonials/TestimonialSection'
 import TrustedCompanies from '../components/TrustedCompanies/TrustedCompanies'
+import Partners from '../components/Partners'
 
 
 
 const HomePage = () => {
   return (
     <>
-      <Navbar />
+     
       <HeroSection />
       <ServicesLayout />
       <IndustriesSection />
-      <TrustedCompanies />
+      <Partners />
+      {/* <TrustedCompanies /> */}
       <StoryAchievementSection />
       <TestimonialSection />
-      <Footer />
+      
     </>
   );
 };

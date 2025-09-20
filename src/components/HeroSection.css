@@ -66,19 +66,19 @@
 /* Buttons centered in wrapper */
 .hero-buttons {
   display: flex;
-  justify-content: center;   /* centers buttons horizontally */
+  justify-content: flex-start;   /* centers buttons horizontally */
   gap: 1rem;
-}
+  }
 
 .btn {
   font-family: 'Outfit', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 140px;
-  padding: 0.75rem 1.5rem;
+  min-width: 120px;
+  padding: 0.65rem 1.25rem;
   border-radius: 0.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: #fff;
   border: none;
@@ -228,9 +228,9 @@
   }
   
   .btn {
-    min-width: 150px;
-    padding: 0.875rem 1.75rem;
-    font-size: 1.05rem;
+    min-width: 130px;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.95rem;
   }
   
   .hero-right {
@@ -306,8 +306,8 @@
   }
   
   .btn {
-    min-width: 140px;
-    padding: 0.75rem 1.5rem;
+    min-width: 125px;
+    padding: 0.7rem 1.4rem;
   }
   
   .hero-caption {
@@ -420,9 +420,9 @@
   }
   
   .btn {
-    min-width: 200px;
+    min-width: 180px;
     width: 100%;
-    max-width: 250px;
+    max-width: 220px;
   }
 }
 
@@ -487,11 +487,11 @@
   }
   
   .btn {
-    min-width: 180px;
+    min-width: 160px;
     width: 100%;
-    max-width: 220px;
-    padding: 0.75rem 1.25rem;
-    font-size: 0.95rem;
+    max-width: 200px;
+    padding: 0.65rem 1.1rem;
+    font-size: 0.9rem;
   }
 }
 
@@ -556,11 +556,11 @@
   }
   
   .btn {
-    min-width: 160px;
+    min-width: 140px;
     width: 100%;
-    max-width: 200px;
-    padding: 0.7rem 1rem;
-    font-size: 0.9rem;
+    max-width: 180px;
+    padding: 0.6rem 0.9rem;
+    font-size: 0.85rem;
   }
 }
 
