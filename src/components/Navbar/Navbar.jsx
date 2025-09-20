@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
+import {Link} from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.jpg";
 import { IoChevronForward } from "react-icons/io5";
@@ -52,7 +53,7 @@ const Navbar = () => {
   return (
     <>
       {/* Main Navbar */}
-      <nav className={`navbar ${scrolled ? "navbar-scrolled" : ""}`}>
+      <nav className={`navbar fixed top-0 left-0 w-full z-50 ${scrolled ? "navbar-scrolled" : ""}`}>
         <div className="navbar-container">
           <div className="navbar-content">
             {/* Left Side - Logo/Brand */}
@@ -61,7 +62,9 @@ const Navbar = () => {
                 <div className="logo-wrapper">
                   <img src={logo} alt="DE FINGERS" className="logo-image" />
                 </div>
-                <span className="brand-name">DE FINGERS</span>
+                <Link to="/" className="no-underline">  
+                  <span className="brand-name">DE FINGERS</span>
+                </Link>
               </div>
             </div>
 
@@ -93,9 +96,13 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>
-                  <a href="#" className="nav-link" onClick={(e) => handleNavClick("about", e)}>
+                  <Link
+                    to="/about"
+                    className="nav-link"
+                    onClick={() => setActiveSection("about")}
+                  >
                     About Us
-                  </a>
+                  </Link>
                 </div>
               </nav>
               <ServicesDropdown
