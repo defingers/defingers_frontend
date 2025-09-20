@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import TestimonialCard from './TestimonialCard.jsx';
 import StatsSection from './StatsSection.jsx';
+import dummyTestimonialImage from '../../assets/testimonial_dummy.svg'
+
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   
@@ -15,7 +17,7 @@ const TestimonialSection = () => {
       clientTitle: "CTO",
       company: "InnovateCore Solutions",
       projectValue: "$2.5M",
-      imageSrc: "/path/to/testimonial-image-1.jpg"
+      imageSrc: dummyTestimonialImage
     },
     {
       rating: 5,
@@ -25,7 +27,7 @@ const TestimonialSection = () => {
       clientTitle: "CEO",
       company: "Digital Dynamics Inc",
       projectValue: "$1.8M",
-      imageSrc: "/path/to/testimonial-image-2.jpg"
+      imageSrc: dummyTestimonialImage
     },
     {
       rating: 5,
@@ -35,7 +37,7 @@ const TestimonialSection = () => {
       clientTitle: "CTO",
       company: "Future Tech Solutions",
       projectValue: "$3.2M",
-      imageSrc: "/path/to/testimonial-image-3.jpg"
+      imageSrc: dummyTestimonialImage
     }
   ];
 
@@ -56,7 +58,7 @@ const TestimonialSection = () => {
     <section className="bg-gray-50 pb-4 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 py-10">
           <h1 className="text-l sm:text-1xl md:text-2xl lg:text-3xl font-bold text-[#FF8C00] mb-2">
             What Our Clients Say
           </h1>
@@ -86,7 +88,7 @@ const TestimonialSection = () => {
                   key={index}
                   onClick={() => setCurrentIndex(index)}
                   className={`w-3 h-3 rounded-full transition-colors ${
-                    index === currentIndex ? 'bg-orange-500' : 'bg-gray-300'
+                    index === currentIndex ? 'bg-[#FF8C00] opacity-70' : 'bg-gray-300 opacity-50'
                   }`}
                 />
               ))}

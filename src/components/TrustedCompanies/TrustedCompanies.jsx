@@ -2,7 +2,7 @@ import React from 'react';
 
 const TrustedSection = () => {
   return (
-    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-white py-12 px-4 sm:px-6 lg:px-8" id='trusted-companies-section'>
       <div className="max-w-5xl mx-auto">
         {/* Header Section */}
         <div className="text-center mb-8">

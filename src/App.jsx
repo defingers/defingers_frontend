@@ -1,14 +1,13 @@
-// import './App.css'
-
-import Footer from './components/Footer'
-// import StorySection from './components/Achievements/StorySection'
-
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
-import ServicesPage from './pages/ServicesPage.jsx'
 import serviceContent from './global/services.json'
 import consultancyContent from './global/consultancy.json'
-import Home from './components/Home.jsx'
+
+import HomePage from './pages/HomePage'
+import Footer from './components/Footer'
+import Navbar from './components/Navbar/Navbar.jsx'
+import ServicesPage from './pages/ServicesPage.jsx'
 import ConsultancyPage from "./pages/consultancyPage.js";
+import AboutPage from "./pages/AboutUsPage.jsx";
 
 function ServiceRoutePage() {
   const { id } = useParams();
@@ -22,16 +21,17 @@ function ConsultancyRoutePage() {
   const consultancy = consultancyContent.find(c => String(c.id) === String(id));
   if (!consultancy) return <div>Consultancy not found</div>;
   return <ConsultancyPage consultancyContent={consultancy} />;
-} 
+}
 
 
 function App() {
   return (
     <BrowserRouter>
+      <Navbar />
 
       <Routes>
-   
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<HomePage />} />
+
         <Route
           path="/service/:id"
           element={<ServiceRoutePage />}
@@ -40,11 +40,15 @@ function App() {
           path="/consultancy/:id"
           element={<ConsultancyRoutePage />}
         />
+        <Route
+          path="/about"
+          element={<AboutPage />}
+        />
 
-    
       </Routes>
+      <Footer />
+
     </BrowserRouter>
   )
 }
-
 export default App
