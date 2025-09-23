@@ -7,7 +7,11 @@ import SecondCta from "../components/consultancy-components/SecondCta";
 
 
 
-const ConsultancyPage = ({ consultancyContent }) => {
+interface ConsultancyPageProps {
+    consultancyContent: any; // Replace 'any' with the actual type if known
+}
+
+const ConsultancyPage: React.FC<ConsultancyPageProps> = ({ consultancyContent }) => {
     return (
         <div className="py-2">
             <HeroSection consultancyContent={consultancyContent} />
