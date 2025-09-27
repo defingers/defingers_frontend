@@ -3,7 +3,7 @@
 .hero {
   width: 100%;
   max-width: 100vw;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -25,11 +25,11 @@
 
 /* LEFT SIDE */
 .hero-left {
-  flex: 0 0 40%;
+  flex: 0 0 35%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 /* Heading – restricted to 2 lines */
@@ -75,7 +75,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 120px;
+  min-width: 180px;
+  width: 14.188rem;
   padding: 0.65rem 1.25rem;
   border-radius: 0.5rem;
   font-size: 0.9rem;
@@ -83,7 +84,7 @@
   color: #fff;
   border: none;
   cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 8px 24px -4px rgba(0,0,0,0.4);
   transition: transform 0.2s ease;
 }
 
@@ -102,39 +103,43 @@
 
 /* RIGHT SIDE */
 .hero-right {
-  flex: 0 0 50%;
+  flex: 0 0 55%;
   background: linear-gradient(135deg, #FEF4E8 0%, #FDF2E9 50%, #FCF1E8 100%);
-  border-top-left-radius: 50%;
-  border-bottom-left-radius: 50%;
+  border-top-left-radius: 40%;
+  border-bottom-left-radius: 40%;
   height: 100%;
+  min-height: 85vh;
   position: relative;
 
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  overflow: visible;
   
-  /* Add subtle shadow for depth */
+  /* Reduced shadow intensity */
   box-shadow: 
-    inset 15px 0 30px rgba(255, 140, 0, 0.08),
-    -5px 0 25px rgba(0, 0, 0, 0.05);
+    inset 8px 0 15px rgba(255, 140, 0, 0.04),
+    -3px 0 12px rgba(0, 0, 0, 0.03);
+  
+  /* Smoother curved left side */
+  /* clip-path: ellipse(100% 90% at 100% 45%); */
 }
 
-/* Add spherical curve enhancement */
+/* Reduced spherical curve enhancement */
 .hero-right::before {
   content: '';
   position: absolute;
-  left: -25%;
-  top: -10%;
-  width: 50%;
-  height: 120%;
-  background: radial-gradient(
+  left: -20%;
+  top: -5%;
+  width: 35%;
+  height: 110%;
+  /* background: radial-gradient(
     ellipse 100% 80% at 80% 50%, 
-    rgba(255, 140, 0, 0.12) 0%, 
-    rgba(255, 140, 0, 0.06) 40%, 
+    rgba(255, 140, 0, 0.03) 0%, 
+    rgba(255, 140, 0, 0.03) 40%, 
     transparent 70%
-  );
-  border-radius: 50%;
+  ); */
+  border-radius: 40%;
 }
 .hero-right-content {
   position: relative;             /* positioning context */
@@ -153,22 +158,22 @@
   height: 100%;                /* keep proportion */
 }
 .hero-image {
-  width: 100%;                  /* let image scale to wrapper width */
+  width: 85%;                  
   height: auto;
-  max-width: 100%;              /* no shrinking */
-  max-height: 90%;              /* prevent overflow */
+  max-width: 85%;              /* reduced from 100% to 85% */
+  max-height: 75%;             /* reduced from 90% to 75% */
   object-fit: contain;
 }
 .hero-caption {
   position: absolute;
-  bottom: 10%;                     /* keep it floated up */
-  left: 58%;                       /* push more towards right */
+  bottom: -1%;                      /* moved down from 10% to 5% */
+  left: 50%;                       /* moved left from 58% to 45% */
   transform: translateX(-50%);
   font-family: 'Averia Serif Libre', serif;
   font-size: 1.8rem;               /* increased from 1.5rem */
   font-weight: 700;
   color: #000000;                  /* black text */
-  -webkit-text-stroke: 1px #FF8C00; /* orange stroke */
+  -webkit-text-stroke: .5px #FF8C00; /* orange stroke */
   line-height: 1.2;                /* tighter line height for 2 lines */
   max-width: 75%;                  /* slightly reduced for better fit */
   text-align: center;
@@ -197,7 +202,7 @@
    ================================ */
 @media (min-width: 1366px) {
   .hero {
-    height: 85vh;
+    height: 95vh;
     margin-top: 3rem;
   }
   
@@ -247,7 +252,7 @@
    ================================ */
 @media (max-width: 1365px) and (min-width: 1280px) {
   .hero {
-    height: 80vh;
+    height: 90vh;
     margin-top: 2.5rem;
   }
   

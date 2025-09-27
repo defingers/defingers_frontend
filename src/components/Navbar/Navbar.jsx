@@ -7,6 +7,13 @@ import { IoChevronForward } from "react-icons/io5";
 import ServicesDropdown from "./ServicesDropdown";
 
 const Navbar = () => {
+  // Get current path
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+  useEffect(() => {
+    const handlePathChange = () => setCurrentPath(window.location.pathname);
+    window.addEventListener('popstate', handlePathChange);
+    return () => window.removeEventListener('popstate', handlePathChange);
+  }, []);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -116,9 +123,11 @@ const Navbar = () => {
             {/* Right Side - Button + Hamburger */}
             <div className="navbar-right">
               {/* Get a Quote button (desktop only) */}
-              <a href="#quote" className="quote-button">
-                Book consultation
-              </a>
+              {currentPath !== '/contact' && (
+                <a href="/contact" className="quote-button">
+                  Book consultation
+                </a>
+              )}
 
               <button onClick={toggleMenu} className="hamburger-button">
                 <Menu className="hamburger-icon" />

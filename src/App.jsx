@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
 import ConsultancyPage from "./pages/consultancyPage.js";
 import AboutPage from "./pages/AboutUsPage.jsx";
+import ContactForm from "./components/form/ContactForm.jsx";
 
 function ServiceRoutePage() {
   const { id } = useParams();
@@ -44,7 +45,10 @@ function App() {
           path="/about"
           element={<AboutPage />}
         />
-
+        <Route
+          path="/contact"
+          element={<ContactForm/>}
+        />
       </Routes>
       <Footer />
 

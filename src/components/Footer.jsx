@@ -69,7 +69,7 @@ const footerData = {
     }
   },
   map: {
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.543123456789!2d78.38745671234567!3d17.495987654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9394bbbbbbbb%3A0x1234567890abcdef!2sPlot%20No%20460%2C%20Rd%20Number%201%2C%20above%20Nut%20Planet%2C%20Anjaneya%20Nagar%2C%20AGI%20Colony%2C%20Moosapet%2C%20Hyderabad%2C%20Telangana%20500018!5e0!3m2!1sen!2sin!4v1704067200000!5m2!1sen!2sin",
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.543123456789!2d78.38745671234567!3d17.495987654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9394bbbbbbbb%3A0x1234567890abcdef!2sPlot%20No%20460%2C%20Rd%20Number%201%2C%20above%20Nut%20Planet%2C%20Anjaneya%20Nagar%2C%20AGI%20Colony%2C%20Moosapet%2C%20Hyderabad%2C%20Telangana%20500018!5e0!3m2!1sen!2sin!4v1704067200000!5m2!1sen!2sin&amp;iwloc=&amp;output=embed",
     directUrl: "https://www.google.com/maps/place/Plot+No+460,+Rd+Number+1,+above+Nut+Planet,+Anjaneya+Nagar,+AGI+Colony,+Moosapet,+Hyderabad,+Telangana+500018/@17.495987654321,78.38745671234567,17z"
   },
   legal: [
@@ -181,7 +181,7 @@ const Footer = () => {
             </div>
             
             {/* Map */}
-            <div className="w-full h-48 bg-gray-200 rounded-lg overflow-hidden">
+            <div className="w-full h-48 bg-gray-200 rounded-lg overflow-hidden relative">
               <iframe
                 src={footerData.map.embedUrl}
                 width="100%"
@@ -192,19 +192,19 @@ const Footer = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="transition-all duration-300"
               ></iframe>
-            </div>
-            
-            {/* Open in Maps Link */}
-            <div className="mt-2 text-right">
-              <a 
-                href={footerData.map.directUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-xs text-blue-600 hover:text-blue-800 bg-white px-2 py-1 rounded shadow-sm border inline-flex items-center"
-              >
-                <MapPin className="w-3 h-3 mr-1" />
-                Open in Maps
-              </a>
+              
+              {/* Custom "View larger map" with location icon overlay */}
+              <div className="absolute top-2 left-2 z-10">
+                <a 
+                  href={footerData.map.directUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-xs text-blue-600 hover:text-blue-800 bg-white bg-opacity-95 px-2 py-1 rounded shadow-sm border border-gray-300 inline-flex items-center hover:shadow-md transition-all duration-200"
+                >
+                  <MapPin className="w-3 h-3 mr-1" />
+                  View larger map
+                </a>
+              </div>
             </div>
           </div>
         </div>
