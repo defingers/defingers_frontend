@@ -5,8 +5,11 @@ import "./Navbar.css";
 import logo from "../../assets/images/logo.jpg";
 import { IoChevronForward } from "react-icons/io5";
 import ServicesDropdown from "./ServicesDropdown";
+import { categories } from "./data";
 
 const Navbar = () => {
+  const [canvasServicesOpen, setCanvasServicesOpen] = useState(false);
+  const [canvasHoveredCategory, setCanvasHoveredCategory] = useState(null);
   // Get current path
   const [currentPath, setCurrentPath] = useState(window.location.pathname);
   useEffect(() => {
@@ -155,7 +158,51 @@ const Navbar = () => {
 
           {/* Canvas Content */}
           <div className="canvas-content">
-            {/* Add your canvas content here */}
+            {/* Canvas Nav Options */}
+            <nav className="canvas-nav flex flex-col gap-4">
+              {/* Services (expandable) */}
+              <div>
+                <button
+                  className="canvas-nav-link flex items-center gap-2 font-semibold text-lg w-full text-left"
+                  onClick={() => setCanvasServicesOpen((open) => !open)}
+                  aria-expanded={canvasServicesOpen}
+                >
+                   <span className="font-medium" style={{ color: '#ff8c00' }}>Services</span>
+                  <IoChevronForward className={`transition-transform ${canvasServicesOpen ? 'rotate-90' : ''}`} />
+                </button>
+                {canvasServicesOpen && (
+                  <div className="pl-6 pt-2 pb-2">
+                    {categories.map((cat) => (
+                      <div key={cat.name} className="mb-2">
+                        <div
+                          className="flex items-center gap-2 cursor-pointer py-1"
+                          onClick={() => setCanvasHoveredCategory(cat.name === canvasHoveredCategory ? null : cat.name)}
+                        >
+                          <cat.icon className="w-4 h-4" />
+                          <span className="font-medium">{cat.name}</span>
+                          <IoChevronForward className={`transition-transform ${canvasHoveredCategory === cat.name ? 'rotate-90' : ''}`} />
+                        </div>
+                        {canvasHoveredCategory === cat.name && (
+                          <div className="pl-6">
+                            {cat.items.map((item) => (
+                              <Link to={item.navigationEndpoint} key={item.name} className="block py-1 text-base text-gray-700 hover:text-[#ff8c00]" onClick={closeMenu}>
+                                <item.icon className="inline w-4 h-4 mr-2" />{item.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+              {/* Partners */}
+              <a href="#trusted-companies-section" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>Partners</a>
+              {/* Contacts */}
+              <Link to="/contact" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>Contacts</Link>
+              {/* About Us */}
+              <Link to="/about" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>About Us</Link>
+            </nav>
           </div>
         </div>
       </div>
