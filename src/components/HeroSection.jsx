@@ -22,8 +22,8 @@ const HeroSection = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn btn-gold">Get Started</button>
             <button className="btn btn-orange">Learn More</button>
+            <button className="btn btn-gold">Get Started</button>
           </div>
         </div>
 

@@ -1,0 +1,299 @@
+import React, { useState } from 'react';
+import { Send, User, Phone, Mail, MessageSquare, Briefcase, CheckCircle } from 'lucide-react';
+import * as Yup from 'yup';
+
+const ContactForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: ''
+  });
+  
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Yup validation schema
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Name must be at least 2 characters')
+      .max(50, 'Name cannot exceed 50 characters')
+      .required('Name is required'),
+    mobile: Yup.string()
+      .matches(/^[\+]?[1-9][\d]{0,15}$/, 'Please enter a valid phone number')
+      .required('Mobile number is required'),
+    email: Yup.string()
+      .email('Please enter a valid email address')
+      .required('Email is required'),
+    company: Yup.string()
+      .min(2, 'Company name must be at least 2 characters')
+      .max(100, 'Company name cannot exceed 100 characters')
+      .required('Company name is required'),
+    subject: Yup.string()
+      .min(5, 'Subject must be at least 5 characters')
+      .max(100, 'Subject cannot exceed 100 characters')
+      .required('Subject is required'),
+    message: Yup.string()
+      .min(10, 'Message must be at least 10 characters')
+      .max(1000, 'Message cannot exceed 1000 characters')
+      .required('Message is required')
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      // Validate form data
+      await validationSchema.validate(formData, { abortEarly: false });
+      setErrors({});
+      
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      
+      setIsSubmitted(true);
+      setFormData({
+        name: '',
+        mobile: '',
+        email: '',
+        company: '',
+        subject: '',
+        message: ''
+      });
+      
+      // Reset success message after 5 seconds
+      setTimeout(() => setIsSubmitted(false), 5000);
+      
+    } catch (validationErrors) {
+      if (validationErrors.inner) {
+        const errorObject = {};
+        validationErrors.inner.forEach(error => {
+          errorObject[error.path] = error.message;
+        });
+        setErrors(errorObject);
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  if (isSubmitted) {
+    return (
+      <div className="max-w-2xl mx-auto p-8">
+        <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 text-center shadow-lg">
+          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+          <h3 className="text-2xl font-bold text-gray-800 mb-2">Message Sent Successfully!</h3>
+          <p className="text-gray-600">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="max-w-2xl mx-auto p-6 mt-12">
+      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+        {/* Header */}
+        <div className="bg-gradient-to-r from-orange-500 to-amber-500 p-8 text-center relative overflow-hidden">
+          <div className="absolute inset-0 bg-black opacity-5"></div>
+          <div className="relative z-10">
+            <h2 className="text-3xl font-bold text-white mb-2">Get in Touch</h2>
+            <p className="text-orange-100">Let's discuss how we can help transform your business</p>
+          </div>
+          <div className="absolute -top-10 -right-10 w-40 h-40 bg-white opacity-10 rounded-full"></div>
+          <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-white opacity-10 rounded-full"></div>
+        </div>
+
+        {/* Form */}
+        <form onSubmit={handleSubmit} className="p-8 space-y-6">
+          {/* Name Field */}
+          <div className="space-y-2">
+            <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
+              <User className="w-4 h-4 mr-2 text-orange-500" />
+              Full Name *
+            </label>
+            <div className="relative">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                placeholder="Enter your full name"
+                className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
+                  errors.name 
+                    ? 'border-red-300 focus:border-red-500' 
+                    : 'border-gray-200 focus:border-orange-400'
+                }`}
+              />
+              {errors.name && (
+                <p className="text-red-500 text-sm mt-1 ml-1">{errors.name}</p>
+              )}
+            </div>
+          </div>
+
+          {/* Mobile and Email Row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Mobile Field */}
+            <div className="space-y-2">
+              <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
+                <Phone className="w-4 h-4 mr-2 text-orange-500" />
+                Mobile Number *
+              </label>
+              <input
+                type="tel"
+                name="mobile"
+                value={formData.mobile}
+                onChange={handleInputChange}
+                placeholder="Enter your mobile number"
+                className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
+                  errors.mobile 
+                    ? 'border-red-300 focus:border-red-500' 
+                    : 'border-gray-200 focus:border-orange-400'
+                }`}
+              />
+              {errors.mobile && (
+                <p className="text-red-500 text-sm mt-1 ml-1">{errors.mobile}</p>
+              )}
+            </div>
+
+            {/* Email Field */}
+            <div className="space-y-2">
+              <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
+                <Mail className="w-4 h-4 mr-2 text-orange-500" />
+                Email Address *
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+                placeholder="Enter your email address"
+                className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
+                  errors.email 
+                    ? 'border-red-300 focus:border-red-500' 
+                    : 'border-gray-200 focus:border-orange-400'
+                }`}
+              />
+              {errors.email && (
+                <p className="text-red-500 text-sm mt-1 ml-1">{errors.email}</p>
+              )}
+            </div>
+          </div>
+
+          {/* Company Field */}
+          <div className="space-y-2">
+            <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
+              <Briefcase className="w-4 h-4 mr-2 text-orange-500" />
+              Company Name *
+            </label>
+            <input
+              type="text"
+              name="company"
+              value={formData.company}
+              onChange={handleInputChange}
+              placeholder="Enter your company name"
+              className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
+                errors.company 
+                  ? 'border-red-300 focus:border-red-500' 
+                  : 'border-gray-200 focus:border-orange-400'
+              }`}
+            />
+            {errors.company && (
+              <p className="text-red-500 text-sm mt-1 ml-1">{errors.company}</p>
+            )}
+          </div>
+
+          {/* Subject Field */}
+          <div className="space-y-2">
+            <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
+              <MessageSquare className="w-4 h-4 mr-2 text-orange-500" />
+              Subject *
+            </label>
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleInputChange}
+              placeholder="What can we help you with?"
+              className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
+                errors.subject 
+                  ? 'border-red-300 focus:border-red-500' 
+                  : 'border-gray-200 focus:border-orange-400'
+              }`}
+            />
+            {errors.subject && (
+              <p className="text-red-500 text-sm mt-1 ml-1">{errors.subject}</p>
+            )}
+          </div>
+
+          {/* Message Field */}
+          <div className="space-y-2">
+            <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
+              <MessageSquare className="w-4 h-4 mr-2 text-orange-500" />
+              Message *
+            </label>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleInputChange}
+              rows="5"
+              placeholder="Tell us more about your project or requirements..."
+              className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none resize-none ${
+                errors.message 
+                  ? 'border-red-300 focus:border-red-500' 
+                  : 'border-gray-200 focus:border-orange-400'
+              }`}
+            />
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-1 ml-1">{errors.message}</p>
+            )}
+          </div>
+
+          {/* Submit Button */}
+          <button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+          >
+            {isSubmitting ? (
+              <>
+                <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
+                Sending Message...
+              </>
+            ) : (
+              <>
+                <Send className="w-5 h-5 mr-2" />
+                Send Message
+              </>
+            )}
+          </button>
+
+          {/* Footer Note */}
+          <p className="text-center text-sm text-gray-500 mt-4">
+            We respect your privacy and will never share your information with third parties.
+          </p>
+        </form>
+      </div>
+    </div>
+  );
+};
+
+export default ContactForm;

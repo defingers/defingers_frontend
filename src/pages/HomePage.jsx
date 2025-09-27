@@ -21,7 +21,6 @@ const HomePage = () => {
       {/* <TrustedCompanies /> */}
       <StoryAchievementSection />
       <TestimonialSection />
-      
     </>
   );
 };
