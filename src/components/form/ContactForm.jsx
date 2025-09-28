@@ -61,15 +61,23 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Validate form data
       await validationSchema.validate(formData, { abortEarly: false });
       setErrors({});
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
+
+      // Send data to API
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/sendmail`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message. Please try again.');
+      }
+
       setIsSubmitted(true);
       setFormData({
         name: '',
@@ -79,10 +87,10 @@ const ContactForm = () => {
         subject: '',
         message: ''
       });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
-      
+
     } catch (validationErrors) {
       if (validationErrors.inner) {
         const errorObject = {};
@@ -90,6 +98,8 @@ const ContactForm = () => {
           errorObject[error.path] = error.message;
         });
         setErrors(errorObject);
+      } else if (validationErrors.message) {
+        setErrors({ api: validationErrors.message });
       }
     } finally {
       setIsSubmitting(false);
