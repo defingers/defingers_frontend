@@ -2,7 +2,7 @@ import React from 'react';
 
 const Partners = () => {
     return (
-        <section className="flex flex-col">
+        <section id="trusted-companies-section" className="flex flex-col">
             <h2 className="text-3xl font-bold text-center text-orange-400 mt-5">
                 Trusted by Industry Leaders
             </h2>

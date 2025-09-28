@@ -121,11 +121,13 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="max-w-2xl mx-auto p-8 min-h-[80vh] flex items-center justify-center">
-        <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 text-center shadow-lg">
-          <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-          <h3 className="text-2xl font-bold text-gray-800 mb-2">Message Sent Successfully!</h3>
-          <p className="text-gray-600">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+      <div className="max-w-2xl mx-auto p-8 mt-12">
+        <div className="max-w-2xl mx-auto p-8 min-h-[80vh] flex items-center justify-center">
+          <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 text-center shadow-lg">
+            <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+            <h3 className="text-2xl font-bold text-gray-800 mb-2">Email Sent Successfully!</h3>
+            <p className="text-gray-600">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+          </div>
         </div>
       </div>
     );
@@ -236,12 +238,12 @@ const ContactForm = () => {
             {isSubmitting ? (
               <>
                 <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                Sending Message...
+                Sending Mail...
               </>
             ) : (
               <>
                 <Send className="w-5 h-5 mr-2" />
-                Send Message
+                Send Mail
               </>
             )}
           </Button>
