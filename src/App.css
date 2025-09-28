@@ -30,3 +30,31 @@
 .read-the-docs {
   color: #888;
 }
+
+/* Custom dropdown styles */
+select {
+  background-image: none !important;
+}
+
+/* Hide default arrow in IE */
+select::-ms-expand {
+  display: none;
+}
+
+/* Custom focus styles for better accessibility */
+select:focus {
+  box-shadow: 0 0 0 3px rgba(255, 140, 0, 0.1);
+}
+
+/* Custom option styling */
+select option {
+  padding: 8px 12px;
+  background-color: white;
+  color: #374151;
+  border: none;
+}
+
+select option:checked {
+  background-color: #fed7aa;
+  color: #ea580c;
+}

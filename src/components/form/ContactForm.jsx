@@ -1,6 +1,15 @@
 import React, { useState } from 'react';
-import { Send, User, Phone, Mail, MessageSquare, Briefcase, CheckCircle } from 'lucide-react';
+import { Send, User, Phone, Mail, MessageSquare, Briefcase, CheckCircle, List } from 'lucide-react';
 import * as Yup from 'yup';
+import InputField from './InputField';
+import Button from '../../ui/Button';
+
+const CATEGORY_OPTIONS = [
+  "Cloud Migration",
+  "IT Infrastructure",
+  "Data Lake Management",
+  "DevOps Services"
+];
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -9,9 +18,10 @@ const ContactForm = () => {
     email: '',
     company: '',
     subject: '',
-    message: ''
+    message: '',
+    category: ''
   });
-  
+
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -39,7 +49,9 @@ const ContactForm = () => {
     message: Yup.string()
       .min(10, 'Message must be at least 10 characters')
       .max(1000, 'Message cannot exceed 1000 characters')
-      .required('Message is required')
+      .required('Message is required'),
+    category: Yup.string()
+      .required('Category is required')
   });
 
   const handleInputChange = (e) => {
@@ -48,7 +60,7 @@ const ContactForm = () => {
       ...prev,
       [name]: value
     }));
-    
+
     // Clear error for this field when user starts typing
     if (errors[name]) {
       setErrors(prev => ({
@@ -85,7 +97,8 @@ const ContactForm = () => {
         email: '',
         company: '',
         subject: '',
-        message: ''
+        message: '',
+        category: ''
       });
 
       // Reset success message after 5 seconds
@@ -108,7 +121,7 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="max-w-2xl mx-auto p-8">
+      <div className="max-w-2xl mx-auto p-8 min-h-[80vh] flex items-center justify-center">
         <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 text-center shadow-lg">
           <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-gray-800 mb-2">Message Sent Successfully!</h3>
@@ -119,8 +132,8 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="max-w-2xl mx-auto p-6 mt-12">
-      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100">
+    <div className="max-w-4xl mx-auto p-6 mt-12 min-h-[90vh] flex items-center">
+      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 w-full">
         {/* Header */}
         <div className="bg-gradient-to-r from-orange-500 to-amber-500 p-8 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-5"></div>
@@ -133,155 +146,92 @@ const ContactForm = () => {
         </div>
 
         {/* Form */}
-        <form onSubmit={handleSubmit} className="p-8 space-y-6">
-          {/* Name Field */}
-          <div className="space-y-2">
-            <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-              <User className="w-4 h-4 mr-2 text-orange-500" />
-              Full Name *
-            </label>
-            <div className="relative">
-              <input
-                type="text"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                placeholder="Enter your full name"
-                className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
-                  errors.name 
-                    ? 'border-red-300 focus:border-red-500' 
-                    : 'border-gray-200 focus:border-orange-400'
-                }`}
-              />
-              {errors.name && (
-                <p className="text-red-500 text-sm mt-1 ml-1">{errors.name}</p>
-              )}
-            </div>
-          </div>
-
-          {/* Mobile and Email Row */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {/* Mobile Field */}
-            <div className="space-y-2">
-              <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-                <Phone className="w-4 h-4 mr-2 text-orange-500" />
-                Mobile Number *
-              </label>
-              <input
-                type="tel"
-                name="mobile"
-                value={formData.mobile}
-                onChange={handleInputChange}
-                placeholder="Enter your mobile number"
-                className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
-                  errors.mobile 
-                    ? 'border-red-300 focus:border-red-500' 
-                    : 'border-gray-200 focus:border-orange-400'
-                }`}
-              />
-              {errors.mobile && (
-                <p className="text-red-500 text-sm mt-1 ml-1">{errors.mobile}</p>
-              )}
-            </div>
-
-            {/* Email Field */}
-            <div className="space-y-2">
-              <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-                <Mail className="w-4 h-4 mr-2 text-orange-500" />
-                Email Address *
-              </label>
-              <input
-                type="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                placeholder="Enter your email address"
-                className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
-                  errors.email 
-                    ? 'border-red-300 focus:border-red-500' 
-                    : 'border-gray-200 focus:border-orange-400'
-                }`}
-              />
-              {errors.email && (
-                <p className="text-red-500 text-sm mt-1 ml-1">{errors.email}</p>
-              )}
-            </div>
-          </div>
-
-          {/* Company Field */}
-          <div className="space-y-2">
-            <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-              <Briefcase className="w-4 h-4 mr-2 text-orange-500" />
-              Company Name *
-            </label>
-            <input
-              type="text"
+        <form onSubmit={handleSubmit} className="p-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <InputField
+              label="Full Name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              placeholder="Enter your full name"
+              error={errors.name}
+              icon={User}
+              required
+            />
+            <InputField
+              label="Mobile Number"
+              name="mobile"
+              value={formData.mobile}
+              onChange={handleInputChange}
+              placeholder="Enter your mobile number"
+              error={errors.mobile}
+              icon={Phone}
+              type="tel"
+              required
+            />
+            <InputField
+              label="Email Address"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              placeholder="Enter your email address"
+              error={errors.email}
+              icon={Mail}
+              type="email"
+              required
+            />
+            <InputField
+              label="Company Name"
               name="company"
               value={formData.company}
               onChange={handleInputChange}
               placeholder="Enter your company name"
-              className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
-                errors.company 
-                  ? 'border-red-300 focus:border-red-500' 
-                  : 'border-gray-200 focus:border-orange-400'
-              }`}
+              error={errors.company}
+              icon={Briefcase}
             />
-            {errors.company && (
-              <p className="text-red-500 text-sm mt-1 ml-1">{errors.company}</p>
-            )}
-          </div>
-
-          {/* Subject Field */}
-          <div className="space-y-2">
-            <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-              <MessageSquare className="w-4 h-4 mr-2 text-orange-500" />
-              Subject *
-            </label>
-            <input
-              type="text"
+            <InputField
+              label="Category"
+              name="category"
+              value={formData.category}
+              onChange={handleInputChange}
+              error={errors.category}
+              icon={List}
+              type="select"
+              options={CATEGORY_OPTIONS}
+              required
+            />
+            <InputField
+              label="Subject"
               name="subject"
               value={formData.subject}
               onChange={handleInputChange}
               placeholder="What can we help you with?"
-              className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none ${
-                errors.subject 
-                  ? 'border-red-300 focus:border-red-500' 
-                  : 'border-gray-200 focus:border-orange-400'
-              }`}
+              error={errors.subject}
+              icon={MessageSquare}
+              required
             />
-            {errors.subject && (
-              <p className="text-red-500 text-sm mt-1 ml-1">{errors.subject}</p>
-            )}
           </div>
-
-          {/* Message Field */}
-          <div className="space-y-2">
-            <label className="flex items-center text-sm font-semibold text-gray-700 mb-2">
-              <MessageSquare className="w-4 h-4 mr-2 text-orange-500" />
-              Message *
-            </label>
-            <textarea
+          <div className="mt-6">
+            <InputField
+              label="Message"
               name="message"
               value={formData.message}
               onChange={handleInputChange}
-              rows="5"
               placeholder="Tell us more about your project or requirements..."
-              className={`w-full px-4 py-3 rounded-xl border-2 bg-gray-50 transition-all duration-300 focus:bg-white focus:outline-none resize-none ${
-                errors.message 
-                  ? 'border-red-300 focus:border-red-500' 
-                  : 'border-gray-200 focus:border-orange-400'
-              }`}
+              error={errors.message}
+              icon={MessageSquare}
+              type="textarea"
+              rows={5}
+              required
             />
-            {errors.message && (
-              <p className="text-red-500 text-sm mt-1 ml-1">{errors.message}</p>
-            )}
           </div>
-
-          {/* Submit Button */}
-          <button
+          {errors.api && (
+            <p className="text-red-500 text-sm mt-1 ml-1">{errors.api}</p>
+          )}
+          <Button
             type="submit"
             disabled={isSubmitting}
-            className="w-full bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none flex items-center justify-center"
+            className={`mt-6 w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-xl transition-colors duration-300 flex items-center justify-center ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
             {isSubmitting ? (
               <>
@@ -294,9 +244,7 @@ const ContactForm = () => {
                 Send Message
               </>
             )}
-          </button>
-
-          {/* Footer Note */}
+          </Button>
           <p className="text-center text-sm text-gray-500 mt-4">
             We respect your privacy and will never share your information with third parties.
           </p>
