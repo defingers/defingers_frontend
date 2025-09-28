@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import {Link} from "react-router-dom";
 import "./Navbar.css";
@@ -8,15 +9,12 @@ import ServicesDropdown from "./ServicesDropdown";
 import { categories } from "./data";
 
 const Navbar = () => {
+  const navigate = useNavigate();
+  const pendingScrollToPartners = useRef(false);
   const [canvasServicesOpen, setCanvasServicesOpen] = useState(false);
   const [canvasHoveredCategory, setCanvasHoveredCategory] = useState(null);
-  // Get current path
-  const [currentPath, setCurrentPath] = useState(window.location.pathname);
-  useEffect(() => {
-    const handlePathChange = () => setCurrentPath(window.location.pathname);
-    window.addEventListener('popstate', handlePathChange);
-    return () => window.removeEventListener('popstate', handlePathChange);
-  }, []);
+  // Get current path using React Router
+  const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -60,6 +58,26 @@ const Navbar = () => {
     }
   };
 
+  // Scroll to partners section after navigation to home
+  useEffect(() => {
+    if (pendingScrollToPartners.current && location.pathname === "/") {
+      const element = document.getElementById("trusted-companies-section");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        pendingScrollToPartners.current = false;
+      } else {
+        // Try again on next render if not found yet
+        setTimeout(() => {
+          const el = document.getElementById("trusted-companies-section");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            pendingScrollToPartners.current = false;
+          }
+        }, 200);
+      }
+    }
+  }, [location]);
+
   return (
     <>
       {/* Main Navbar */}
@@ -96,14 +114,30 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "partners" ? "active" : ""}`}>
-                  <a href="#trusted-companies-section" className="nav-link" onClick={(e) => handleNavClick("partners", e)}>
+                  <a
+                    href="#trusted-companies-section"
+                    className="nav-link"
+                    onClick={e => {
+                      e.preventDefault();
+                      setActiveSection("partners");
+                      if (location.pathname !== "/") {
+                        pendingScrollToPartners.current = true;
+                        navigate("/");
+                      } else {
+                        const element = document.getElementById("trusted-companies-section");
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                        }
+                      }
+                    }}
+                  >
                     Partners
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "contacts" ? "active" : ""}`}>
-                  <a href="#" className="nav-link" onClick={(e) => handleNavClick("contacts", e)}>
+                  <Link to="/contact" className="nav-link" onClick={() => setActiveSection("contacts")}> 
                     Contacts
-                  </a>
+                  </Link>
                 </div>
                 <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>
                   <Link
@@ -126,10 +160,10 @@ const Navbar = () => {
             {/* Right Side - Button + Hamburger */}
             <div className="navbar-right">
               {/* Get a Quote button (desktop only) */}
-              {currentPath !== '/contact' && (
-                <a href="/contact" className="quote-button">
+              {location.pathname !== '/contact' && (
+                <Link to="/contact" className="quote-button">
                   Book consultation
-                </a>
+                </Link>
               )}
 
               <button onClick={toggleMenu} className="hamburger-button">
