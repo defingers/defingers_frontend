@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   overflow-x: hidden;
+  overflow-y: hidden;
   margin-top: 2.5rem;
   box-sizing: border-box;
 }
@@ -386,7 +387,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: calc(65vh - 1rem);
+    /* min-height removed to prevent overflow */
   }
   
   .hero-left {
@@ -451,7 +452,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: calc(60vh - 1rem);
+    /* min-height removed to prevent overflow */
   }
   
   .hero-left {
@@ -520,7 +521,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: calc(55vh - 1rem);
+    /* min-height removed to prevent overflow */
   }
   
   .hero-left {
