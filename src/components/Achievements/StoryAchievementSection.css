@@ -65,8 +65,8 @@
 /* Mobile and Tablet - no curved design, flat colored background */
 @media (max-width: 1023px) {
   .curved-background {
-    background-color: #F5E6A8;
-    opacity: 0.8;
+    background-color: #FDEDAF;
+    opacity: 1;
   }
   
   .curved-background svg {
