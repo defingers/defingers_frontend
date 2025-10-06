@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { FaTwitter, FaPinterest, FaLinkedin, FaYoutube, FaFacebook } from 'react-icons/fa';
+import { FaTwitter , FaLinkedin, FaYoutube, FaFacebook } from 'react-icons/fa';
+import { IoLogoWhatsapp } from "react-icons/io5";
 import logo from '../assets/images/logo.jpg';
 
 // Footer data configuration
@@ -21,9 +22,9 @@ const footerData = {
       icon: FaTwitter
     },
     {
-      name: "Pinterest",
+      name: "WhatsApp",
       href: "#",
-      icon: FaPinterest
+      icon: IoLogoWhatsapp
     },
     {
       name: "LinkedIn",
@@ -134,7 +135,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.services.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors">
+                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     {link.name}
                   </a>
                 </li>
@@ -148,7 +149,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.resources.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors">
+                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     {link.name}
                   </a>
                 </li>
@@ -162,7 +163,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.company.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors">
+                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     {link.name}
                   </a>
                 </li>
@@ -201,8 +202,6 @@ const Footer = () => {
                   rel="noopener noreferrer"
                   className="text-xs text-blue-600 hover:text-blue-800 bg-white bg-opacity-95 px-2 py-1 rounded shadow-sm border border-gray-300 inline-flex items-center hover:shadow-md transition-all duration-200"
                 >
-                  <MapPin className="w-3 h-3 mr-1" />
-                  View larger map
                 </a>
               </div>
             </div>
@@ -219,7 +218,7 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               {footerData.legal.map((link, index) => (
-                <a key={index} href={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors">
+                <a key={index} href={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   {link.name}
                 </a>
               ))}

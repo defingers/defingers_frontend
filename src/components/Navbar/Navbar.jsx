@@ -231,7 +231,26 @@ const Navbar = () => {
                 )}
               </div>
               {/* Partners */}
-              <a href="#trusted-companies-section" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>Partners</a>
+              <a
+                href="#trusted-companies-section"
+                className="canvas-nav-link font-semibold text-lg"
+                onClick={e => {
+                  e.preventDefault();
+                  closeMenu();
+                  setActiveSection("partners");
+                  if (location.pathname !== "/") {
+                    pendingScrollToPartners.current = true;
+                    navigate("/");
+                  } else {
+                    const element = document.getElementById("trusted-companies-section");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                    }
+                  }
+                }}
+              >
+                Partners
+              </a>
               {/* Contacts */}
               <Link to="/contact" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>Contacts</Link>
               {/* About Us */}

@@ -2,7 +2,7 @@ import React from 'react';
 
 const Partners = () => {
     return (
-        <section id="trusted-companies-section" className="flex flex-col">
+        <section id="trusted-companies-section" className="flex flex-col relative">
             <h2 className="text-3xl font-bold text-center text-orange-400 mt-5">
                 Trusted by Industry Leaders
             </h2>
@@ -132,7 +132,25 @@ const Partners = () => {
                     </div>
                 </div>
             </div>
-        </section >
+
+            {/* Wavy Pattern Divider */}
+            <div className="relative w-full mt-12 md:mt-16" style={{ backgroundColor: '#FDEDAF' }}>
+                <svg 
+                    className="w-full h-40 md:h-56 lg:h-72" 
+                    viewBox="0 0 1200 250" 
+                    preserveAspectRatio="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    {/* Background rectangle to ensure solid color */}
+                    <rect width="1200" height="250" fill="#FDEDAF"/>
+                    {/* White wave on top - deeper in middle-left, shallower on sides */}
+                    <path 
+                        d="M0,20 Q250,40 450,180 T1200,20 L1200,0 L0,0 Z" 
+                        fill="#FFFFFF"
+                    />
+                </svg>
+            </div>
+        </section>
     );
 };
 

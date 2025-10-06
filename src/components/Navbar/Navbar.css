@@ -432,11 +432,12 @@
 
 /* navbar button */
 /* Quote Button */
+
 .quote-button {
   display: none; /* hidden by default */
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background: #FFAF41; /* orange */
+  background: #FF8C00; /* brand orange */
   color: #fff;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;

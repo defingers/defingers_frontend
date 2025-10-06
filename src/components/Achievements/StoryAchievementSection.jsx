@@ -26,7 +26,7 @@ const StoryAchievementSection = () => {
   ];
 
   return (
-    <div className="relative bg-white overflow-hidden">
+  <div className="relative" style={{ backgroundColor: '#FDEDAF' }}>
       {/* Curved Background */}
       <div className="curved-background">
         <svg
@@ -34,12 +34,10 @@ const StoryAchievementSection = () => {
           preserveAspectRatio="none"
           viewBox="0 0 1200 800"
           fill="none"
-          
         >
           <path
             d="M0 0L1200 0L1200 400C1200 400 800 500 600 400C400 300 200 500 0 400L0 0Z"
-            fill="#F5E6A8"
-            fillOpacity="0.8"
+            fill="#FDEDAF"
           />
         </svg>
       </div>
