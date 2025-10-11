@@ -21,7 +21,7 @@ export const categories = [
       { name: "IT Infrastructure", icon: FaNetworkWired, navigationEndpoint: "/service/2" },
       { name: "Data Lake Management", icon: FaDatabase, navigationEndpoint: "/service/3" },
       { name: "DevOps Services", icon: FaCogs, navigationEndpoint: "/service/4" },
-      { name: "More Option 1", icon: FaRocket, navigationEndpoint: "/service/5" },
+      // { name: "More Option 1", icon: FaRocket, navigationEndpoint: "/service/5" },
     ],
   },
   {

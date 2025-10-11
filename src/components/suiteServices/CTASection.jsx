@@ -1,5 +1,8 @@
+import { useNavigate } from 'react-router-dom';
+
 // CTA Component
 const CTASection = () => {
+  const navigate = useNavigate();
   return (
     <div className="bg-white rounded-2xl border-2 border-orange-200 p-6 sm:p-8 lg:p-10 mt-12">
       <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
@@ -18,7 +21,7 @@ const CTASection = () => {
         
         {/* Right Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 w-full lg:w-auto">
-          <button className="bg-[#FF8C00] hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors duration-200 whitespace-nowrap">
+          <button className="bg-[#FF8C00] hover:bg-orange-500 text-white px-6 py-3 rounded-lg font-semibold text-center transition-colors duration-200 whitespace-nowrap" onClick={() => navigate('/contact')}>
             Book Consultation
           </button>
           <button className="bg-gray-200 hover:bg-gray-300 text-gray-800 px-6 py-3 rounded-lg font-semibold text-center transition-colors duration-200 whitespace-nowrap">

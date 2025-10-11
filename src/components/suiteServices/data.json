@@ -1,0 +1,46 @@
+{
+  "itServices": [
+    {
+      "icon": "☁️",
+      "title": "Cloud Migration",
+      "description": "Seamlessly migrate your infrastructure to the cloud with zero downtime."
+    },
+    {
+      "icon": "💾",
+      "title": "IT Infrastructure",
+      "description": "Design, build, and manage robust and scalable IT infrastructure."
+    },
+    {
+      "icon": "🗄️",
+      "title": "Data Lake Management",
+      "description": "Organize and manage your data lakes for powerful analytics and insights."
+    },
+    {
+      "icon": "🔧",
+      "title": "System Maintenance",
+      "description": "Keep your systems running smoothly with our maintenance services."
+    }
+  ],
+  "itConsulting": [
+    {
+      "icon": "💡",
+      "title": "Strategy Consulting",
+      "description": "Develop comprehensive IT strategies aligned with your business goals."
+    },
+    {
+      "icon": "📊",
+      "title": "Digital Transformation",
+      "description": "Transform your business processes with cutting-edge digital solutions."
+    },
+    {
+      "icon": "🔒",
+      "title": "Security Assessment",
+      "description": "Comprehensive security audits and vulnerability assessments."
+    },
+    {
+      "icon": "⚡",
+      "title": "Performance Optimization",
+      "description": "Optimize your systems and processes for maximum efficiency."
+    }
+  ]
+}

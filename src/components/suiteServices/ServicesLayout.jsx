@@ -1,63 +1,21 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import CTASection from './CTASection.jsx';
 import ServiceCard from './ServiceCard.jsx';
-
+import { categories, contentData } from '../Navbar/data.js';
 
 const ServicesLayout = () => {
   const [activeTab, setActiveTab] = useState('services');
+  const navigate = useNavigate();
 
-  // Sample data for IT Services
-  const itServices = [
-    {
-      icon: "☁️",
-      title: "Cloud Migration",
-      description: "Seamlessly migrate your infrastructure to the cloud with zero downtime."
-    },
-    {
-      icon: "💾",
-      title: "IT Infrastructure", 
-      description: "Design, build, and manage robust and scalable IT infrastructure."
-    },
-    {
-      icon: "🗄️",
-      title: "Data Lake Management",
-      description: "Organize and manage your data lakes for powerful analytics and insights."
-    },
-    {
-      icon: "🔧",
-      title: "System Maintenance",
-      description: "Keep your systems running smoothly with our maintenance services."
-    }
-  ];
-
-  // Sample data for IT Consulting
-  const itConsulting = [
-    {
-      icon: "💡",
-      title: "Strategy Consulting",
-      description: "Develop comprehensive IT strategies aligned with your business goals."
-    },
-    {
-      icon: "📊",
-      title: "Digital Transformation",
-      description: "Transform your business processes with cutting-edge digital solutions."
-    },
-    {
-      icon: "🔒",
-      title: "Security Assessment",
-      description: "Comprehensive security audits and vulnerability assessments."
-    },
-    {
-      icon: "⚡",
-      title: "Performance Optimization",
-      description: "Optimize your systems and processes for maximum efficiency."
-    }
-  ];
+  // Get IT Services and IT Consulting from categories
+  const itServices = categories.find(cat => cat.name === 'IT Services')?.items || [];
+  const itConsulting = categories.find(cat => cat.name === 'IT Consulting')?.items || [];
 
   const currentServices = activeTab === 'services' ? itServices : itConsulting;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 py-8 px-4 sm:px-6 lg:px-8">
+    <div id="services-section" className="min-h-screen bg-gradient-to-br from-orange-50 to-amber-50 py-8 px-4 sm:px-6 lg:px-8">
       {/* Main Container */}
       <div className="max-w-7xl mx-auto">
         
@@ -76,7 +34,7 @@ const ServicesLayout = () => {
           <div className="bg-gray-100 rounded-lg p-1 w-full max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl flex">
             <button
               onClick={() => setActiveTab('services')}
-              className={`flex-1 px-6 py-2 sm:px-8 sm:py-2 md:px-12 md:py-2 lg:px-16 lg:py-2 rounded-md text-sm sm:text-base font-medium transition-all duration-200 ${
+              className={`flex-1 px-6 py-2 sm:px-8 sm:py-2 md:px-12 md:py-2 lg:px-16 lg:py-2 rounded-md text-sm sm:text-base font-medium transition-all duration-200 cursor-pointer ${
                 activeTab === 'services'
                   ? 'bg-white text-gray-900 shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
@@ -86,7 +44,7 @@ const ServicesLayout = () => {
             </button>
             <button
               onClick={() => setActiveTab('consulting')}
-              className={`flex-1 px-6 py-2 sm:px-8 sm:py-2 md:px-12 md:py-2 lg:px-16 lg:py-2 rounded-md text-sm sm:text-base font-medium transition-all duration-200 ${
+              className={`flex-1 px-6 py-2 sm:px-8 sm:py-2 md:px-12 md:py-2 lg:px-16 lg:py-2 rounded-md text-sm sm:text-base font-medium transition-all duration-200 cursor-pointer ${
                 activeTab === 'consulting'
                   ? 'bg-white text-gray-900 shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
@@ -103,8 +61,13 @@ const ServicesLayout = () => {
             <ServiceCard
               key={index}
               icon={service.icon}
-              title={service.title}
-              description={service.description}
+              title={service.name}
+              description={contentData[service.name]?.description || ''}
+              buttonText={contentData[service.name]?.buttonText || 'Read More'}
+              onReadMore={() => {
+                const endpoint = contentData[service.name]?.navigationEndpoint;
+                if (endpoint) navigate(endpoint);
+              }}
             />
           ))}
         </div>

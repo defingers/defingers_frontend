@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes, useParams } from "react-router-dom";
 import serviceContent from './global/services.json'
 import consultancyContent from './global/consultancy.json'
+import ScrollToTop from './components/ScrollToTop';
 
 import HomePage from './pages/HomePage'
 import Footer from './components/Footer'
@@ -28,6 +29,7 @@ function ConsultancyRoutePage() {
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
 
       <Routes>
