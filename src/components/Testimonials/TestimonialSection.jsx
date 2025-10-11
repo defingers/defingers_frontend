@@ -1,54 +1,41 @@
-
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Star } from 'lucide-react';
 import TestimonialCard from './TestimonialCard.jsx';
 import StatsSection from './StatsSection.jsx';
-import dummyTestimonialImage from '../../assets/testimonial_dummy.svg'
+import dummyTestimonialImage from '../../assets/testimonial_dummy.svg';
+import testimonialsData from './testimonials.json';
 
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  
-  const testimonials = [
-    {
-      rating: 5,
-      timeAgo: "5 months ago",
-      testimonial: "TechConsult Pro transformed our entire IT infrastructure in just 6 months. Their expertise in cloud migration and cybersecurity is unmatched. We've seen a 40% increase in operational efficiency.",
-      clientName: "Sarah Johnson",
-      clientTitle: "CTO",
-      company: "InnovateCore Solutions",
-      projectValue: "$2.5M",
-      imageSrc: dummyTestimonialImage
-    },
-    {
-      rating: 5,
-      timeAgo: "3 months ago",
-      testimonial: "Outstanding service delivery and technical expertise. The team went above and beyond to ensure our digital transformation was seamless and efficient.",
-      clientName: "Michael Chen",
-      clientTitle: "CEO",
-      company: "Digital Dynamics Inc",
-      projectValue: "$1.8M",
-      imageSrc: dummyTestimonialImage
-    },
-    {
-      rating: 5,
-      timeAgo: "7 months ago",
-      testimonial: "Their cloud migration strategy saved us millions in operational costs while improving our system performance significantly. Highly recommended!",
-      clientName: "Emily Rodriguez",
-      clientTitle: "CTO",
-      company: "Future Tech Solutions",
-      projectValue: "$3.2M",
-      imageSrc: dummyTestimonialImage
-    }
-  ];
+  const [direction, setDirection] = useState('next');
+  const timeoutRef = useRef();
+
+  // Map imageSrc string to actual import
+  const testimonials = testimonialsData.map(t => ({
+    ...t,
+    imageSrc: dummyTestimonialImage
+  }));
+
+  useEffect(() => {
+    timeoutRef.current = setTimeout(() => {
+      setDirection('next');
+      setCurrentIndex(prevIndex =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000);
+    return () => clearTimeout(timeoutRef.current);
+  }, [currentIndex, testimonials.length]);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prevIndex) => 
+    setDirection('next');
+    setCurrentIndex((prevIndex) =>
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prevIndex) => 
+    setDirection('prev');
+    setCurrentIndex((prevIndex) =>
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
@@ -69,9 +56,13 @@ const TestimonialSection = () => {
         </div>
 
         {/* Testimonial Card */}
-        <div className="relative max-w-6xl mx-auto">
-          <TestimonialCard {...testimonials[currentIndex]} />
-          
+        <div className="relative max-w-6xl mx-auto min-h-[340px]">
+          <div
+            className={`transition-transform duration-700 ease-in-out ${direction === 'next' ? 'animate-slide-left' : 'animate-slide-right'}`}
+            key={currentIndex}
+          >
+            <TestimonialCard {...testimonials[currentIndex]} />
+          </div>
           {/* Navigation */}
           <div className="flex justify-center items-center mt-8 space-x-4">
             <button
@@ -80,20 +71,21 @@ const TestimonialSection = () => {
             >
               <ChevronLeft className="w-5 h-5 text-gray-600" />
             </button>
-            
             {/* Dots Indicator */}
             <div className="flex space-x-2">
               {testimonials.map((_, index) => (
                 <button
                   key={index}
-                  onClick={() => setCurrentIndex(index)}
+                  onClick={() => {
+                    setDirection(index > currentIndex ? 'next' : 'prev');
+                    setCurrentIndex(index);
+                  }}
                   className={`w-3 h-3 rounded-full transition-colors ${
                     index === currentIndex ? 'bg-[#FF8C00] opacity-70' : 'bg-gray-300 opacity-50'
                   }`}
                 />
               ))}
             </div>
-            
             <button
               onClick={nextTestimonial}
               className="w-10 h-10 rounded-full border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
@@ -103,6 +95,22 @@ const TestimonialSection = () => {
           </div>
         </div>
       </div>
+      <style>{`
+        @keyframes slideLeft {
+          0% { opacity: 0; transform: translateX(60px); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+        @keyframes slideRight {
+          0% { opacity: 0; transform: translateX(-60px); }
+          100% { opacity: 1; transform: translateX(0); }
+        }
+        .animate-slide-left {
+          animation: slideLeft 0.7s;
+        }
+        .animate-slide-right {
+          animation: slideRight 0.7s;
+        }
+      `}</style>
     </section>
     <StatsSection />
     </>
