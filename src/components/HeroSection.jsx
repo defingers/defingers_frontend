@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./HeroSection.css";
 import RobotHand from "../assets/images/robotHand.png";
 
 const HeroSection = () => {
   const [displayedText, setDisplayedText] = useState('');
+  const navigate = useNavigate();
   const fullText = "Transform Your Cloud Journey. We Build, Scale & Secure.";
   const typingSpeed = 50; // milliseconds per character
 
@@ -85,8 +87,8 @@ const HeroSection = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn btn-orange">Learn More</button>
-            <button className="btn btn-gold">Get Started</button>
+            <button className="btn btn-orange" onClick={() => navigate('/contact')}>Talk to our Expert</button>
+            <a href="#services-section" className="btn btn-gold">Explore Services</a>
           </div>
         </div>
 

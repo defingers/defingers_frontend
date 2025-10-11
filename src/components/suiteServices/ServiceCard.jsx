@@ -1,11 +1,11 @@
-const ServiceCard = ({ icon, title, description, buttonText = "Read More" }) => {
+const ServiceCard = ({ icon: Icon, title, description, buttonText = "Read More", onReadMore }) => {
   return (
     <div className="bg-white rounded-lg shadow-md border border-orange-100 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 h-full min-h-[280px]" style={{ border: "1px solid orange" }}>
       <div className="p-4 flex flex-col h-full">
         {/* Icon Container */}
         <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mb-4 mx-auto">
           <div className="text-lg text-orange-500">
-            {icon}
+            {Icon && <Icon />}
           </div>
         </div>
         
@@ -21,7 +21,7 @@ const ServiceCard = ({ icon, title, description, buttonText = "Read More" }) => 
         
         {/* Button */}
         <div className="text-center mt-auto">
-          <button className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-gray-700 bg-transparent border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200">
+          <button className="inline-flex items-center px-3 py-1.5 text-xs font-medium text-gray-700 bg-transparent border border-gray-300 rounded-md hover:bg-gray-50 hover:border-gray-400 transition-all duration-200" onClick={onReadMore}>
             {buttonText}
             <svg className="ml-1 w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

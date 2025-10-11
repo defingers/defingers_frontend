@@ -78,10 +78,25 @@ const Navbar = () => {
     }
   }, [location]);
 
+  useEffect(() => {
+    // Update activeSection based on the current URL
+    const pathToSectionMap = {
+      '/': '',
+      '/contact': 'contacts',
+      '/about': 'about',
+      '/services': 'services',
+      '/partners': 'partners',
+    };
+    const currentSection = pathToSectionMap[location.pathname] || '';
+    setActiveSection(currentSection);
+  }, [location.pathname]);
+
   return (
     <>
       {/* Main Navbar */}
-      <nav className={`navbar fixed top-0 left-0 w-full z-50 ${scrolled ? "navbar-scrolled" : ""}`}>
+      <nav
+        className={`navbar fixed top-0 left-0 w-full z-50 ${scrolled ? "navbar-scrolled" : ""} ${isServicesOpen ? "navbar-white" : ""}`} /* Added conditional class for white background */
+      >
         <div className="navbar-container">
           <div className="navbar-content">
             {/* Left Side - Logo/Brand */}
@@ -136,7 +151,7 @@ const Navbar = () => {
                 </div>
                 <div className={`nav-item ${activeSection === "contacts" ? "active" : ""}`}>
                   <Link to="/contact" className="nav-link" onClick={() => setActiveSection("contacts")}> 
-                    Contacts
+                    Contact Us
                   </Link>
                 </div>
                 <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>

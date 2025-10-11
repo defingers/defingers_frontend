@@ -94,6 +94,9 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
             <RightSectionContent
               option={optionToShow}
               contentData={contentData}
+              closeDropdown={() => {
+                if (typeof onMouseLeave === 'function') onMouseLeave();
+              }}
             />
           </div>
         </div>
