@@ -1,0 +1,32 @@
+[
+  {
+    "rating": 5,
+    "timeAgo": "5 months ago",
+    "testimonial": "TechConsult Pro transformed our entire IT infrastructure in just 6 months. Their expertise in cloud migration and cybersecurity is unmatched. We've seen a 40% increase in operational efficiency.",
+    "clientName": "Sarah Johnson",
+    "clientTitle": "CTO",
+    "company": "InnovateCore Solutions",
+    "projectValue": "$2.5M",
+    "imageSrc": "dummyTestimonialImage"
+  },
+  {
+    "rating": 5,
+    "timeAgo": "3 months ago",
+    "testimonial": "Outstanding service delivery and technical expertise. The team went above and beyond to ensure our digital transformation was seamless and efficient.",
+    "clientName": "Michael Chen",
+    "clientTitle": "CEO",
+    "company": "Digital Dynamics Inc",
+    "projectValue": "$1.8M",
+    "imageSrc": "dummyTestimonialImage"
+  },
+  {
+    "rating": 5,
+    "timeAgo": "7 months ago",
+    "testimonial": "Their cloud migration strategy saved us millions in operational costs while improving our system performance significantly. Highly recommended!",
+    "clientName": "Emily Rodriguez",
+    "clientTitle": "CTO",
+    "company": "Future Tech Solutions",
+    "projectValue": "$3.2M",
+    "imageSrc": "dummyTestimonialImage"
+  }
+]
