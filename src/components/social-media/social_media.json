@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "platform": "EMAIL",
+    "title": "EMAIL",
+    "description": "Write us a few lines about your ideas, your projects and let's advance together.",
+    "buttonText": "EMAIL US",
+    "link": "mailto:contact@yourcompany.com",
+    "icon": "MdEmail",
+    "bgColor": "#e2e8f0",
+    "textColor": "#000000",
+    "buttonColor": "rgba(255, 140, 0, 0.8)",
+    "buttonIcon": "✉"
+  },
+  {
+    "id": 2,
+    "platform": "TWITTER",
+    "title": "TWITTER",
+    "description": "Follow us to interact, chat and share our ideas on Twitter.",
+    "buttonText": "FOLLOW US",
+    "link": "https://twitter.com/yourcompany",
+    "icon": "FaTwitter",
+    "bgColor": "#f3f4f6",
+    "textColor": "#000000",
+    "buttonColor": "rgba(255, 215, 0, 0.8)",
+    "buttonIcon": "𝕏"
+  },
+  {
+    "id": 3,
+    "platform": "FACEBOOK",
+    "title": "FACEBOOK",
+    "description": "Like our page and send us message directly from our brand new FB page.",
+    "buttonText": "LIKE OUR PAGE",
+    "link": "https://facebook.com/yourcompany",
+    "icon": "FaFacebook",
+    "bgColor": "#f3f4f6",
+    "textColor": "#1e293b",
+    "buttonColor": "rgba(255, 140, 0, 0.8)",
+    "buttonIcon": "f"
+  },
+  {
+    "id": 4,
+    "platform": "LINKEDIN",
+    "title": "LINKEDIN",
+    "description": "Connect with us to find your career opportunities.",
+    "buttonText": "CONNECT WITH US",
+    "link": "https://linkedin.com/company/yourcompany",
+    "icon": "FaLinkedin",
+    "bgColor": "#e2e8f0",
+    "textColor": "#1e293b",
+    "buttonColor": "rgba(255, 215, 0, 0.8)",
+    "buttonIcon": "in"
+  }
+]
