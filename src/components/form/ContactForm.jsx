@@ -89,6 +89,13 @@ const ContactForm = () => {
       if (!response.ok) {
         throw new Error('Failed to send message. Please try again.');
       }
+      const googleFormURL = `${import.meta.env.VITE_GOOGLE_FORM_URL}`;
+      console.log("Google Form URL:", googleFormURL);
+
+    fetch(googleFormURL, {
+      method: 'POST',
+      body: new URLSearchParams(formData),
+    }).catch(err => console.warn("Google Sheets sync failed:", err));
 
       setIsSubmitted(true);
       setFormData({

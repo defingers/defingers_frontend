@@ -8,7 +8,7 @@ const SecondCta = () => {
         <section className="bg-[#FFAF41] py-10 md:py-16 flex items-center justify-center px-4">
             <div className="w-full flex flex-col items-center">
                 <h2 className="text-2xl md:text-4xl font-bold text-white text-center mb-4 md:mb-6 font-montserrat">
-                Ready to Transform Your Cloud Migration?
+                Ready to Transform Your IT Platform Modernization?
                 </h2>
                 <p className="text-base md:text-xl text-white text-center mb-6 md:mb-10 font-montserrat max-w-2xl">
                 Let's discuss how our cloud solutions can help you achieve your business goals.
@@ -18,7 +18,7 @@ const SecondCta = () => {
                     className="w-full max-w-xs md:max-w-none md:w-80 font-outfit "
                     onClick={() => navigate('/contact')}
                 >
-                    Book a Consultation
+                    Let`s Connect
                 </Button>
             </div>
         </section>

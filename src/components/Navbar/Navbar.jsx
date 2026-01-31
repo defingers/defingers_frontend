@@ -7,10 +7,11 @@ import logo from "../../assets/images/logo.jpg";
 import { IoChevronForward } from "react-icons/io5";
 import ServicesDropdown from "./ServicesDropdown";
 import { categories } from "./data";
-
+import { HiOutlineSearch } from "react-icons/hi";
 const Navbar = () => {
   const navigate = useNavigate();
   const pendingScrollToPartners = useRef(false);
+  const pendingScrollToIndustries = useRef(false);
   const [canvasServicesOpen, setCanvasServicesOpen] = useState(false);
   const [canvasHoveredCategory, setCanvasHoveredCategory] = useState(null);
   // Get current path using React Router
@@ -56,9 +57,24 @@ const Navbar = () => {
         }, 100);
       }
     }
+    
+    // Handle smooth scroll to section for Industries
+    if (section === "industries") {
+      const element = document.getElementById("industries-section");
+      if (element) {
+        // Add a small delay to ensure any dropdown closes first
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+            inline: "nearest"
+          });
+        }, 100);
+      }
+    }
   };
 
-  // Scroll to partners section after navigation to home
+  // Scroll to partners or industries section after navigation to home
   useEffect(() => {
     if (pendingScrollToPartners.current && location.pathname === "/") {
       const element = document.getElementById("trusted-companies-section");
@@ -76,6 +92,23 @@ const Navbar = () => {
         }, 200);
       }
     }
+    
+    if (pendingScrollToIndustries.current && location.pathname === "/") {
+      const element = document.getElementById("industries-section");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        pendingScrollToIndustries.current = false;
+      } else {
+        // Try again on next render if not found yet
+        setTimeout(() => {
+          const el = document.getElementById("industries-section");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+            pendingScrollToIndustries.current = false;
+          }
+        }, 200);
+      }
+    }
   }, [location]);
 
   useEffect(() => {
@@ -86,6 +119,7 @@ const Navbar = () => {
       '/about': 'about',
       '/services': 'services',
       '/partners': 'partners',
+      '/industries': 'industries',
     };
     const currentSection = pathToSectionMap[location.pathname] || '';
     setActiveSection(currentSection);
@@ -114,6 +148,11 @@ const Navbar = () => {
             {/* Center - Navigation Links */}
             <div className="navbar-center">
               <nav className="desktop-nav">
+                <div className={`nav-item ${activeSection === "" ? "active" : ""}`}>
+                  <Link to="/" className="nav-link" onClick={() => setActiveSection("")}>
+                    Home
+                  </Link>
+                </div>
                 <div
                   className={`nav-item dropdown ${activeSection === "services" ? "active" : ""}`}
                   onMouseEnter={() => setIsServicesOpen(true)}
@@ -126,6 +165,37 @@ const Navbar = () => {
                         isServicesOpen ? "dropdown-arrow-open" : ""
                       }`}
                     />
+                  </a>
+                </div>
+                <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>
+                  <Link
+                    to="/about"
+                    className="nav-link"
+                    onClick={() => setActiveSection("about")}
+                  >
+                    About Us
+                  </Link>
+                </div>
+                
+                <div className={`nav-item ${activeSection === "industries" ? "active" : ""}`}>
+                  <a
+                    href="#industries-section"
+                    className="nav-link"
+                    onClick={e => {
+                      e.preventDefault();
+                      setActiveSection("industries");
+                      if (location.pathname !== "/") {
+                        pendingScrollToIndustries.current = true;
+                        navigate("/");
+                      } else {
+                        const element = document.getElementById("industries-section");
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                        }
+                      }
+                    }}
+                  >
+                    Industries
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "partners" ? "active" : ""}`}>
@@ -154,15 +224,6 @@ const Navbar = () => {
                     Contact Us
                   </Link>
                 </div>
-                <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>
-                  <Link
-                    to="/about"
-                    className="nav-link"
-                    onClick={() => setActiveSection("about")}
-                  >
-                    About Us
-                  </Link>
-                </div>
               </nav>
               <ServicesDropdown
                 isOpen={isServicesOpen}
@@ -177,7 +238,7 @@ const Navbar = () => {
               {/* Get a Quote button (desktop only) */}
               {location.pathname !== '/contact' && (
                 <Link to="/contact" className="quote-button">
-                  Book consultation
+                  <span className="flex items-center gap-1"><HiOutlineSearch />Reach Us</span>
                 </Link>
               )}
 
@@ -209,6 +270,8 @@ const Navbar = () => {
           <div className="canvas-content">
             {/* Canvas Nav Options */}
             <nav className="canvas-nav flex flex-col gap-4">
+              {/* Home */}
+              <Link to="/" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>Home</Link>
               {/* Services (expandable) */}
               <div>
                 <button
@@ -245,6 +308,27 @@ const Navbar = () => {
                   </div>
                 )}
               </div>
+              {/* Industries */}
+              <a
+                href="#industries-section"
+                className="canvas-nav-link font-semibold text-lg"
+                onClick={e => {
+                  e.preventDefault();
+                  closeMenu();
+                  setActiveSection("industries");
+                  if (location.pathname !== "/") {
+                    pendingScrollToIndustries.current = true;
+                    navigate("/");
+                  } else {
+                    const element = document.getElementById("industries-section");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+                    }
+                  }
+                }}
+              >
+                Industries
+              </a>
               {/* Partners */}
               <a
                 href="#trusted-companies-section"

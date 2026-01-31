@@ -1,13 +1,15 @@
 import React from 'react';
 import socialMediaData from './social_media.json';
 import { MdEmail } from 'react-icons/md';
-import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa';
+import { FaTwitter, FaFacebook, FaLinkedin, FaYoutube, FaWhatsapp } from 'react-icons/fa';
 
 const iconMap = {
   MdEmail,
   FaTwitter,
   FaFacebook,
-  FaLinkedin
+  FaLinkedin,
+  FaYoutube,
+  FaWhatsapp
 };
 
 const SocialMediaSection = () => {
@@ -16,8 +18,8 @@ const SocialMediaSection = () => {
   };
 
   return (
-    <section className="w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+    <section id="social-media-section" className="w-full">
+le      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6">
         {socialMediaData.map((social) => {
           const IconComponent = iconMap[social.icon];
           return (
