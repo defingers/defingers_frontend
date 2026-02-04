@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './RightSectionContent.css';
 
-const RightSectionContent = ({ option, contentData }) => {
+const RightSectionContent = ({ option, contentData, closeDropdown }) => {
   const navigate = useNavigate();
   
   // Get the data for the selected option
@@ -12,6 +12,7 @@ const RightSectionContent = ({ option, contentData }) => {
   const handleNavigate = () => {
     if (data && data.navigationEndpoint) {
       navigate(data.navigationEndpoint);
+      if (typeof closeDropdown === 'function') closeDropdown();
     }
   };
 
@@ -27,6 +28,9 @@ const RightSectionContent = ({ option, contentData }) => {
     <div className="right-content">
       <div className="content-layout">
         
+        {/* Background Image Div */}
+        <div className="background-image"></div>
+
         {/* Left Content */}
         <div className="content-left">
           <h3 className="content-title">{data.title}</h3>

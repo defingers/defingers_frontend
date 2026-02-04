@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin } from 'lucide-react';
-import { FaTwitter, FaPinterest, FaLinkedin, FaYoutube, FaFacebook } from 'react-icons/fa';
+import { FaTwitter , FaLinkedin, FaYoutube, FaFacebook } from 'react-icons/fa';
+import { IoLogoWhatsapp } from "react-icons/io5";
 import logo from '../assets/images/logo.jpg';
 
 // Footer data configuration
@@ -8,36 +9,36 @@ const footerData = {
   company: {
     name: "DE FINGERS",
     logo: "DF",
-    tagline: "Your trusted partner in the cloud journey.",
-    email: "example@defingers.com",
-    phone: "+91-79812 18151",
-    address: "Plot No 460, Rd Number 1, above Nut Planet, Anjaneya Nagar, AGI Colony, Moosapet, Hyderabad, Telangana 500018",
-    copyright: "© 2025 De Fingers. All rights reserved."
+    tagline: "Trusted partner in IT Journey.",
+    email: "hr@dfingers.com",
+    phone: "+91-7981 218151",
+    address: "DE FINGERS 20, Street Number 4, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081",
+    copyright: `© ${new Date().getFullYear()} De Fingers. All rights reserved.`
   },
   socialLinks: [
     {
       name: "Twitter",
-      href: "#",
+      href: "https://x.com/aboutfingers",
       icon: FaTwitter
     },
     {
-      name: "Pinterest",
-      href: "#",
-      icon: FaPinterest
+      name: "WhatsApp",
+      href: "https://wa.me/917981218151",
+      icon: IoLogoWhatsapp
     },
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/company/definger/",
       icon: FaLinkedin
     },
     {
       name: "YouTube",
-      href: "#",
+      href: "https://www.youtube.com/@DEFINGERS-720",
       icon: FaYoutube
     },
     {
       name: "Facebook",
-      href: "#",
+      href: "https://www.facebook.com/digitization.fingers.1/",
       icon: FaFacebook
     }
   ],
@@ -69,8 +70,8 @@ const footerData = {
     }
   },
   map: {
-    embedUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3805.543123456789!2d78.38745671234567!3d17.495987654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb9394bbbbbbbb%3A0x1234567890abcdef!2sPlot%20No%20460%2C%20Rd%20Number%201%2C%20above%20Nut%20Planet%2C%20Anjaneya%20Nagar%2C%20AGI%20Colony%2C%20Moosapet%2C%20Hyderabad%2C%20Telangana%20500018!5e0!3m2!1sen!2sin!4v1704067200000!5m2!1sen!2sin",
-    directUrl: "https://www.google.com/maps/place/Plot+No+460,+Rd+Number+1,+above+Nut+Planet,+Anjaneya+Nagar,+AGI+Colony,+Moosapet,+Hyderabad,+Telangana+500018/@17.495987654321,78.38745671234567,17z"
+    embedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d475.7856478649322!2d78.3848692!3d17.4460593!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb910011a0bbff%3A0x1b073dbc2588b5cf!2sDE%20FINGERS!5e0!3m2!1sen!2sin!4v1769850397110!5m2!1sen!2sin",
+    directUrl: "https://maps.app.goo.gl/zQktWmHawBtnN6YD6"
   },
   legal: [
     { name: "Terms & Conditions", href: "#" },
@@ -134,7 +135,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.services.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors">
+                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     {link.name}
                   </a>
                 </li>
@@ -148,7 +149,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.resources.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors">
+                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     {link.name}
                   </a>
                 </li>
@@ -162,7 +163,7 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.company.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors">
+                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                     {link.name}
                   </a>
                 </li>
@@ -181,7 +182,7 @@ const Footer = () => {
             </div>
             
             {/* Map */}
-            <div className="w-full h-48 bg-gray-200 rounded-lg overflow-hidden">
+            <div className="w-full h-48 bg-gray-200 rounded-lg overflow-hidden relative">
               <iframe
                 src={footerData.map.embedUrl}
                 width="100%"
@@ -192,19 +193,17 @@ const Footer = () => {
                 referrerPolicy="no-referrer-when-downgrade"
                 className="transition-all duration-300"
               ></iframe>
-            </div>
-            
-            {/* Open in Maps Link */}
-            <div className="mt-2 text-right">
-              <a 
-                href={footerData.map.directUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="text-xs text-blue-600 hover:text-blue-800 bg-white px-2 py-1 rounded shadow-sm border inline-flex items-center"
-              >
-                <MapPin className="w-3 h-3 mr-1" />
-                Open in Maps
-              </a>
+              
+              {/* Custom "View larger map" with location icon overlay */}
+              <div className="absolute top-2 left-2 z-10">
+                <a 
+                  href={footerData.map.directUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-xs text-blue-600 hover:text-blue-800 bg-white bg-opacity-95 px-2 py-1 rounded shadow-sm border border-gray-300 inline-flex items-center hover:shadow-md transition-all duration-200"
+                >
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -219,7 +218,7 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               {footerData.legal.map((link, index) => (
-                <a key={index} href={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors">
+                <a key={index} href={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                   {link.name}
                 </a>
               ))}

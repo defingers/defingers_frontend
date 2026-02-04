@@ -22,6 +22,11 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
+.navbar-white {
+  background: #ffffff !important; /* Set navbar background to white */
+  transition: background 0.3s ease; /* Smooth transition */
+}
+
 .navbar-container {
   width: 100%;
   max-width: 100vw;
@@ -247,8 +252,8 @@
 }
 .brand-name {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.25rem;
-  font-weight: 500;
+  font-size: 1.5rem;
+  font-weight: 600;
   color: #000000;
   white-space: nowrap; /* Prevents text from wrapping */
   overflow: hidden;
@@ -298,7 +303,7 @@
 .desktop-nav {
   display: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 @media (min-width: 1024px) {
@@ -432,11 +437,12 @@
 
 /* navbar button */
 /* Quote Button */
+
 .quote-button {
   display: none; /* hidden by default */
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
-  background: #FFAF41; /* orange */
+  background: #FF8C00; /* brand orange */
   color: #fff;
   font-weight: 500;
   font-family: 'Poppins', sans-serif;

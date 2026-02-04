@@ -8,6 +8,22 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
   const [hoveredCategory, setHoveredCategory] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
 
+  // Find the first category and its first option
+  const firstCategory = categories[0];
+  const firstOption = firstCategory?.items[0]?.name;
+
+  // Determine which category and option to show/highlight
+  let hoveredCat = hoveredCategory;
+  let optionToShow = selectedOption;
+  if (isOpen && !hoveredCat && !selectedOption) {
+    hoveredCat = firstCategory?.name;
+    optionToShow = firstOption;
+  } else if (isOpen && hoveredCat && !selectedOption) {
+    // If hovering a category and nothing is selected, show its first option
+    const hoveredCatObj = categories.find(c => c.name === hoveredCat);
+    optionToShow = hoveredCatObj?.items[0]?.name;
+  }
+
 
   return (
     <div
@@ -30,7 +46,7 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
                   {/* Category Item */}
                   <div
                     className={`category-item ${
-                      hoveredCategory === cat.name ? "active" : ""
+                      hoveredCat === cat.name ? "active" : ""
                     }`}
                   >
                     <div className="category-content">
@@ -39,26 +55,33 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
                     </div>
                     <IoChevronForward
                       className={`category-arrow ${
-                        hoveredCategory === cat.name ? "arrow-open" : ""
+                        hoveredCat === cat.name ? "arrow-open" : ""
                       }`}
                     />
                   </div>
 
-                  {/* Submenu (only visible on hover) */}
-                  {hoveredCategory === cat.name && (
+                  {/* Submenu (only visible on hover or default */}
+                  {hoveredCat === cat.name && (
                     <div className="submenu">
-                      {cat.items.map((item) => (
-                        <div
-                          key={item.name}
-                          className={`submenu-item ${
-                            selectedOption === item.name ? "selected" : ""
-                          }`}
-                          onClick={() => setSelectedOption(item.name)}
-                        >
-                          <item.icon className="submenu-icon" />
-                          <span>{item.name}</span>
-                        </div>
-                      ))}
+                      {cat.items.map((item, idx) => {
+                        // Highlight logic: if selectedOption, highlight that; else highlight first submenu of hoveredCat
+                        let isSelected = false;
+                        if (selectedOption) {
+                          isSelected = selectedOption === item.name;
+                        } else if (hoveredCat === cat.name && idx === 0) {
+                          isSelected = true;
+                        }
+                        return (
+                          <div
+                            key={item.name}
+                            className={`submenu-item ${isSelected ? "selected" : ""}`}
+                            onClick={() => setSelectedOption(item.name)}
+                          >
+                            <item.icon className="submenu-icon" />
+                            <span>{item.name}</span>
+                          </div>
+                        );
+                      })}
                     </div>
                   )}
                 </div>
@@ -69,8 +92,11 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
           {/* RIGHT SIDE */}
           <div className="dropdown-right">
             <RightSectionContent
-              option={selectedOption}
+              option={optionToShow}
               contentData={contentData}
+              closeDropdown={() => {
+                if (typeof onMouseLeave === 'function') onMouseLeave();
+              }}
             />
           </div>
         </div>
