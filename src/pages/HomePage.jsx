@@ -7,6 +7,7 @@ import ServicesLayout from '../components/suiteServices/ServicesLayout'
 import TestimonialSection from '../components/Testimonials/TestimonialSection'
 import TrustedCompanies from '../components/TrustedCompanies/TrustedCompanies'
 import Partners from '../components/Partners'
+import SocialMediaSection from '../components/social-media/SocialMediaSection '
 
 
 
@@ -21,6 +22,7 @@ const HomePage = () => {
       {/* <TrustedCompanies /> */}
       <StoryAchievementSection />
       <TestimonialSection />
+      <SocialMediaSection />
     </>
   );
 };

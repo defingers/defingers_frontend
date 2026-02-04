@@ -1,48 +1,50 @@
 import React from 'react';
 import IndustryCard from './IndustryCard';
 import domainsGroupImage from '../../assets/domains_group_image.png';
+import { FaLaptopCode, FaHospital, FaUniversity, FaShoppingCart, FaGraduationCap, FaIndustry } from 'react-icons/fa';
+
 const IndustriesSection = () => {
   const industriesData = [
     {
       id: 1,
-      icon: "💰",
-      title: "Finance & Banking",
-      description: "We deliver secure, compliant and scalable digital platforms for financial institutions."
+      icon: FaLaptopCode,
+      title: "IT & Software",
+      description: "Cutting-edge software solutions and IT infrastructure that drive digital transformation and business efficiency."
     },
     {
       id: 2,
-      icon: "🏥",
-      title: "Healthcare",
-      description: "Advanced healthcare solutions that improve patient care and operational efficiency."
+      icon: FaHospital,
+      title: "Health & Life Sciences",
+      description: "Innovative healthcare solutions that enhance patient care, streamline operations, and ensure regulatory compliance."
     },
     {
       id: 3,
-      icon: "🛒",
-      title: "E-commerce",
-      description: "Robust e-commerce platforms that drive sales and enhance customer experience."
+      icon: FaUniversity,
+      title: "Finance & Banking",
+      description: "Secure, compliant, and scalable financial platforms that modernize banking operations and enhance customer experience."
     },
     {
       id: 4,
-      icon: "🏭",
-      title: "Manufacturing",
-      description: "Smart manufacturing solutions that optimize production and reduce costs."
+      icon: FaShoppingCart,
+      title: "E-Commerce & Retail",
+      description: "Powerful e-commerce platforms and retail solutions that boost sales, optimize inventory, and elevate customer engagement."
     },
     {
       id: 5,
-      icon: "📚",
-      title: "Education",
-      description: "Digital learning platforms that transform educational experiences."
+      icon: FaGraduationCap,
+      title: "Education & E-Learning",
+      description: "Advanced digital learning platforms and educational technology that transform teaching and improve student outcomes."
     },
     {
       id: 6,
-      icon: "🚚",
-      title: "Logistics",
-      description: "Streamlined logistics solutions that improve supply chain efficiency."
+      icon: FaIndustry,
+      title: "Manufacturing ",
+      description: "Smart manufacturing solutions and IoT-enabled systems that optimize production, reduce costs, and improve quality."
     }
   ];
 
   return (
-    <div className="bg-gradient-to-br from-yellow-100 to-orange-100 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+    <div id="industries-section" className="bg-gradient-to-br from-yellow-100 to-orange-100 py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
@@ -67,7 +69,7 @@ const IndustriesSection = () => {
             {/* Header */}
             <div className="text-center lg:text-left">
               <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-[#FF8C00]  mb-4">
-                Industries we Empowered In
+                Industries We Empowered In
               </h2>
               <p className="text-gray-700 text-base sm:text-lg max-w-2xl">
                 We provide tailored solutions across a diverse range of sectors, 

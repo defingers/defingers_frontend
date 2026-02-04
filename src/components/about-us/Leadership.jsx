@@ -1,31 +1,30 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
-import leaderImg from "../../assets/images/image7.png";
+import leaderImg3 from "../../assets/team_members/suninFinal.jpeg";
+import leaderImg2 from "../../assets/team_members/primrosefinal.jpeg";
+import leaderImg1 from "../../assets/team_members/hnNaidufinal.jpeg"
 
 const leaders = [
     {
-        name: "Sarah Johnson",
-        role: "CEO & Founder",
-        expertise: "Cloud Architecture",
-        description: "Expert in cloud migration and enterprise security solutions with proven track record.",
-        linkedin: "#",
-        image: leaderImg,
+        name: "H N Naidu",
+        role: "Managing Director",
+        expertise: "Executive Leadership",
+        description: "Strategic leader with expertise in business direction and critical decision-making for organizational growth.",
+        image: leaderImg1,
     },
     {
-        name: "Sarah Johnson",
-        role: "CEO & Founder",
-        expertise: "Cloud Architecture",
-        description: "Expert in cloud migration and enterprise security solutions with proven track record.",
-        linkedin: "#",
-        image: leaderImg,
+        name: "Primrose P",
+        role: "Founder & Director",
+        expertise: "Chief Administrative Officer",
+        description: "Visionary founder driving operational excellence and administrative strategies to ensure seamless business operations.",
+        image: leaderImg2,
     },
     {
-        name: "Sarah Johnson",
-        role: "CEO & Founder",
-        expertise: "Cloud Architecture",
-        description: "Expert in cloud migration and enterprise security solutions with proven track record.",
-        linkedin: "#",
-        image: leaderImg,
+        name: "Sunin Seeti",
+        role: "Technology Head-IT",
+        expertise: "Technical Expert",
+        description: "Technology innovator leading IT infrastructure and digital transformation initiatives with hands-on technical expertise.",
+        image: leaderImg3,
     },
 ];
 
@@ -46,17 +45,17 @@ const Leadership = () => (
                             <img
                                 src={leader.image}
                                 alt={leader.name}
-                                className="w-full h-full object-cover"
+                                className="w-full h-full "
                             />
                         </div>
                         <div className="p-4 flex flex-col flex-1">
                             <h3 className="font-bold text-lg mb-1 font-poppins">{leader.name}</h3>
                             <div className="flex flex-wrap gap-x-4 gap-y-1 mb-2">
-                                <span className="text-orange-500 font-bold text-sm font-outfit">{leader.role}</span>
+                                <div className="text-orange-500 font-bold text-sm font-outfit">{leader.role}</div>
                                 <span className="text-yellow-400 font-bold text-sm font-outfit">{leader.expertise}</span>
                             </div>
                             <p className="text-black text-sm font-outfit mb-3">{leader.description}</p>
-                            <a
+                            {/* <a
                                 href={leader.linkedin}
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -64,7 +63,7 @@ const Leadership = () => (
                             >
                                 <FaLinkedin className="text-xl" />
                                 linkedin Profile
-                            </a>
+                            </a> */}
                         </div>
                     </div>
                 ))}

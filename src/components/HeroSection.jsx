@@ -87,7 +87,7 @@ const HeroSection = () => {
           </p>
 
           <div className="hero-buttons">
-            <button className="btn btn-orange" onClick={() => navigate('/contact')}>Talk to our Expert</button>
+            {/* <button className="btn btn-orange" onClick={() => navigate('/contact')}>Talk to our Expert</button> */}
             <a href="#services-section" className="btn btn-gold">Explore Services</a>
           </div>
         </div>

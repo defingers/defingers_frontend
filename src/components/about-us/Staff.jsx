@@ -1,56 +1,56 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
-import staff1 from "../../assets/images/staff.png";
-import staff2 from "../../assets/images/staff.png";
-import staff3 from "../../assets/images/staff.png";
-import staff4 from "../../assets/images/staff.png";
-import staff5 from "../../assets/images/staff.png";
-import staff6 from "../../assets/images/staff.png";
-import staff7 from "../../assets/images/staff.png";
+import staff1 from "../../assets/team_members/Shahanaz_photo.jpg";
+import staff2 from "../../assets/team_members/richard.jpeg";
+import staff3 from "../../assets/team_members/Manjari1.jpg";
+import staff4 from "../../assets/team_members/Maheshwari.jpeg";
+import staff5 from "../../assets/team_members/Harshini.jpg";
+import staff6 from "../../assets/team_members/Tharshith1.jpg";
+import staff7 from "../../assets/team_members/Akkshay.jpeg";
 
 // Staff data
 const STAFF = [
   {
-    name: "Rakesh",
-    title: "Full Stack Developer",
+    name: "Shahanaz",
+    title: "Sr Talent Acquisition",
     image: staff1,
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/shahanaz-shaik-686002339/"
   },
   {
-    name: "Ritesh",
-    title: "Full Stack Developer",
+    name: "Richard",
+    title: "Cloud Specilist",
     image: staff2,
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/richard-boaz/"
   },
   {
-    name: "Ritesh",
-    title: "Full Stack Developer",
+    name: "Manjari",
+    title: "Business Development",
     image: staff3,
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/manjarichava/"
   },
   {
-    name: "Ritesh",
-    title: "Full Stack Developer",
+    name: "Maheshwari",
+    title: "Business Development",
     image: staff4,
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/maheshwari-madana-162486254"
   },
   {
-    name: "Chandrika",
-    title: "UI/UX Designer",
+    name: "Harshini",
+    title: "Talent Acquisition",
     image: staff5,
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/harshini-thota-51b058256"
   },
   {
-    name: "Nishitha",
-    title: "Digital Manager",
+    name: "Tharshith",
+    title: "Talent Acquisition",
     image: staff6,
-    linkedin: "#"
+    linkedin: "https://www.linkedin.com/in/sai-tharshith-karneedi-1b649b205"
   },
   {
-    name: "Thanmai",
-    title: "E-mail Marketing",
+    name: "Akshay",
+    title: "Talent Acquisition",
     image: staff7,
-    linkedin: "#"
+    linkedin: " https://www.linkedin.com/in/akshay-deolankar-a26455385"
   },
 ];
 
@@ -84,7 +84,7 @@ const Staff = () => (
       {/* Left Side: Title and Description */}
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:mb-0 md:mr-16">
         <h2 className="text-3xl md:text-4xl font-bold text-orange-400 mb-4 font-poppins text-center md:text-left ">
-          Meet Our Staff
+          Meet Our Team
         </h2>
         <p className="text-base md:text-lg font-outfit text-black/ text-center md:text-left max-w-md mb-10">
           Our skilled professionals each bring unique expertise and passion to deliver exceptional results for our clients.
