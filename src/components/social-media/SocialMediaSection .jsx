@@ -19,7 +19,7 @@ const SocialMediaSection = () => {
 
   return (
     <section id="social-media-section" className="w-full">
-le      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-6">
         {socialMediaData.map((social) => {
           const IconComponent = iconMap[social.icon];
           return (
