@@ -1,5 +1,4 @@
-import React from "react";
-import heroImg from "../../assets/images/cloud-migration.png"; // Update this path to your actual image
+import heroImg from "../../assets/logo.png"; // Update this path to your actual image
 
 const HeroSection = () => (
     <section className="bg-[#fcf3e7] min-h-[80vh] px-4 sm:px-6 py-6 flex items-center justify-center ">
@@ -22,7 +21,7 @@ const HeroSection = () => (
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
-                        <span className="bg-orange-400 text-white rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-xl sm:text-2xl font-bold font-outfit">25+</span>
+                        <span className="bg-orange-400 text-white rounded-full w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center text-xl sm:text-2xl font-bold font-outfit">15+</span>
                         <div>
                             <div className="font-semibold text-base sm:text-lg text-black">Projects Delivered</div>
                             <div className="text-sm text-gray-500 font-outfit">Across Industries</div>
@@ -35,7 +34,7 @@ const HeroSection = () => (
                 <img
                     src={heroImg}
                     alt="Technology Hero"
-                    className="rounded-2xl w-full max-w-xs xs:max-w-sm sm:max-w-2xl md:max-w-lg lg:max-w-4xl object-cover h-[180px] xs:h-[220px] sm:h-[300px] md:h-[350px] lg:h-[400px] xl:h-[350px]"
+                    className="rounded-2xl w-full max-w-[200px] xs:max-w-[250px] sm:max-w-xs md:max-w-sm lg:max-w-md object-cover "
                 />
             </div>
         </div>

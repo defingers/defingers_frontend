@@ -1,32 +1,29 @@
 [
   {
-    "rating": 5,
-    "timeAgo": "5 months ago",
-    "testimonial": "TechConsult Pro transformed our entire IT infrastructure in just 6 months. Their expertise in cloud migration and cybersecurity is unmatched. We've seen a 40% increase in operational efficiency.",
-    "clientName": "Sarah Johnson",
-    "clientTitle": "CTO",
-    "company": "InnovateCore Solutions",
-    "projectValue": "$2.5M",
+    "rating": 4,
+    "timeAgo": "12 months ago",
+    "testimonial": "DE FINGERS transformed our entire IT infrastructure in just 6 months. Their expertise in cloud migration and data analytics is unmatched. We've seen a 40% increase in operational efficiency.",
+    "clientName": "Elexo",
+    "company": "Elexo IT Solutions",
+    "projectValue": "500k",
     "imageSrc": "dummyTestimonialImage"
   },
   {
     "rating": 5,
-    "timeAgo": "3 months ago",
-    "testimonial": "Outstanding service delivery and technical expertise. The team went above and beyond to ensure our digital transformation was seamless and efficient.",
-    "clientName": "Michael Chen",
-    "clientTitle": "CEO",
-    "company": "Digital Dynamics Inc",
-    "projectValue": "$1.8M",
+    "timeAgo": "18 months ago",
+    "testimonial": "Outstanding service delivery and technical expertise. The team went above and beyond to ensure our digital data transformation was seamless and efficient.",
+    "clientName": "App Mandi",
+    "company": "AppPhase Technologies",
+    "projectValue": "800k",
     "imageSrc": "dummyTestimonialImage"
   },
   {
     "rating": 5,
     "timeAgo": "7 months ago",
-    "testimonial": "Their cloud migration strategy saved us millions in operational costs while improving our system performance significantly. Highly recommended!",
-    "clientName": "Emily Rodriguez",
-    "clientTitle": "CTO",
-    "company": "Future Tech Solutions",
-    "projectValue": "$3.2M",
+    "testimonial": "DE FINGER`S OCR solutions transform printed and handwritten documents into accurate, searchable, and editable digital data. By automating data extraction from invoices, forms, IDs, and records, we help businesses reduce manual effort, improve accuracy, and accelerate workflow",
+    "clientName": "SBI Yono",
+    "company": "Fintra Solutions",
+    "projectValue": "400k",
     "imageSrc": "dummyTestimonialImage"
   }
 ]

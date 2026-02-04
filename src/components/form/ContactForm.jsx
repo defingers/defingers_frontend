@@ -12,7 +12,97 @@ const CATEGORY_OPTIONS = [
 ];
 
 const ContactForm = () => {
+<<<<<<< HEAD
     const [formData, setFormData] = useState({
+=======
+  const [formData, setFormData] = useState({
+    name: '',
+    mobile: '',
+    email: '',
+    company: '',
+    subject: '',
+    message: '',
+    category: ''
+  });
+
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  // Yup validation schema
+  const validationSchema = Yup.object().shape({
+    name: Yup.string()
+      .min(2, 'Name must be at least 2 characters')
+      .max(50, 'Name cannot exceed 50 characters')
+      .required('Name is required'),
+    mobile: Yup.string()
+      .matches(/^[\+]?[1-9][\d]{0,15}$/, 'Please enter a valid phone number')
+      .required('Mobile number is required'),
+    email: Yup.string()
+      .email('Please enter a valid email address')
+      .required('Email is required'),
+    company: Yup.string()
+      .min(2, 'Company name must be at least 2 characters')
+      .max(100, 'Company name cannot exceed 100 characters')
+      .required('Company name is required'),
+    subject: Yup.string()
+      .min(5, 'Subject must be at least 5 characters')
+      .max(100, 'Subject cannot exceed 100 characters')
+      .required('Subject is required'),
+    message: Yup.string()
+      .min(10, 'Message must be at least 10 characters')
+      .max(1000, 'Message cannot exceed 1000 characters')
+      .required('Message is required'),
+    category: Yup.string()
+      .required('Category is required')
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+
+    // Clear error for this field when user starts typing
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Validate form data
+      await validationSchema.validate(formData, { abortEarly: false });
+      setErrors({});
+
+      // Send data to API
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/sendmail`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to send message. Please try again.');
+      }
+      const googleFormURL = `${import.meta.env.VITE_GOOGLE_FORM_URL}`;
+      console.log("Google Form URL:", googleFormURL);
+
+    fetch(googleFormURL, {
+      method: 'POST',
+      body: new URLSearchParams(formData),
+    }).catch(err => console.warn("Google Sheets sync failed:", err));
+
+      setIsSubmitted(true);
+      setFormData({
+>>>>>>> 4b8a680a7160b603e6bacfd49c84ebdbc36ba906
         name: '',
         mobile: '',
         email: '',
