@@ -10,7 +10,7 @@ const MilestoneCard = ({ number, title, description }) => {
       
       {/* Card Content */}
       <div className="pt-6 flex flex-col h-full">
-        <h3 className="text-xl font-semibold text-[#FF8C00] mb-4 text-center">
+        <h3 className="text-md font-semibold text-[#FF8C00] mb-4 text-center">
           {title}
         </h3>
         <p className="text-gray-600 text-sm leading-relaxed text-center flex-grow">

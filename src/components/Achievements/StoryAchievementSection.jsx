@@ -5,23 +5,23 @@ const StoryAchievementSection = () => {
   const milestones = [
     {
       number: "1",
-      title: "Founded",
-      description: "Started as a small team with big dreams and a passion for technology"
+      title: "Started 2017",
+      description: " Started our career journey in 2017."
     },
     {
       number: "2", 
-      title: "Build",
-      description: "We'll help you design your ideal resident benefits package."
+      title: "Certified in OCR and AWS",
+      description: " Certified in OCR and AWS technologies."
     },
     {
       number: "3",
-      title: "Build", 
-      description: "We'll help you design your ideal resident benefits package."
+      title: "Healthcare Data Platforms", 
+      description: "Enabled data platforms for healthcare solutions."
     },
     {
       number: "4",
-      title: "Build",
-      description: "We'll help you design your ideal resident benefits package."
+      title: "Cloud Migration",
+      description: "Delivered successful cloud migration projects."
     }
   ];
 
