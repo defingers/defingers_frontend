@@ -5,10 +5,11 @@ import InputField from './InputField';
 import Button from '../../ui/Button';
 
 const CATEGORY_OPTIONS = [
-  "Cloud Migration",
-  "IT Infrastructure",
-  "Data Lake Management",
-  "DevOps Services"
+  "AI and Data Services",
+  "Cloud and Infrastructure",
+  "Digital Marketing Services",
+  "Quality Assurance Services",
+  "Staffing and Consulting Services"
 ];
 
 const COUNTRY_CODES = [
