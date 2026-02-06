@@ -10,12 +10,12 @@ const ServicesLayout = () => {
 
   // Get categories from data.js
   const aiDataServices = categories.find(cat => cat.name === 'AI and Data Services')?.items || [];
-  const cloudInfrastructure = categories.find(cat => cat.name === 'Cloud and Infrastructure')?.items || [];
+  const staffingServices = categories.find(cat => cat.name === 'Staffing and Consulting Services')?.items || [];
   const digitalMarketing = categories.find(cat => cat.name === 'Digital Marketing Services')?.items || [];
 
   const currentServices = 
     activeTab === 'ai-data' ? aiDataServices : 
-    activeTab === 'cloud' ? cloudInfrastructure :
+    activeTab === 'staffing' ? staffingServices :
     activeTab === 'marketing' ? digitalMarketing : [];
 
   return (
@@ -47,9 +47,9 @@ const ServicesLayout = () => {
               Software 
             </button>
             <button
-              onClick={() => setActiveTab('cloud')}
+              onClick={() => setActiveTab('staffing')}
               className={`flex-1 px-4 py-2 sm:px-6 sm:py-2 md:px-8 md:py-2 lg:px-10 lg:py-2 rounded-md text-sm sm:text-base font-medium transition-all duration-200 cursor-pointer ${
-                activeTab === 'cloud'
+                activeTab === 'staffing'
                   ? 'bg-white text-gray-900 shadow-sm'
                   : 'text-gray-600 hover:text-gray-900'
               }`}

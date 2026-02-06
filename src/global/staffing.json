@@ -5,13 +5,12 @@
         "consultancyName": "IT Staffing",
         "consultancyDescription": "Connect with top IT talent to drive your technology initiatives.",
         "consultancyFocused": {
-            "consultancyFocusedImage":"staffingFocusedImage",
+            "consultancyFocusedImage": "staffingFocusedImage",
             "headingTag": "Find the Right Tech Talent",
             "content": {
                 "desc": "Finding the right IT professionals is critical to your success. We specialize in sourcing, vetting, and placing highly skilled IT professionals across all technology domains. From software developers and data scientists to DevOps engineers and project managers, we connect you with talent that matches your technical requirements and company culture.",
-                "highliter":"100+ IT Professionals Placed Annually"
+                "highliter": "100+ IT Professionals Placed Annually"
             }
-          
         },
         "consultancyBenefits": {
             "headingTag": "IT Staffing Benefits",
@@ -19,12 +18,10 @@
                 {
                     "benefiticons": "thunder",
                     "title": "Pre-Vetted Talent"
-
                 },
                 {
                     "benefiticons": "stock",
                     "title": "Fast Placement"
-                   
                 },
                 {
                     "benefiticons": "security",
@@ -63,13 +60,12 @@
         "consultancyName": "Payroll Management",
         "consultancyDescription": "Streamline payroll processing with our comprehensive management services.",
         "consultancyFocused": {
-            "consultancyFocusedImage":"payrollFocusedImage",
+            "consultancyFocusedImage": "payrollFocusedImage",
             "headingTag": "Hassle-Free Payroll Solutions",
             "content": {
                 "desc": "Payroll management doesn't have to be complicated. We handle all aspects of payroll processing including salary calculations, tax compliance, benefits administration, and reporting. Our automated systems ensure accurate, on-time payments while maintaining full compliance with tax regulations and labor laws.",
-                "highliter":"99.9% Payroll Accuracy Rate"
+                "highliter": "99.9% Payroll Accuracy Rate"
             }
-          
         },
         "consultancyBenefits": {
             "headingTag": "Payroll Management Benefits",
@@ -77,12 +73,10 @@
                 {
                     "benefiticons": "thunder",
                     "title": "Automated Processing"
-
                 },
                 {
                     "benefiticons": "stock",
                     "title": "Tax Compliance"
-                   
                 },
                 {
                     "benefiticons": "security",
@@ -121,13 +115,12 @@
         "consultancyName": "Bench Management",
         "consultancyDescription": "Optimize your bench resources and maximize utilization rates.",
         "consultancyFocused": {
-            "consultancyFocusedImage":"benchFocusedImage",
+            "consultancyFocusedImage": "benchFocusedImage",
             "headingTag": "Maximize Resource Utilization",
             "content": {
                 "desc": "Effective bench management is crucial for staffing companies and IT services firms. We help you optimize bench resources through strategic placement, upskilling programs, and market intelligence. Our bench management solutions reduce idle time, improve utilization rates, and ensure your talent is always productive and billable.",
-                "highliter":"85% Average Utilization Rate"
+                "highliter": "85% Average Utilization Rate"
             }
-          
         },
         "consultancyBenefits": {
             "headingTag": "Bench Management Benefits",
@@ -135,12 +128,10 @@
                 {
                     "benefiticons": "thunder",
                     "title": "Higher Utilization"
-
                 },
                 {
                     "benefiticons": "stock",
                     "title": "Skill Development"
-                   
                 },
                 {
                     "benefiticons": "security",
@@ -179,13 +170,12 @@
         "consultancyName": "Talent Acquisition",
         "consultancyDescription": "Strategic talent acquisition to build high-performing teams.",
         "consultancyFocused": {
-            "consultancyFocusedImage":"talentFocusedImage",
+            "consultancyFocusedImage": "talentFocusedImage",
             "headingTag": "Build Your Dream Team",
             "content": {
                 "desc": "Talent acquisition is more than just filling positions—it's about building strategic capabilities. We provide end-to-end talent acquisition services including workforce planning, employer branding, candidate sourcing, screening, interviewing, and onboarding. Our consultative approach ensures you attract and retain top talent aligned with your business goals.",
-                "highliter":"95% Candidate Success Rate"
+                "highliter": "95% Candidate Success Rate"
             }
-          
         },
         "consultancyBenefits": {
             "headingTag": "Talent Acquisition Benefits",
@@ -193,12 +183,10 @@
                 {
                     "benefiticons": "thunder",
                     "title": "Strategic Hiring"
-
                 },
                 {
                     "benefiticons": "stock",
                     "title": "Quality Candidates"
-                   
                 },
                 {
                     "benefiticons": "security",
