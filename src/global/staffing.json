@@ -6,6 +6,7 @@
         "consultancyDescription": "Connect with top IT talent to drive your technology initiatives.",
         "consultancyFocused": {
             "consultancyFocusedImage": "staffingFocusedImage",
+            "cartoonImage": "staffCartoon",
             "headingTag": "Find the Right Tech Talent",
             "content": {
                 "desc": "Finding the right IT professionals is critical to your success. We specialize in sourcing, vetting, and placing highly skilled IT professionals across all technology domains. From software developers and data scientists to DevOps engineers and project managers, we connect you with talent that matches your technical requirements and company culture.",
@@ -61,6 +62,7 @@
         "consultancyDescription": "Streamline payroll processing with our comprehensive management services.",
         "consultancyFocused": {
             "consultancyFocusedImage": "payrollFocusedImage",
+            "cartoonImage": "payrollCartoon",
             "headingTag": "Hassle-Free Payroll Solutions",
             "content": {
                 "desc": "Payroll management doesn't have to be complicated. We handle all aspects of payroll processing including salary calculations, tax compliance, benefits administration, and reporting. Our automated systems ensure accurate, on-time payments while maintaining full compliance with tax regulations and labor laws.",
@@ -116,6 +118,7 @@
         "consultancyDescription": "Optimize your bench resources and maximize utilization rates.",
         "consultancyFocused": {
             "consultancyFocusedImage": "benchFocusedImage",
+            "cartoonImage": "staff3Cartoon",
             "headingTag": "Maximize Resource Utilization",
             "content": {
                 "desc": "Effective bench management is crucial for staffing companies and IT services firms. We help you optimize bench resources through strategic placement, upskilling programs, and market intelligence. Our bench management solutions reduce idle time, improve utilization rates, and ensure your talent is always productive and billable.",
@@ -171,6 +174,7 @@
         "consultancyDescription": "Strategic talent acquisition to build high-performing teams.",
         "consultancyFocused": {
             "consultancyFocusedImage": "talentFocusedImage",
+            "cartoonImage": "staff2Cartoon",
             "headingTag": "Build Your Dream Team",
             "content": {
                 "desc": "Talent acquisition is more than just filling positions—it's about building strategic capabilities. We provide end-to-end talent acquisition services including workforce planning, employer branding, candidate sourcing, screening, interviewing, and onboarding. Our consultative approach ensures you attract and retain top talent aligned with your business goals.",

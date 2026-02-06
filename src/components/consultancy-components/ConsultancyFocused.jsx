@@ -16,13 +16,13 @@ const ConsultancyFocused = ({ consultancyContent }) => {
                         <span className='text-base md:text-3xl font-bold text-orange-400'>{consultancyContent.consultancyFocused.content.highliter}</span>
                     </div>
                 </div>
-                {/* <div className="md:w-1/2 w-full flex justify-center md:justify-end">
+                <div className="md:w-1/2 w-full flex justify-center md:justify-end">
                     <img
-                        src={Images.ItFocused}
-                        alt="IT Focused"
-                        className="w-80 h-80 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mt-8 md:mt-0 rounded-lg "
+                        src={consultancyContent.consultancyFocused.cartoonImage ? Images[consultancyContent.consultancyFocused.cartoonImage] : Images.ItFocused}
+                        alt={consultancyContent.consultancyName}
+                        className="w-80 h-80 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mt-8 md:mt-0 rounded-lg object-contain"
                     />
-                </div> */}
+                </div>
             </div>
         </section>
     );

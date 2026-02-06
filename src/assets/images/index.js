@@ -41,6 +41,29 @@ import TalentAcquisition from './TalentAcquisition.jpg';
 // Navbar
 import navbarDropdownWaves from './navbar-dropdown-waves.png';
 
+// Cartoon Images
+import aiCartoon from '../cartoons/ai.png';
+import ai2Cartoon from '../cartoons/ai2.png';
+import ai4Cartoon from '../cartoons/ai4.png';
+import cloudCartoon from '../cartoons/cloud.png';
+import cloud2Cartoon from '../cartoons/cloud2.png';
+import dataAnalysisCartoon from '../cartoons/dataaanlysis.png';
+import dataAnalysis2Cartoon from '../cartoons/dataaanlysis2.png';
+import dataAnalysis3Cartoon from '../cartoons/dataaanlysis3.png';
+import digitalMarketingCartoon from '../cartoons/digitalmarketing.png';
+import payrollCartoon from '../cartoons/payroll.png';
+import qaCartoon from '../cartoons/qa.png';
+import qa2Cartoon from '../cartoons/qa2.png';
+import qa3Cartoon from '../cartoons/qa3.png';
+import robotCartoon from '../cartoons/robot.png';
+import socialMediaCartoon from '../cartoons/socialmedia.png';
+import socialMedia2Cartoon from '../cartoons/socialmedia2.png';
+import staffCartoon from '../cartoons/staff.png';
+import staff2Cartoon from '../cartoons/staff2.png';
+import staff3Cartoon from '../cartoons/staff3.png';
+import web1Cartoon from '../cartoons/web1.png';
+import web2Cartoon from '../cartoons/web2.png';
+
 
 const Images = {
     //cloud migration   
@@ -84,7 +107,30 @@ const Images = {
     "TalentAcquisition": TalentAcquisition,
 
     // Navbar
-    "navbarDropdownWaves": navbarDropdownWaves
+    "navbarDropdownWaves": navbarDropdownWaves,
+
+    // Cartoon Images
+    "aiCartoon": aiCartoon,
+    "ai2Cartoon": ai2Cartoon,
+    "ai4Cartoon": ai4Cartoon,
+    "cloudCartoon": cloudCartoon,
+    "cloud2Cartoon": cloud2Cartoon,
+    "dataAnalysisCartoon": dataAnalysisCartoon,
+    "dataAnalysis2Cartoon": dataAnalysis2Cartoon,
+    "dataAnalysis3Cartoon": dataAnalysis3Cartoon,
+    "digitalMarketingCartoon": digitalMarketingCartoon,
+    "payrollCartoon": payrollCartoon,
+    "qaCartoon": qaCartoon,
+    "qa2Cartoon": qa2Cartoon,
+    "qa3Cartoon": qa3Cartoon,
+    "robotCartoon": robotCartoon,
+    "socialMediaCartoon": socialMediaCartoon,
+    "socialMedia2Cartoon": socialMedia2Cartoon,
+    "staffCartoon": staffCartoon,
+    "staff2Cartoon": staff2Cartoon,
+    "staff3Cartoon": staff3Cartoon,
+    "web1Cartoon": web1Cartoon,
+    "web2Cartoon": web2Cartoon
 };
 
 export default Images;

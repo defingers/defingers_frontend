@@ -6,6 +6,7 @@
         "consultancyDescription": "Hire the best tech talent, fast and hassle-free.",
         "consultancyFocused": {
             "consultancyFocusedImage":"consultancyFocusedImage",
+            "cartoonImage": "aiCartoon",
             "headingTag": "Client-Focused Solutions",
             "content": {
                 "desc": "Finding the right talent is crucial. We specialize in sourcing, vetting, and placing top-tier IT professionals who align with your company culture and technical needs. From developers to project managers, we build your dream team.",

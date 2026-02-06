@@ -6,6 +6,7 @@
         "serviceDescription": "Build robust data pipelines and infrastructure to process, transform, and manage large-scale data efficiently.",
         "serviceTransition": {
             "serviceTransitionImage": "dataEngineeringTransition",
+            "cartoonImage": "dataAnalysisCartoon",
             "HeadingTag": "Transform Your Data Infrastructure",
             "content": {
                 "checkmarkIcon": "checkmark",
@@ -79,6 +80,7 @@
         "serviceDescription": "Transform raw data into actionable insights with advanced analytics and intuitive visualizations.",
         "serviceTransition": {
             "serviceTransitionImage": "analyticsTransition",
+            "cartoonImage": "dataAnalysis3Cartoon",
             "HeadingTag": "Turn Data into Actionable Insights",
             "content": {
                 "checkmarkIcon": "checkmark",
@@ -152,6 +154,7 @@
         "serviceDescription": "Harness the power of generative AI and machine learning to automate processes and enhance creativity.",
         "serviceTransition": {
             "serviceTransitionImage": "aiTransition",
+            "cartoonImage": "ai2Cartoon",
             "HeadingTag": "Unlock the Power of Generative AI",
             "content": {
                 "checkmarkIcon": "checkmark",
@@ -225,6 +228,7 @@
         "serviceDescription": "Centralize and manage your enterprise data with robust governance, quality controls, and security.",
         "serviceTransition": {
             "serviceTransitionImage": "dataManagementTransition",
+            "cartoonImage": "ai4Cartoon",
             "HeadingTag": "Master Your Enterprise Data",
             "content": {
                 "checkmarkIcon": "checkmark",

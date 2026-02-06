@@ -6,6 +6,7 @@
         "serviceDescription": "Seamless migration to cloud platforms with zero downtime and optimized costs.",
         "serviceTransition": {
             "serviceTransitionImage":"cloudTransition",
+            "cartoonImage": "cloudCartoon",
             "HeadingTag": "Transform Your Business with Cloud Technology",
             "content": {
                 "checkmarkIcon":"checkmark",
@@ -83,6 +84,7 @@
         "serviceDescription": "Accelerate development and deployment with modern DevOps practices.",
         "serviceTransition": {
             "serviceTransitionImage":"devopsTransition",
+            "cartoonImage": "cloud2Cartoon",
             "HeadingTag": "Streamline Your Development Pipeline",
             "content": {
                 "checkmarkIcon":"checkmark",
@@ -160,6 +162,7 @@
         "serviceDescription": "Comprehensive security solutions to protect your digital assets.",
         "serviceTransition": {
             "serviceTransitionImage":"securityTransition",
+            "cartoonImage": "robotCartoon",
             "HeadingTag": "Safeguard Your Business from Cyber Threats",
             "content": {
                 "checkmarkIcon":"checkmark",
@@ -237,6 +240,7 @@
         "serviceDescription": "Reliable, high-performance infrastructure management services.",
         "serviceTransition": {
             "serviceTransitionImage":"infrastructureTransition",
+            "cartoonImage": "cloud2Cartoon",
             "HeadingTag": "Optimize Your IT Infrastructure",
             "content": {
                 "checkmarkIcon":"checkmark",

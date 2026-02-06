@@ -5,7 +5,7 @@ const ServiceTransition = ({ serviceContent }) => {
     return (
         <section className="service-transition md:p-25 py-10 md:py-16">
             <div className="container mx-auto flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 px-4 md:px-0">
-                <div className="md:w w-full">
+                <div className="md:w-1/2 w-full">
                     <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 font-poppins text-center md:text-left">
                         {serviceContent.serviceTransition.HeadingTag}
                     </h2>
@@ -26,13 +26,13 @@ const ServiceTransition = ({ serviceContent }) => {
                         </ul>
                     </div>
                 </div>
-                {/* <div className="md:w-1/2 w-full flex justify-center md:justify-end">
+                <div className="md:w-1/2 w-full flex justify-center md:justify-end">
                     <img
-                        src={Images[serviceContent.serviceTransition.serviceTransitionImage]}
-                        alt="Cloud Migration"
-                        className="w-64 h-64 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mt-8 md:mt-0 rounded-lg object-cover "
+                        src={serviceContent.serviceTransition.cartoonImage ? Images[serviceContent.serviceTransition.cartoonImage] : Images[serviceContent.serviceTransition.serviceTransitionImage]}
+                        alt={serviceContent.serviceName}
+                        className="w-64 h-64 md:w-[400px] md:h-[400px] lg:w-[500px] lg:h-[500px] mt-8 md:mt-0 rounded-lg object-contain"
                     />
-                </div> */}
+                </div>
             </div>
         </section>
     );

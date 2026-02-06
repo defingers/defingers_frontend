@@ -6,6 +6,7 @@
         "consultancyDescription": "Create engaging content that drives traffic and conversions.",
         "consultancyFocused": {
             "consultancyFocusedImage":"contentFocusedImage",
+            "cartoonImage": "digitalMarketingCartoon",
             "headingTag": "Strategic Content That Converts",
             "content": {
                 "desc": "Content marketing is the foundation of digital success. We create compelling, SEO-optimized content that attracts, engages, and converts your target audience. From blog posts and articles to white papers and case studies, our content strategies build brand authority and drive measurable results.",
@@ -64,6 +65,7 @@
         "consultancyDescription": "Build a powerful social media presence that engages your audience.",
         "consultancyFocused": {
             "consultancyFocusedImage":"socialFocusedImage",
+            "cartoonImage": "socialMediaCartoon",
             "headingTag": "Amplify Your Social Presence",
             "content": {
                 "desc": "Social media is where your customers are. We manage your social media presence across all major platforms—Facebook, Instagram, LinkedIn, Twitter, and more. From content creation and scheduling to community management and paid campaigns, we help you build meaningful connections with your audience.",
@@ -122,6 +124,7 @@
         "consultancyDescription": "Improve search rankings and drive organic traffic to your website.",
         "consultancyFocused": {
             "consultancyFocusedImage":"seoFocusedImage",
+            "cartoonImage": "web1Cartoon",
             "headingTag": "Dominate Search Engine Rankings",
             "content": {
                 "desc": "SEO is essential for online visibility. We optimize your website to rank higher in search results and attract qualified organic traffic. Our comprehensive SEO services include technical SEO, on-page optimization, content strategy, link building, and local SEO to improve your search visibility and drive conversions.",
@@ -180,6 +183,7 @@
         "consultancyDescription": "Maximize ROI with targeted digital advertising campaigns.",
         "consultancyFocused": {
             "consultancyFocusedImage":"advertisingFocusedImage",
+            "cartoonImage": "web2Cartoon",
             "headingTag": "Data-Driven Advertising Campaigns",
             "content": {
                 "desc": "Digital advertising delivers immediate results. We create and manage high-performing ad campaigns across Google Ads, Facebook Ads, Instagram, LinkedIn, and display networks. Our data-driven approach ensures your advertising budget is spent efficiently to generate qualified leads and maximize ROI.",

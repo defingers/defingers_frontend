@@ -6,6 +6,7 @@
         "serviceDescription": "Accelerate testing with intelligent automation frameworks.",
         "serviceTransition": {
             "serviceTransitionImage":"automationTransition",
+            "cartoonImage": "qaCartoon",
             "HeadingTag": "Automate Testing for Faster Delivery",
             "content": {
                 "checkmarkIcon":"checkmark",
@@ -83,6 +84,7 @@
         "serviceDescription": "Ensure your applications perform flawlessly under any load.",
         "serviceTransition": {
             "serviceTransitionImage":"performanceTransition",
+            "cartoonImage": "qa2Cartoon",
             "HeadingTag": "Optimize Application Performance",
             "content": {
                 "checkmarkIcon":"checkmark",
@@ -160,6 +162,7 @@
         "serviceDescription": "Leverage AI and ML to revolutionize software testing.",
         "serviceTransition": {
             "serviceTransitionImage":"aiTestingTransition",
+            "cartoonImage": "qa3Cartoon",
             "HeadingTag": "Next-Generation Intelligent Testing",
             "content": {
                 "checkmarkIcon":"checkmark",
@@ -237,6 +240,7 @@
         "serviceDescription": "Powerful testing tools and frameworks to accelerate quality delivery.",
         "serviceTransition": {
             "serviceTransitionImage":"qaToolsTransition",
+            "cartoonImage": "qa2Cartoon",
             "HeadingTag": "Enterprise-Grade QA Solutions",
             "content": {
                 "checkmarkIcon":"checkmark",
