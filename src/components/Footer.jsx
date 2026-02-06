@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { FaTwitter , FaLinkedin, FaYoutube, FaFacebook } from 'react-icons/fa';
 import { IoLogoWhatsapp } from "react-icons/io5";
 import logo from '../assets/images/logo.jpg';
+import { categories } from './Navbar/data';
 
 // Footer data configuration
 const footerData = {
@@ -46,12 +48,19 @@ const footerData = {
     services: {
       title: "Services",
       links: [
-        { name: "Cloud Migration", href: "#" },
-        { name: "IT Infrastructure", href: "#" },
-        { name: "Data lake management", href: "#" },
-        { name: "IT recruitment", href: "#" },
-        { name: "Staff augmentation", href: "#" },
-        { name: "Training", href: "#" }
+        // AI and Data Services
+        { name: "Data Engineering & Management", href: "/ai-data/1" },
+        { name: "Generative AI/ML", href: "/ai-data/3" },
+        // Cloud and Infrastructure
+        { name: "Cloud Transformation", href: "/cloud/1" },
+        { name: "Cyber Security Services", href: "/cloud/3" },
+        // Digital Marketing Services
+        { name: "Content Marketing", href: "/marketing/1" },
+        { name: "Social Media Management", href: "/marketing/2" },
+        // Quality Assurance Services
+        { name: "Test Automation", href: "/qa/1" },
+        // Staffing and Consulting Services
+        { name: "IT Staffing", href: "/staffing/1" },
       ]
     },
     resources: {
@@ -64,8 +73,8 @@ const footerData = {
     company: {
       title: "Company",
       links: [
-        { name: "About Us", href: "#" },
-        { name: "Contact Us", href: "#" }
+        { name: "About Us", href: "/about" },
+        { name: "Contact Us", href: "/contact" }
       ]
     }
   },
@@ -135,9 +144,15 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.services.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    {link.name}
-                  </a>
+                  {link.href === "#" ? (
+                    <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link to={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -149,9 +164,15 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.resources.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    {link.name}
-                  </a>
+                  {link.href === "#" ? (
+                    <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link to={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -163,9 +184,15 @@ const Footer = () => {
             <ul className="space-y-3">
               {footerData.navigation.company.links.map((link, index) => (
                 <li key={index}>
-                  <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    {link.name}
-                  </a>
+                  {link.href === "#" ? (
+                    <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                      {link.name}
+                    </a>
+                  ) : (
+                    <Link to={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                      {link.name}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -218,9 +245,15 @@ const Footer = () => {
             </div>
             <div className="flex space-x-6">
               {footerData.legal.map((link, index) => (
-                <a key={index} href={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                  {link.name}
-                </a>
+                link.href === "#" ? (
+                  <a key={index} href={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link key={index} to={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                    {link.name}
+                  </Link>
+                )
               ))}
             </div>
           </div>
