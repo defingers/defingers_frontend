@@ -60,10 +60,10 @@ const HeroSection = () => {
     <section className="hero">
       <div className="hero-container">
         {/* LEFT SIDE */}
-        <div className="hero-left px-12">
-          <div style={{ position: 'relative', width: '100%' }}>
+        <div className="hero-left px-4 sm:px-6 md:px-8 lg:px-12">
+          <div style={{ position: 'relative', width: '100%', minHeight: 'fit-content' }}>
             {/* Reserve space for full heading to prevent layout shift */}
-            <h1 className="hero-heading" style={{ visibility: 'hidden', margin: 0 }}>
+            <h1 className="hero-heading" style={{ visibility: 'hidden', margin: 0, whiteSpace: 'normal' }}>
               {renderTextWithColors(fullText)}
             </h1>
             {/* Animated visible text absolutely positioned on top */}
@@ -75,6 +75,7 @@ const HeroSection = () => {
               margin: 0,
               pointerEvents: 'none',
               background: 'transparent',
+              whiteSpace: 'normal',
             }}>
               {renderTextWithColors(displayedText)}
               <span className="typing-cursor">|</span>

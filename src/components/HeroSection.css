@@ -33,18 +33,16 @@
   gap: 2rem;
 }
 
-/* Heading – restricted to 2 lines */
+/* Heading – allows natural wrapping */
 .hero-heading {
   font-family: 'Outfit', sans-serif;
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.2;
   max-width: 95%;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;     /* force max 2 lines */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .hero-heading .black {
@@ -471,10 +469,12 @@
   }
   
   .hero-heading {
-    font-size: 1.6rem;
-    line-height: 1.25;
+    font-size: 1.5rem;
+    line-height: 1.3;
     text-align: center;
     max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .hero-subtext {
@@ -540,10 +540,12 @@
   }
   
   .hero-heading {
-    font-size: 1.4rem;
-    line-height: 1.2;
+    font-size: 1.35rem;
+    line-height: 1.3;
     text-align: center;
     max-width: 100%;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
   }
   
   .hero-subtext {

@@ -134,7 +134,7 @@ const Partners = () => {
             </div>
 
             {/* Wavy Pattern Divider */}
-            <div className="relative w-full mt-12 md:mt-16" style={{ backgroundColor: '#FDEDAF' }}>
+            <div className="relative w-full " style={{ backgroundColor: '#FDEDAF' }}>
                 <svg 
                     className="w-full h-40 md:h-56 lg:h-72" 
                     viewBox="0 0 1200 250" 
