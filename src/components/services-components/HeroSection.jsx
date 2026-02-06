@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import Images from '../../assets/images/index';
 import Button from '../../ui/Button';
 
 const HeroSection = ({ serviceContent }) => {
+    const navigate = useNavigate();
+
     return (
         <section
             className="hero relative bg-cover bg-center h-[70vh] flex items-center justify-start"
@@ -16,8 +19,9 @@ const HeroSection = ({ serviceContent }) => {
                 <Button
                     color="orange"
                     className="w-full md:w-64 font-outfit"
+                    onClick={() => navigate('/contact')}
                 >
-                    Book a Consultation
+                    Let's Connect
                 </Button>
             </div>
         </section>

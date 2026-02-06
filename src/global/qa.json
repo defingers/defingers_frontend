@@ -1,0 +1,310 @@
+[
+    {
+        "id": 1,
+        "serviceImage": "TestAutomation",
+        "serviceName": "Test Automation",
+        "serviceDescription": "Accelerate testing with intelligent automation frameworks.",
+        "serviceTransition": {
+            "serviceTransitionImage":"automationTransition",
+            "HeadingTag": "Automate Testing for Faster Delivery",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "Test automation is essential for modern software development. We design and implement comprehensive test automation frameworks using industry-leading tools like Selenium, Cypress, Appium, and Playwright. Our automation solutions cover web, mobile, API, and performance testing to ensure software quality at scale.",
+                "phase2": "We help you reduce testing time by up to 70% while improving test coverage and reliability. Our automation engineers create maintainable, scalable test suites that integrate seamlessly with your CI/CD pipelines for continuous testing and faster release cycles."
+            },
+            "bulletContent": [
+                "Web & Mobile Test Automation",
+                "API & Integration Testing",
+                "CI/CD Integration"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "Test Automation Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "70% Faster Testing",
+                    "desc": "Reduce testing cycles from weeks to hours with automation."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Higher Coverage",
+                    "desc": "Achieve 90%+ test coverage with comprehensive automation."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Early Bug Detection",
+                    "desc": "Catch defects early in the development cycle."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "automationAdvantages",
+            "headingTag": "Automation Expertise",
+            "content": "Our QA automation experts bring years of experience building robust test frameworks. We've automated thousands of test cases across diverse technologies and industries, delivering faster releases without compromising quality.",
+            "operation": [
+                {
+                    "Number": "70%",
+                    "Description": "Faster Testing Cycles"
+                },
+                {
+                    "Number": "90%+",
+                    "Description": "Test Coverage"
+                },
+                {
+                    "Number": "50%",
+                    "Description": "Cost Reduction"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What tools do you use for test automation?",
+                "answer": "We work with industry-standard tools including Selenium, Cypress, Playwright, Appium, TestNG, JUnit, RestAssured, Postman, and JMeter, selecting the best fit for your technology stack."
+            },
+            {
+                "question": "Can you automate existing manual tests?",
+                "answer": "Yes, we analyze your manual test cases and create automated test scripts that replicate and enhance manual testing efforts, prioritizing high-value test scenarios."
+            },
+            {
+                "question": "How long does it take to implement automation?",
+                "answer": "Initial framework setup takes 2-4 weeks, with ongoing test script development. Most projects achieve significant automation coverage within 2-3 months."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Accelerate Your Testing?",
+            "desc": "Let's discuss how our test automation solutions can help you deliver quality software faster."
+        }
+    },
+    {
+        "id": 2,
+        "serviceImage": "PerformanceEngineering",
+        "serviceName": "Performance Engineering",
+        "serviceDescription": "Ensure your applications perform flawlessly under any load.",
+        "serviceTransition": {
+            "serviceTransitionImage":"performanceTransition",
+            "HeadingTag": "Optimize Application Performance",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "Performance engineering ensures your applications deliver exceptional user experiences under all conditions. We conduct comprehensive performance testing including load testing, stress testing, scalability testing, and endurance testing to identify bottlenecks and optimization opportunities.",
+                "phase2": "Our performance experts use advanced tools like JMeter, LoadRunner, Gatling, and K6 to simulate real-world scenarios and measure application performance. We provide detailed analysis and recommendations to optimize response times, throughput, and resource utilization."
+            },
+            "bulletContent": [
+                "Load & Stress Testing",
+                "Performance Optimization",
+                "Scalability Assessment"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "Performance Engineering Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Faster Response Times",
+                    "desc": "Reduce page load times by up to 60%."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Handle Peak Loads",
+                    "desc": "Ensure stability during traffic spikes and peak periods."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Better User Experience",
+                    "desc": "Deliver fast, responsive applications that users love."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "performanceAdvantages",
+            "headingTag": "Performance Excellence",
+            "content": "Our performance engineering team has optimized applications serving millions of users. We combine technical expertise with real-world experience to deliver measurable performance improvements.",
+            "operation": [
+                {
+                    "Number": "60%",
+                    "Description": "Faster Response Times"
+                },
+                {
+                    "Number": "10x",
+                    "Description": "Scalability Improvement"
+                },
+                {
+                    "Number": "99.9%",
+                    "Description": "Availability SLA"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What types of performance testing do you offer?",
+                "answer": "We provide load testing, stress testing, spike testing, endurance testing, scalability testing, and volume testing to cover all performance scenarios."
+            },
+            {
+                "question": "How do you measure application performance?",
+                "answer": "We measure key metrics including response time, throughput, error rate, CPU/memory utilization, and user experience metrics using industry-standard tools."
+            },
+            {
+                "question": "Can you test mobile applications?",
+                "answer": "Yes, we conduct performance testing for native, hybrid, and web mobile applications across iOS and Android platforms using specialized mobile testing tools."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Optimize Your Application Performance?",
+            "desc": "Let's discuss how our performance engineering services can ensure your application delivers exceptional user experiences."
+        }
+    },
+    {
+        "id": 3,
+        "serviceImage": "AIAugmentedTesting",
+        "serviceName": "AI-Augmented Testing",
+        "serviceDescription": "Leverage AI and ML to revolutionize software testing.",
+        "serviceTransition": {
+            "serviceTransitionImage":"aiTestingTransition",
+            "HeadingTag": "Next-Generation Intelligent Testing",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "AI-augmented testing represents the future of quality assurance. We leverage artificial intelligence and machine learning to enhance test creation, execution, and maintenance. Our AI-powered testing solutions include intelligent test generation, self-healing test scripts, visual testing, and predictive analytics.",
+                "phase2": "AI testing reduces maintenance effort by up to 80% while improving test coverage and defect detection. We use tools like Testim, Applitools, and custom ML models to create adaptive test frameworks that learn and evolve with your application."
+            },
+            "bulletContent": [
+                "Intelligent Test Generation",
+                "Self-Healing Test Scripts",
+                "Visual AI Testing"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "AI Testing Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "80% Less Maintenance",
+                    "desc": "Self-healing tests adapt automatically to application changes."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Intelligent Defect Detection",
+                    "desc": "AI identifies potential defects before they reach production."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Visual Testing",
+                    "desc": "Catch UI/UX issues across browsers and devices automatically."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "aiTestingAdvantages",
+            "headingTag": "AI Testing Innovation",
+            "content": "We're pioneers in AI-augmented testing, combining deep QA expertise with cutting-edge AI/ML technologies. Our solutions have helped companies reduce testing costs by 60% while improving quality.",
+            "operation": [
+                {
+                    "Number": "80%",
+                    "Description": "Reduced Maintenance"
+                },
+                {
+                    "Number": "3x",
+                    "Description": "Faster Test Creation"
+                },
+                {
+                    "Number": "95%",
+                    "Description": "Defect Detection Rate"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What is AI-augmented testing?",
+                "answer": "AI-augmented testing uses machine learning and AI to automate test creation, execution, and maintenance. It includes self-healing tests, intelligent test generation, and predictive analytics."
+            },
+            {
+                "question": "How does self-healing testing work?",
+                "answer": "Self-healing tests use AI to automatically adapt to UI changes, updating element locators and test logic without manual intervention, reducing maintenance effort significantly."
+            },
+            {
+                "question": "What tools do you use for AI testing?",
+                "answer": "We use advanced tools like Testim.io, Applitools Eyes, Mabl, Functionize, and custom ML models built with TensorFlow and PyTorch for specialized testing needs."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Transform Testing with AI?",
+            "desc": "Let's explore how AI-augmented testing can reduce your maintenance costs and improve software quality."
+        }
+    },
+    {
+        "id": 4,
+        "serviceImage": "QAToolsAccelerators",
+        "serviceName": "QA Tools & Accelerators",
+        "serviceDescription": "Powerful testing tools and frameworks to accelerate quality delivery.",
+        "serviceTransition": {
+            "serviceTransitionImage":"qaToolsTransition",
+            "HeadingTag": "Enterprise-Grade QA Solutions",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "We provide comprehensive QA tools and accelerators that streamline your testing processes. Our toolkit includes test management platforms, defect tracking systems, test data management solutions, and custom testing frameworks tailored to your specific needs.",
+                "phase2": "Our pre-built testing accelerators and reusable components reduce test automation setup time by 50%. We offer ready-to-use frameworks for common testing scenarios, enabling faster test automation implementation and maintenance."
+            },
+            "bulletContent": [
+                "Test Management Platforms",
+                "Reusable Test Frameworks",
+                "Test Data Management"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "QA Tools Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "50% Faster Setup",
+                    "desc": "Accelerate automation implementation with pre-built frameworks."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Centralized Management",
+                    "desc": "Manage all testing activities from a single platform."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Better Collaboration",
+                    "desc": "Improve team collaboration with integrated QA tools."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "qaToolsAdvantages",
+            "headingTag": "QA Tools Excellence",
+            "content": "Our QA tools and accelerators are battle-tested across hundreds of projects. We provide enterprise-grade solutions with comprehensive documentation, training, and ongoing support.",
+            "operation": [
+                {
+                    "Number": "50%",
+                    "Description": "Faster Automation Setup"
+                },
+                {
+                    "Number": "100+",
+                    "Description": "Reusable Components"
+                },
+                {
+                    "Number": "24/7",
+                    "Description": "Tool Support"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What QA tools do you provide?",
+                "answer": "We provide test management tools (Jira, TestRail), automation frameworks (Selenium, Cypress), CI/CD integration tools, test data management solutions, and custom accelerators."
+            },
+            {
+                "question": "Are your frameworks customizable?",
+                "answer": "Yes, all our frameworks are fully customizable and can be adapted to your specific technology stack, testing requirements, and organizational processes."
+            },
+            {
+                "question": "Do you provide training on QA tools?",
+                "answer": "Yes, we offer comprehensive training programs for all QA tools and frameworks, including hands-on workshops, documentation, and ongoing support."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Accelerate Your QA Journey?",
+            "desc": "Let's discuss how our QA tools and accelerators can streamline your testing processes and improve efficiency."
+        }
+    }
+]

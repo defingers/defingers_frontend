@@ -1,0 +1,234 @@
+[
+    {
+        "id": 1,
+        "consultancyImage": "ContentMarketing",
+        "consultancyName": "Content Marketing",
+        "consultancyDescription": "Create engaging content that drives traffic and conversions.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"contentFocusedImage",
+            "headingTag": "Strategic Content That Converts",
+            "content": {
+                "desc": "Content marketing is the foundation of digital success. We create compelling, SEO-optimized content that attracts, engages, and converts your target audience. From blog posts and articles to white papers and case studies, our content strategies build brand authority and drive measurable results.",
+                "highliter":"30+ Content Pieces Created Monthly"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "Content Marketing Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "SEO Optimization"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Brand Authority"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Lead Generation"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "contentAdvantageImage",
+            "headingTag": "Why Choose Our Content Services?",
+            "content": "Our content marketing team combines creative storytelling with data-driven strategies. We understand your audience and create content that resonates, ranks, and delivers ROI.",
+            "chips": [
+                "SEO Experts",
+                "Multi-Format Content",
+                "Analytics-Driven"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What types of content do you create?",
+                "answer": "We create blog posts, articles, white papers, case studies, infographics, videos, social media content, and more—all tailored to your brand and audience."
+            },
+            {
+                "question": "How do you measure content success?",
+                "answer": "We track metrics including traffic, engagement, conversions, SEO rankings, and ROI using advanced analytics tools and provide detailed monthly reports."
+            },
+            {
+                "question": "Do you handle content distribution?",
+                "answer": "Yes, we create comprehensive content distribution strategies across your website, social media, email marketing, and other channels to maximize reach."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "consultancyImage": "socialMediaManagement",
+        "consultancyName": "Social Media Management",
+        "consultancyDescription": "Build a powerful social media presence that engages your audience.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"socialFocusedImage",
+            "headingTag": "Amplify Your Social Presence",
+            "content": {
+                "desc": "Social media is where your customers are. We manage your social media presence across all major platforms—Facebook, Instagram, LinkedIn, Twitter, and more. From content creation and scheduling to community management and paid campaigns, we help you build meaningful connections with your audience.",
+                "highliter":"200% Average Engagement Increase"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "Social Media Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Brand Awareness"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Community Building"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Customer Engagement"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "socialAdvantageImage",
+            "headingTag": "Why Choose Our Social Media Services?",
+            "content": "We combine creative content with data-driven strategies to grow your social media presence. Our team stays ahead of platform trends and algorithm changes to maximize your reach and engagement.",
+            "chips": [
+                "Multi-Platform Expertise",
+                "Creative Content",
+                "Analytics & Reporting"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "Which social media platforms do you manage?",
+                "answer": "We manage all major platforms including Facebook, Instagram, LinkedIn, Twitter, TikTok, YouTube, and Pinterest, tailored to where your audience is most active."
+            },
+            {
+                "question": "How often do you post content?",
+                "answer": "Posting frequency is customized based on platform best practices and your goals, typically ranging from daily to multiple times per day across all channels."
+            },
+            {
+                "question": "Do you handle social media advertising?",
+                "answer": "Yes, we create and manage paid social media campaigns with targeted advertising to maximize ROI and reach your ideal customers."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "consultancyImage": "seoOptimization",
+        "consultancyName": "Web & SEO Optimization",
+        "consultancyDescription": "Improve search rankings and drive organic traffic to your website.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"seoFocusedImage",
+            "headingTag": "Dominate Search Engine Rankings",
+            "content": {
+                "desc": "SEO is essential for online visibility. We optimize your website to rank higher in search results and attract qualified organic traffic. Our comprehensive SEO services include technical SEO, on-page optimization, content strategy, link building, and local SEO to improve your search visibility and drive conversions.",
+                "highliter":"150% Average Traffic Increase"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "SEO Optimization Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Higher Rankings"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Organic Traffic"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Better Conversions"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "seoAdvantageImage",
+            "headingTag": "Why Choose Our SEO Services?",
+            "content": "Our SEO experts use proven strategies and white-hat techniques to improve your search rankings. We stay updated with search engine algorithm changes and deliver sustainable, long-term results.",
+            "chips": [
+                "Technical SEO",
+                "Content Optimization",
+                "Link Building"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "How long does it take to see SEO results?",
+                "answer": "SEO is a long-term strategy. You'll typically see initial improvements in 3-6 months, with significant results appearing within 6-12 months depending on competition and current site status."
+            },
+            {
+                "question": "Do you guarantee first-page rankings?",
+                "answer": "While we can't guarantee specific rankings (no one can ethically), we use proven strategies that consistently improve our clients' search visibility and organic traffic."
+            },
+            {
+                "question": "What's included in your SEO services?",
+                "answer": "We provide comprehensive SEO including technical audits, keyword research, on-page optimization, content strategy, link building, local SEO, and monthly reporting."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "consultancyImage": "digitalAdvertising",
+        "consultancyName": "Digital Advertising",
+        "consultancyDescription": "Maximize ROI with targeted digital advertising campaigns.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"advertisingFocusedImage",
+            "headingTag": "Data-Driven Advertising Campaigns",
+            "content": {
+                "desc": "Digital advertising delivers immediate results. We create and manage high-performing ad campaigns across Google Ads, Facebook Ads, Instagram, LinkedIn, and display networks. Our data-driven approach ensures your advertising budget is spent efficiently to generate qualified leads and maximize ROI.",
+                "highliter":"400% Average ROI Improvement"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "Digital Advertising Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Immediate Results"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Targeted Reach"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Measurable ROI"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "advertisingAdvantageImage",
+            "headingTag": "Why Choose Our Advertising Services?",
+            "content": "We combine creative excellence with analytical precision to deliver advertising campaigns that convert. Our certified advertising specialists continuously optimize campaigns for maximum performance and ROI.",
+            "chips": [
+                "Multi-Platform Campaigns",
+                "A/B Testing",
+                "ROI Optimization"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What advertising platforms do you use?",
+                "answer": "We manage campaigns across Google Ads (Search, Display, Shopping), Facebook Ads, Instagram Ads, LinkedIn Ads, Twitter Ads, and programmatic display networks."
+            },
+            {
+                "question": "How much should I budget for advertising?",
+                "answer": "Ad budgets vary based on industry, competition, and goals. We recommend starting with at least $2,000-$5,000/month to see meaningful results and scale from there."
+            },
+            {
+                "question": "How do you measure campaign success?",
+                "answer": "We track key metrics including impressions, clicks, CTR, conversions, CPA, ROAS, and overall ROI. You'll receive detailed reports with actionable insights."
+            }
+        ]
+    }
+]

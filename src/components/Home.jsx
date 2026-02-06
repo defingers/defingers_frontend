@@ -21,7 +21,7 @@ const Home = () => {
                         className="bg-orange-400 text-white px-4 py-2 rounded font-bold cursor-pointer"
                         onClick={() => {
                             setSelectedService('Cloud Migration');
-                            navigate('/service/1');
+                            navigate('/ai-data/1');
                         }}
                     >
                         Cloud Migration
@@ -30,7 +30,7 @@ const Home = () => {
                         className="bg-orange-400 text-white px-4 py-2 rounded font-bold cursor-pointer"
                         onClick={() => {
                             setSelectedService('IT Infrastructure');
-                            navigate('/service/2');
+                            navigate('/ai-data/2');
                         }}
                     >
                         IT Infrastructure

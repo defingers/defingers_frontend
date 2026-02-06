@@ -16,9 +16,9 @@ const Navbar2 = () => {
         {/* Center Nav */}
         <div className="flex items-center gap-10">
           <Link
-            to="/service/1"
+            to="/ai-data/1"
             className={`font-semibold text-lg flex items-center gap-1 ${
-              location.pathname.startsWith("/service") ? "text-orange-500" : "text-black"
+              location.pathname.startsWith("/ai-data") || location.pathname.startsWith("/cloud") || location.pathname.startsWith("/marketing") || location.pathname.startsWith("/qa") || location.pathname.startsWith("/staffing") ? "text-orange-500" : "text-black"
             }`}
           >
             Services

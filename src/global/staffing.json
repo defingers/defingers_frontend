@@ -1,0 +1,234 @@
+[
+    {
+        "id": 1,
+        "consultancyImage": "ITStaffing",
+        "consultancyName": "IT Staffing",
+        "consultancyDescription": "Connect with top IT talent to drive your technology initiatives.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"staffingFocusedImage",
+            "headingTag": "Find the Right Tech Talent",
+            "content": {
+                "desc": "Finding the right IT professionals is critical to your success. We specialize in sourcing, vetting, and placing highly skilled IT professionals across all technology domains. From software developers and data scientists to DevOps engineers and project managers, we connect you with talent that matches your technical requirements and company culture.",
+                "highliter":"100+ IT Professionals Placed Annually"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "IT Staffing Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Pre-Vetted Talent"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Fast Placement"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Flexible Engagement"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "staffingAdvantageImage",
+            "headingTag": "Why Choose Our Staffing Services?",
+            "content": "We maintain a vast network of pre-screened IT professionals and use advanced matching algorithms to find the perfect fit for your needs. Our rigorous vetting process ensures you get top-tier talent, fast.",
+            "chips": [
+                "Technical Screening",
+                "Cultural Fit Assessment",
+                "Fast Turnaround"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What IT roles do you staff?",
+                "answer": "We place professionals across all IT domains including software development, data science, cloud engineering, cybersecurity, QA, DevOps, project management, and more."
+            },
+            {
+                "question": "How quickly can you fill positions?",
+                "answer": "Depending on requirements, we typically present qualified candidates within 3-5 business days and complete placements within 2-3 weeks."
+            },
+            {
+                "question": "Do you offer contract and permanent placements?",
+                "answer": "Yes, we provide flexible staffing solutions including contract, contract-to-hire, and permanent placements based on your needs."
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "consultancyImage": "PayrollManagement",
+        "consultancyName": "Payroll Management",
+        "consultancyDescription": "Streamline payroll processing with our comprehensive management services.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"payrollFocusedImage",
+            "headingTag": "Hassle-Free Payroll Solutions",
+            "content": {
+                "desc": "Payroll management doesn't have to be complicated. We handle all aspects of payroll processing including salary calculations, tax compliance, benefits administration, and reporting. Our automated systems ensure accurate, on-time payments while maintaining full compliance with tax regulations and labor laws.",
+                "highliter":"99.9% Payroll Accuracy Rate"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "Payroll Management Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Automated Processing"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Tax Compliance"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Cost Savings"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "payrollAdvantageImage",
+            "headingTag": "Why Choose Our Payroll Services?",
+            "content": "Our payroll experts leverage advanced technology to deliver accurate, compliant payroll processing. We handle the complexity so you can focus on growing your business.",
+            "chips": [
+                "Automated Systems",
+                "Compliance Expertise",
+                "Dedicated Support"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What's included in your payroll services?",
+                "answer": "We provide complete payroll processing including salary calculations, tax withholding, direct deposits, benefits administration, year-end reporting, and compliance management."
+            },
+            {
+                "question": "How do you ensure payroll compliance?",
+                "answer": "Our team stays updated on all federal, state, and local tax regulations. We use certified payroll systems and conduct regular audits to ensure full compliance."
+            },
+            {
+                "question": "Can you handle multi-state payroll?",
+                "answer": "Yes, we manage payroll for employees across multiple states, handling varying tax regulations and compliance requirements seamlessly."
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "consultancyImage": "BenchManagement",
+        "consultancyName": "Bench Management",
+        "consultancyDescription": "Optimize your bench resources and maximize utilization rates.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"benchFocusedImage",
+            "headingTag": "Maximize Resource Utilization",
+            "content": {
+                "desc": "Effective bench management is crucial for staffing companies and IT services firms. We help you optimize bench resources through strategic placement, upskilling programs, and market intelligence. Our bench management solutions reduce idle time, improve utilization rates, and ensure your talent is always productive and billable.",
+                "highliter":"85% Average Utilization Rate"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "Bench Management Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Higher Utilization"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Skill Development"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Cost Optimization"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "benchAdvantageImage",
+            "headingTag": "Why Choose Our Bench Management?",
+            "content": "We combine strategic workforce planning with continuous training and rapid placement capabilities. Our data-driven approach ensures optimal resource utilization and minimal bench time.",
+            "chips": [
+                "Strategic Placement",
+                "Upskilling Programs",
+                "Market Intelligence"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "How do you reduce bench time?",
+                "answer": "We use predictive analytics to forecast demand, provide continuous training to keep skills current, and maintain strong client relationships for rapid placement opportunities."
+            },
+            {
+                "question": "What training do you provide for bench resources?",
+                "answer": "We offer technical training in trending technologies, certification programs, soft skills development, and project-based learning to enhance marketability."
+            },
+            {
+                "question": "How do you match bench resources to opportunities?",
+                "answer": "We use advanced matching algorithms considering skills, experience, location, client requirements, and career goals to find optimal placements quickly."
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "consultancyImage": "TalentAcquisition",
+        "consultancyName": "Talent Acquisition",
+        "consultancyDescription": "Strategic talent acquisition to build high-performing teams.",
+        "consultancyFocused": {
+            "consultancyFocusedImage":"talentFocusedImage",
+            "headingTag": "Build Your Dream Team",
+            "content": {
+                "desc": "Talent acquisition is more than just filling positions—it's about building strategic capabilities. We provide end-to-end talent acquisition services including workforce planning, employer branding, candidate sourcing, screening, interviewing, and onboarding. Our consultative approach ensures you attract and retain top talent aligned with your business goals.",
+                "highliter":"95% Candidate Success Rate"
+            }
+          
+        },
+        "consultancyBenefits": {
+            "headingTag": "Talent Acquisition Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Strategic Hiring"
+
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Quality Candidates"
+                   
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Faster Time-to-Hire"
+                }
+            ]
+        },
+        "WhyChooseConsultancy": {
+            "consultancyAdvantageImage": "talentAdvantageImage",
+            "headingTag": "Why Choose Our Talent Acquisition?",
+            "content": "Our talent acquisition specialists combine deep industry knowledge with innovative sourcing strategies. We build strong employer brands and create exceptional candidate experiences that attract top performers.",
+            "chips": [
+                "Strategic Planning",
+                "Multi-Channel Sourcing",
+                "Employer Branding"
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What makes your talent acquisition different?",
+                "answer": "We take a strategic, consultative approach focusing on long-term talent strategy, not just immediate hiring needs. We build sustainable talent pipelines and strong employer brands."
+            },
+            {
+                "question": "How do you source passive candidates?",
+                "answer": "We use advanced sourcing techniques including social recruiting, employee referrals, talent communities, networking events, and targeted outreach to engage passive talent."
+            },
+            {
+                "question": "Do you provide recruitment process outsourcing (RPO)?",
+                "answer": "Yes, we offer full RPO services where we manage your entire recruitment function, providing dedicated recruiters, processes, and technology for scalable hiring."
+            }
+        ]
+    }
+]

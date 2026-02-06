@@ -5,7 +5,7 @@ import RightSectionContent from "./RightSectionContent";
 import {contentData,categories} from "./data.js"
 
 const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
-  const [hoveredCategory, setHoveredCategory] = useState(null);
+  const [clickedCategory, setClickedCategory] = useState(null);
   const [selectedOption, setSelectedOption] = useState(null);
 
   // Find the first category and its first option
@@ -13,15 +13,15 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
   const firstOption = firstCategory?.items[0]?.name;
 
   // Determine which category and option to show/highlight
-  let hoveredCat = hoveredCategory;
+  let activeCat = clickedCategory;
   let optionToShow = selectedOption;
-  if (isOpen && !hoveredCat && !selectedOption) {
-    hoveredCat = firstCategory?.name;
+  if (isOpen && !activeCat && !selectedOption) {
+    activeCat = firstCategory?.name;
     optionToShow = firstOption;
-  } else if (isOpen && hoveredCat && !selectedOption) {
-    // If hovering a category and nothing is selected, show its first option
-    const hoveredCatObj = categories.find(c => c.name === hoveredCat);
-    optionToShow = hoveredCatObj?.items[0]?.name;
+  } else if (isOpen && activeCat && !selectedOption) {
+    // If a category is clicked and nothing is selected, show its first option
+    const activeCatObj = categories.find(c => c.name === activeCat);
+    optionToShow = activeCatObj?.items[0]?.name;
   }
 
 
@@ -40,14 +40,13 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
                 <div
                   key={cat.name}
                   className="category-wrapper"
-                  onMouseEnter={() => setHoveredCategory(cat.name)}
-                  onMouseLeave={() => setHoveredCategory(null)}
                 >
                   {/* Category Item */}
                   <div
                     className={`category-item ${
-                      hoveredCat === cat.name ? "active" : ""
+                      activeCat === cat.name ? "active" : ""
                     }`}
+                    onClick={() => setClickedCategory(clickedCategory === cat.name ? null : cat.name)}
                   >
                     <div className="category-content">
                       <cat.icon className="category-icon" />
@@ -55,20 +54,20 @@ const ServicesDropdown = ({ isOpen, onMouseEnter, onMouseLeave }) => {
                     </div>
                     <IoChevronForward
                       className={`category-arrow ${
-                        hoveredCat === cat.name ? "arrow-open" : ""
+                        activeCat === cat.name ? "arrow-open" : ""
                       }`}
                     />
                   </div>
 
-                  {/* Submenu (only visible on hover or default */}
-                  {hoveredCat === cat.name && (
+                  {/* Submenu (only visible when clicked */}
+                  {activeCat === cat.name && (
                     <div className="submenu">
                       {cat.items.map((item, idx) => {
-                        // Highlight logic: if selectedOption, highlight that; else highlight first submenu of hoveredCat
+                        // Highlight logic: if selectedOption, highlight that; else highlight first submenu of activeCat
                         let isSelected = false;
                         if (selectedOption) {
                           isSelected = selectedOption === item.name;
-                        } else if (hoveredCat === cat.name && idx === 0) {
+                        } else if (activeCat === cat.name && idx === 0) {
                           isSelected = true;
                         }
                         return (

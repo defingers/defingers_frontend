@@ -1,0 +1,310 @@
+[
+    {
+        "id": 1,
+        "serviceImage": "CloudTransformation",
+        "serviceName": "Cloud Transformation",
+        "serviceDescription": "Seamless migration to cloud platforms with zero downtime and optimized costs.",
+        "serviceTransition": {
+            "serviceTransitionImage":"cloudTransition",
+            "HeadingTag": "Transform Your Business with Cloud Technology",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "Cloud transformation is a strategic journey that modernizes your IT infrastructure and enables business agility. Our expert team guides you through every step of cloud adoption, from initial assessment to full-scale migration and optimization across AWS, Azure, Google Cloud, and hybrid environments.",
+                "phase2": "We ensure your cloud migration is secure, cost-effective, and aligned with your business objectives. Our approach minimizes risk while maximizing the benefits of cloud computing including scalability, flexibility, and innovation."
+            },
+            "bulletContent": [
+                "Multi-Cloud Strategy & Architecture",
+                "Cloud Migration & Modernization",
+                "Cost Optimization & FinOps"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "Cloud Transformation Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Scalability",
+                    "desc": "Scale resources up or down based on demand automatically."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Cost Efficiency",
+                    "desc": "Reduce infrastructure costs by up to 60% with cloud optimization."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Enhanced Security",
+                    "desc": "Enterprise-grade security with compliance frameworks."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "cloudAdvantages",
+            "headingTag": "Why Choose Our Cloud Services",
+            "content": "With certified cloud architects and proven methodologies, we deliver cloud transformations that drive real business value. Our team has successfully migrated hundreds of applications to the cloud with zero downtime.",
+            "operation": [
+                {
+                    "Number": "200+",
+                    "Description": "Cloud Migrations Completed"
+                },
+                {
+                    "Number": "99.99%",
+                    "Description": "Service Availability"
+                },
+                {
+                    "Number": "60%",
+                    "Description": "Average Cost Reduction"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "How long does cloud migration take?",
+                "answer": "Migration timelines vary based on complexity, typically ranging from 3-6 months for enterprise applications. We provide a detailed timeline after initial assessment."
+            },
+            {
+                "question": "Will there be downtime during migration?",
+                "answer": "We use advanced migration strategies to ensure zero or minimal downtime. Critical systems remain operational throughout the migration process."
+            },
+            {
+                "question": "Which cloud platform is best for my business?",
+                "answer": "We assess your specific requirements and recommend the best fit among AWS, Azure, Google Cloud, or hybrid solutions based on your workloads, budget, and goals."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Transform Your Cloud Strategy?",
+            "desc": "Let's discuss how our cloud transformation services can drive business agility and innovation."
+        }
+    },
+    {
+        "id": 2,
+        "serviceImage": "DevOpsCloudOps",
+        "serviceName": "DevOps & CloudOps",
+        "serviceDescription": "Accelerate development and deployment with modern DevOps practices.",
+        "serviceTransition": {
+            "serviceTransitionImage":"devopsTransition",
+            "HeadingTag": "Streamline Your Development Pipeline",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "DevOps and CloudOps practices revolutionize how software is built, tested, and deployed. We implement comprehensive CI/CD pipelines, infrastructure as code, and automated testing frameworks that enable rapid, reliable software delivery.",
+                "phase2": "Our CloudOps services ensure your cloud infrastructure is optimized, monitored, and maintained 24/7. We automate routine tasks, implement best practices, and provide proactive monitoring to prevent issues before they impact your business."
+            },
+            "bulletContent": [
+                "CI/CD Pipeline Automation",
+                "Infrastructure as Code (IaC)",
+                "Continuous Monitoring & Optimization"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "DevOps & CloudOps Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Faster Deployments",
+                    "desc": "Deploy code 10x faster with automated pipelines."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Improved Quality",
+                    "desc": "Catch and fix issues early with automated testing."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Enhanced Collaboration",
+                    "desc": "Break down silos between development and operations teams."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "devopsAdvantages",
+            "headingTag": "DevOps Excellence",
+            "content": "Our DevOps experts bring industry-leading practices and tools to your organization. We've helped companies reduce deployment time by 75% while improving system reliability and team productivity.",
+            "operation": [
+                {
+                    "Number": "75%",
+                    "Description": "Faster Time to Market"
+                },
+                {
+                    "Number": "50+",
+                    "Description": "Daily Deployments"
+                },
+                {
+                    "Number": "99.9%",
+                    "Description": "Deployment Success Rate"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What tools do you use for DevOps?",
+                "answer": "We work with industry-standard tools including Jenkins, GitLab CI/CD, Docker, Kubernetes, Terraform, Ansible, and monitoring tools like Prometheus and Grafana."
+            },
+            {
+                "question": "How does DevOps improve security?",
+                "answer": "DevSecOps integrates security into every stage of the development pipeline with automated security scanning, compliance checks, and vulnerability management."
+            },
+            {
+                "question": "Can you help with legacy system modernization?",
+                "answer": "Yes, we specialize in modernizing legacy applications and implementing DevOps practices for existing systems, including containerization and microservices architecture."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Accelerate Your DevOps Journey?",
+            "desc": "Let's explore how our DevOps solutions can help you deploy faster and more reliably."
+        }
+    },
+    {
+        "id": 3,
+        "serviceImage": "CyberSecurityServices",
+        "serviceName": "Cyber Security Services",
+        "serviceDescription": "Comprehensive security solutions to protect your digital assets.",
+        "serviceTransition": {
+            "serviceTransitionImage":"securityTransition",
+            "HeadingTag": "Safeguard Your Business from Cyber Threats",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "In today's digital landscape, cybersecurity is not optional—it's essential. Our comprehensive security services protect your organization from evolving threats with multi-layered defense strategies, including network security, application security, data protection, and compliance management.",
+                "phase2": "We provide 24/7 security monitoring, threat detection, and incident response. Our security experts implement industry best practices and compliance frameworks (ISO 27001, SOC 2, GDPR) to ensure your data and systems are protected against unauthorized access, data breaches, and cyber attacks."
+            },
+            "bulletContent": [
+                "Security Assessment & Penetration Testing",
+                "24/7 Security Monitoring & SOC",
+                "Compliance & Risk Management"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "Cybersecurity Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "Threat Prevention",
+                    "desc": "Proactively identify and neutralize threats before they cause damage."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Compliance",
+                    "desc": "Meet regulatory requirements and industry standards."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Data Protection",
+                    "desc": "Safeguard sensitive data with encryption and access controls."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "securityAdvantages",
+            "headingTag": "Your Security Partner",
+            "content": "Our certified security professionals bring deep expertise in threat intelligence, security architecture, and incident response. We've protected organizations from thousands of cyber threats and maintained 99% threat prevention rate.",
+            "operation": [
+                {
+                    "Number": "99%",
+                    "Description": "Threat Prevention Rate"
+                },
+                {
+                    "Number": "24/7",
+                    "Description": "Security Monitoring"
+                },
+                {
+                    "Number": "15min",
+                    "Description": "Average Response Time"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What types of security assessments do you perform?",
+                "answer": "We conduct vulnerability assessments, penetration testing, security audits, risk assessments, and compliance reviews tailored to your industry and regulatory requirements."
+            },
+            {
+                "question": "Do you provide incident response services?",
+                "answer": "Yes, we offer 24/7 incident response services including threat containment, forensic analysis, recovery planning, and post-incident remediation."
+            },
+            {
+                "question": "How do you ensure compliance with regulations?",
+                "answer": "We implement comprehensive compliance frameworks aligned with GDPR, HIPAA, PCI-DSS, SOC 2, and other relevant standards, with regular audits and documentation."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Strengthen Your Security Posture?",
+            "desc": "Let's discuss how our cybersecurity services can protect your business from evolving threats."
+        }
+    },
+    {
+        "id": 4,
+        "serviceImage": "InfrastructureManagement",
+        "serviceName": "Infrastructure Management",
+        "serviceDescription": "Reliable, high-performance infrastructure management services.",
+        "serviceTransition": {
+            "serviceTransitionImage":"infrastructureTransition",
+            "HeadingTag": "Optimize Your IT Infrastructure",
+            "content": {
+                "checkmarkIcon":"checkmark",
+                "phase1": "Effective infrastructure management is the foundation of business continuity and performance. We provide end-to-end infrastructure management services covering servers, networks, storage, databases, and applications—both on-premises and in the cloud.",
+                "phase2": "Our proactive approach includes continuous monitoring, performance optimization, capacity planning, and preventive maintenance. We ensure your infrastructure operates at peak efficiency with 99.9% uptime guarantee, while reducing operational costs and complexity."
+            },
+            "bulletContent": [
+                "Proactive Monitoring & Maintenance",
+                "Performance Optimization",
+                "Disaster Recovery & Business Continuity"
+            ]
+        },
+        "serviceBenefits": {
+            "headingTag": "Infrastructure Management Benefits",
+            "content": [
+                {
+                    "benefiticons": "thunder",
+                    "title": "High Availability",
+                    "desc": "Ensure 99.9% uptime with redundant systems and failover."
+                },
+                {
+                    "benefiticons": "stock",
+                    "title": "Cost Optimization",
+                    "desc": "Reduce infrastructure costs by up to 40% through optimization."
+                },
+                {
+                    "benefiticons": "security",
+                    "title": "Scalability",
+                    "desc": "Easily scale infrastructure to meet growing business demands."
+                }
+            ]
+        },
+        "serviceAdvantage": {
+            "serviceAdvantageImage": "infrastructureAdvantages",
+            "headingTag": "Infrastructure Excellence",
+            "content": "Our infrastructure management team brings decades of combined experience managing complex IT environments. We leverage automation, AI-driven insights, and best practices to deliver superior infrastructure performance.",
+            "operation": [
+                {
+                    "Number": "99.9%",
+                    "Description": "Guaranteed Uptime"
+                },
+                {
+                    "Number": "40%",
+                    "Description": "Cost Reduction"
+                },
+                {
+                    "Number": "24/7",
+                    "Description": "Expert Support"
+                }
+            ]
+        },
+        "faqs": [
+            {
+                "question": "What infrastructure platforms do you support?",
+                "answer": "We support all major infrastructure platforms including on-premises data centers, AWS, Azure, Google Cloud, and hybrid environments."
+            },
+            {
+                "question": "How do you handle infrastructure incidents?",
+                "answer": "We provide 24/7 monitoring and incident response with dedicated support teams, automated alerting, and escalation procedures to minimize downtime."
+            },
+            {
+                "question": "Do you provide disaster recovery services?",
+                "answer": "Yes, we design and implement comprehensive disaster recovery and business continuity plans with regular testing to ensure rapid recovery in case of outages."
+            }
+        ],
+        "secondCta": {
+            "text": "Ready to Optimize Your Infrastructure?",
+            "desc": "Let's discuss how our infrastructure management services can ensure peak performance and reliability."
+        }
+    }
+]
