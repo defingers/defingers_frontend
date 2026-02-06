@@ -5,7 +5,7 @@ const StoryAchievementSection = () => {
   const milestones = [
     {
       number: "1",
-      title: "Started 2017",
+      title: "Founded 2017",
       description: " Started our career journey in 2017."
     },
     {
