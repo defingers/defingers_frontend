@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, User, Phone, Mail, MessageSquare, Briefcase, CheckCircle, List } from 'lucide-react';
+import { Send, User, Phone, Mail, MessageSquare, Briefcase, CheckCircle, List, Globe } from 'lucide-react';
 import * as Yup from 'yup';
 import InputField from './InputField';
 import Button from '../../ui/Button';
@@ -11,9 +11,21 @@ const CATEGORY_OPTIONS = [
   "DevOps Services"
 ];
 
+const COUNTRY_CODES = [
+  { code: '+1', country: 'US/Canada' },
+  { code: '+44', country: 'UK' },
+  { code: '+91', country: 'India' },
+  { code: '+61', country: 'Australia' },
+  { code: '+33', country: 'France' },
+  { code: '+49', country: 'Germany' },
+  { code: '+81', country: 'Japan' },
+  { code: '+86', country: 'China' }
+];
+
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
+    countryCode: '+1',
     mobile: '',
     email: '',
     company: '',
@@ -32,8 +44,10 @@ const ContactForm = () => {
       .min(2, 'Name must be at least 2 characters')
       .max(50, 'Name cannot exceed 50 characters')
       .required('Name is required'),
+    countryCode: Yup.string()
+      .required('Country code is required'),
     mobile: Yup.string()
-      .matches(/^[\+]?[1-9][\d]{0,15}$/, 'Please enter a valid phone number')
+      .matches(/^[\d]{0,15}$/, 'Please enter a valid phone number')
       .required('Mobile number is required'),
     email: Yup.string()
       .email('Please enter a valid email address')
@@ -75,31 +89,34 @@ const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      // Validate form data
       await validationSchema.validate(formData, { abortEarly: false });
       setErrors({});
 
-      // Send data to API
+      const submitData = {
+        name: formData.name,
+        countryCode: formData.countryCode,
+        mobile: formData.mobile,
+        email: formData.email,
+        company: formData.company,
+        subject: formData.subject,
+        message: formData.message,
+        category: formData.category
+      };
+
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/sendmail`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(submitData)
       });
 
       if (!response.ok) {
         throw new Error('Failed to send message. Please try again.');
       }
-      const googleFormURL = `${import.meta.env.VITE_GOOGLE_FORM_URL}`;
-      console.log("Google Form URL:", googleFormURL);
-
-    fetch(googleFormURL, {
-      method: 'POST',
-      body: new URLSearchParams(formData),
-    }).catch(err => console.warn("Google Sheets sync failed:", err));
 
       setIsSubmitted(true);
       setFormData({
         name: '',
+        countryCode: '+1',
         mobile: '',
         email: '',
         company: '',
@@ -108,7 +125,6 @@ const ContactForm = () => {
         category: ''
       });
 
-      // Reset success message after 5 seconds
       setTimeout(() => setIsSubmitted(false), 5000);
 
     } catch (validationErrors) {
@@ -167,17 +183,36 @@ const ContactForm = () => {
               icon={User}
               required
             />
-            <InputField
-              label="Mobile Number"
-              name="mobile"
-              value={formData.mobile}
-              onChange={handleInputChange}
-              placeholder="Enter your mobile number"
-              error={errors.mobile}
-              icon={Phone}
-              type="tel"
-              required
-            />
+            <div>
+              <label className="block text-sm font-semibold text-gray-700 mb-2">Mobile Number</label>
+              <div className="flex gap-3 items-center">
+                <div className="w-28">
+                  <select
+                    name="countryCode"
+                    value={formData.countryCode}
+                    onChange={handleInputChange}
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  >
+                    {COUNTRY_CODES.map(({ code, country }) => (
+                      <option key={code} value={code}>{code}</option>
+                    ))}
+                  </select>
+                </div>
+                <span className="text-gray-400">|</span>
+                <div className="flex-1">
+                  <input
+                    type="tel"
+                    name="mobile"
+                    value={formData.mobile}
+                    onChange={handleInputChange}
+                    placeholder="Enter number"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                  />
+                </div>
+              </div>
+              {errors.mobile && <p className="text-red-500 text-xs mt-1">{errors.mobile}</p>}
+              {errors.countryCode && <p className="text-red-500 text-xs mt-1">{errors.countryCode}</p>}
+            </div>
             <InputField
               label="Email Address"
               name="email"
