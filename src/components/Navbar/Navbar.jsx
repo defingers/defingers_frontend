@@ -12,6 +12,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const pendingScrollToPartners = useRef(false);
   const pendingScrollToIndustries = useRef(false);
+  const pendingScrollToContacts = useRef(false);
   const [canvasServicesOpen, setCanvasServicesOpen] = useState(false);
   const [canvasHoveredCategory, setCanvasHoveredCategory] = useState(null);
   // Get current path using React Router
@@ -72,6 +73,21 @@ const Navbar = () => {
         }, 100);
       }
     }
+
+    // Handle smooth scroll to section for Contacts
+    if (section === "contacts") {
+      const element = document.getElementById("social-media-section");
+      if (element) {
+        // Add a small delay to ensure any dropdown closes first
+        setTimeout(() => {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+            inline: "nearest"
+          });
+        }, 100);
+      }
+    }
   };
 
   // Scroll to partners or industries section after navigation to home
@@ -109,13 +125,30 @@ const Navbar = () => {
         }, 200);
       }
     }
+
+    if (pendingScrollToContacts.current && location.pathname === "/") {
+      const element = document.getElementById("social-media-section");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+        pendingScrollToContacts.current = false;
+      } else {
+        // Try again on next render if not found yet
+        setTimeout(() => {
+          const el = document.getElementById("social-media-section");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+            pendingScrollToContacts.current = false;
+          }
+        }, 200);
+      }
+    }
   }, [location]);
 
   useEffect(() => {
     // Update activeSection based on the current URL
     const pathToSectionMap = {
       '/': '',
-      '/contact': 'contacts',
+      '/#social-media-section': 'contacts',
       '/about': 'about',
       '/services': 'services',
       '/partners': 'partners',
@@ -223,9 +256,25 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "contacts" ? "active" : ""}`}>
-                  <Link to="/contact" className="nav-link" onClick={() => setActiveSection("contacts")}>
+                  <a
+                    href="#social-media-section"
+                    className="nav-link"
+                    onClick={e => {
+                      e.preventDefault();
+                      setActiveSection("contacts");
+                      if (location.pathname !== "/") {
+                        pendingScrollToContacts.current = true;
+                        navigate("/");
+                      } else {
+                        const element = document.getElementById("social-media-section");
+                        if (element) {
+                          element.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+                        }
+                      }
+                    }}
+                  >
                     Contact Us
-                  </Link>
+                  </a>
                 </div>
               </nav>
               <ServicesDropdown
@@ -354,7 +403,26 @@ const Navbar = () => {
                 Partners
               </a>
               {/* Contacts */}
-              <Link to="/contact" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>Contacts</Link>
+              <a
+                href="#social-media-section"
+                className="canvas-nav-link font-semibold text-lg"
+                onClick={e => {
+                  e.preventDefault();
+                  closeMenu();
+                  setActiveSection("contacts");
+                  if (location.pathname !== "/") {
+                    pendingScrollToContacts.current = true;
+                    navigate("/");
+                  } else {
+                    const element = document.getElementById("social-media-section");
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth", block: "center", inline: "nearest" });
+                    }
+                  }
+                }}
+              >
+                Contacts
+              </a>
               {/* About Us */}
               <Link to="/about" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>About Us</Link>
             </nav>

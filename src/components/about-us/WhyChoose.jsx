@@ -2,12 +2,16 @@ import React from "react";
 
 const stats = [
   {
+    value: "10+",
+    label: "Years Combined Experience",
+  },
+  {
     value: "15+",
     label: "Projects Delivered",
   },
   {
-    value: "10+",
-    label: "Years Combined Experience",
+    value: "100+",
+    label: "Resources Deployed globally",
   },
   {
     value: "90%",

@@ -25,8 +25,8 @@ const WhyChooseConsultancy = ({ consultancyContent }) => {
                 </div>
                 <div className="md:w-1/2 w-full flex justify-center md:justify-end mt-8 md:mt-0">
                     <img
-                        src={Images.ItRecruitment}
-                        alt="Cloud Migration"
+                        src={Images[consultancyContent.consultancyImage]}
+                        alt={consultancyContent.consultancyName}
                         className="w-80 h-64 sm:w-[400px] sm:h-[300px] md:w-[400px] md:h-[300px] lg:w-[500px] lg:h-[300px] rounded-xl object-cover"
                     />
                 </div>

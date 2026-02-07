@@ -5,13 +5,14 @@ import { FaTwitter , FaLinkedin, FaYoutube, FaFacebook } from 'react-icons/fa';
 import { IoLogoWhatsapp } from "react-icons/io5";
 import logo from '../assets/images/logo.jpg';
 import { categories } from './Navbar/data';
+import { MdEmail } from 'react-icons/md';
 
 // Footer data configuration
 const footerData = {
   company: {
     name: "DE FINGERS",
     logo: "DF",
-    tagline: "Trusted partner in IT Journey.",
+    tagline: "DE FINGERS Specialized in Cloud Data Modernization AI & Advanced Analytics Solutions Expert Consulting & Strategic Staffing Flexible Talent Delivery Model",
     email: "hr@dfingers.com",
     phone: "+91 7981 218151",
     address: "DE FINGERS 20, Street Number 4, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081",
@@ -19,15 +20,20 @@ const footerData = {
 .`
   },
   socialLinks: [
+     {
+      name: "Email",
+      href: "mailto:hr@dfingers.com",
+      icon: MdEmail
+    },
     {
       name: "Twitter",
       href: "https://x.com/aboutfingers",
       icon: FaTwitter
     },
     {
-      name: "WhatsApp",
-      href: "https://wa.me/917981218151",
-      icon: IoLogoWhatsapp
+      name: "Facebook",
+      href: "https://www.facebook.com/digitization.fingers.1/",
+      icon: FaFacebook
     },
     {
       name: "LinkedIn",
@@ -40,17 +46,17 @@ const footerData = {
       icon: FaYoutube
     },
     {
-      name: "Facebook",
-      href: "https://www.facebook.com/digitization.fingers.1/",
-      icon: FaFacebook
-    }
+      name: "WhatsApp",
+      href: "https://wa.me/917981218151",
+      icon: IoLogoWhatsapp
+    },
   ],
   navigation: {
     services: {
       title: "Services",
       links: [
         // AI and Data Services
-        { name: "Data Engineering & Management", href: "/ai-data/1" },
+        { name: "Data Engineering", href: "/ai-data/1" },
         { name: "Generative AI/ML", href: "/ai-data/3" },
         // Cloud and Infrastructure
         { name: "Cloud Transformation", href: "/cloud/1" },
@@ -61,21 +67,35 @@ const footerData = {
         // Quality Assurance Services
         { name: "Test Automation", href: "/qa/1" },
         // Staffing and Consulting Services
-        { name: "IT Staffing", href: "/staffing/1" },
+        { name: "Resource Consulting", href: "/staffing/1" },
       ]
     },
     resources: {
       title: "Resources",
       links: [
-        { name: "Blog", href: "#" },
-        { name: "Case Studies", href: "#testimonials" }
+        { name: "Blog", href: "https://www.linkedin.com/company/definger" },
+        { name: "Case Studies", href: "#testimonials" },
+        { name: "IT Latest News", href: "#" },
+        { name: "Events", href: "https://t-hub.co/" },
+        { name: "Careers", href: "#" },
+        { name: "Downloads", href: "#" },
       ]
     },
     company: {
       title: "Company",
       links: [
         { name: "About Us", href: "/about" },
-        { name: "Contact Us", href: "/contact" }
+        { name: "Contact Us", href: "/contact" },
+        { name: "Our Offices", href: "/contact" },
+        { name: "Our Team", href: "/about/#our-team" }
+      ]
+    },
+    partners: {
+      title: "Partners",
+      links: [
+        { name: "SOFTSOL", href: "https://www.softsol.com/" },
+        { name: "FUSIL", href: "https://www.fusilsolutions.com/" },
+        { name: "JNVAT", href: "https://jnvat.com/" },
       ]
     }
   },
@@ -89,7 +109,7 @@ const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
           
           {/* Company Info Section */}
           <div className="lg:col-span-1">
@@ -201,10 +221,46 @@ const Footer = () => {
                     <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                       {link.name}
                     </a>
+                  ) : link.href.includes('/#') ? (
+                    <Link 
+                      to={link.href} 
+                      className="text-gray-600 text-sm hover:text-gray-900 transition-colors" 
+                      onClick={() => {
+                        setTimeout(() => {
+                          const id = link.href.split('#')[1];
+                          const element = document.getElementById(id);
+                          if (element) {
+                            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                          }
+                        }, 100);
+                      }}
+                    >
+                      {link.name}
+                    </Link>
                   ) : (
                     <Link to={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
                       {link.name}
                     </Link>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          {/* Partners Section */}
+          <div className="lg:col-span-1">
+            <h3 className="text-gray-900 font-semibold text-base mb-4">{footerData.navigation.partners.title}</h3>
+            <ul className="space-y-3">
+              {footerData.navigation.partners.links.map((link, index) => (
+                <li key={index}>
+                  {link.href === "" || link.href === "#" ? (
+                    <span className="text-gray-600 text-sm">
+                      {link.name}
+                    </span>
+                  ) : (
+                    <a href={link.href} target="_blank" rel="noopener noreferrer" className="text-gray-600 text-sm hover:text-gray-900 transition-colors">
+                      {link.name}
+                    </a>
                   )}
                 </li>
               ))}

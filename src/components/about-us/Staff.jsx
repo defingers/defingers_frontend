@@ -79,7 +79,7 @@ const StaffCard = ({ name, title, image, linkedin }) => (
 
 // Main Staff section
 const Staff = () => (
-  <section className="bg-[#fcf3e8] w-full py-16 px-4 flex flex-col ">
+  <section className="bg-[#fcf3e8] w-full py-16 px-4 flex flex-col " id="our-team">
     <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-7xl mx-auto ">
       {/* Left Side: Title and Description */}
       <div className="flex-1 flex flex-col items-center md:items-start text-center md:text-left md:mb-0 md:mr-16">

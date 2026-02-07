@@ -2,7 +2,7 @@
     {
         "id": 1,
         "consultancyImage": "ITStaffing",
-        "consultancyName": "IT Staffing",
+        "consultancyName": "Resource Consulting",
         "consultancyDescription": "Connect with top IT talent to drive your technology initiatives.",
         "consultancyFocused": {
             "consultancyFocusedImage": "staffingFocusedImage",
@@ -14,7 +14,7 @@
             }
         },
         "consultancyBenefits": {
-            "headingTag": "IT Staffing Benefits",
+            "headingTag": "Resource Consulting Benefits",
             "content": [
                 {
                     "benefiticons": "thunder",
@@ -31,7 +31,7 @@
             ]
         },
         "WhyChooseConsultancy": {
-            "consultancyAdvantageImage": "staffingAdvantageImage",
+            "consultancyAdvantageImage": "staffCartoon",
             "headingTag": "Why Choose Our Staffing Services?",
             "content": "We maintain a vast network of pre-screened IT professionals and use advanced matching algorithms to find the perfect fit for your needs. Our rigorous vetting process ensures you get top-tier talent, fast.",
             "chips": [
@@ -87,7 +87,7 @@
             ]
         },
         "WhyChooseConsultancy": {
-            "consultancyAdvantageImage": "payrollAdvantageImage",
+            "consultancyAdvantageImage": "payrollCartoon",
             "headingTag": "Why Choose Our Payroll Services?",
             "content": "Our payroll experts leverage advanced technology to deliver accurate, compliant payroll processing. We handle the complexity so you can focus on growing your business.",
             "chips": [
@@ -143,7 +143,7 @@
             ]
         },
         "WhyChooseConsultancy": {
-            "consultancyAdvantageImage": "benchAdvantageImage",
+            "consultancyAdvantageImage": "staff3Cartoon",
             "headingTag": "Why Choose Our Bench Management?",
             "content": "We combine strategic workforce planning with continuous training and rapid placement capabilities. Our data-driven approach ensures optimal resource utilization and minimal bench time.",
             "chips": [
@@ -199,7 +199,7 @@
             ]
         },
         "WhyChooseConsultancy": {
-            "consultancyAdvantageImage": "talentAdvantageImage",
+            "consultancyAdvantageImage": "staff2Cartoon",
             "headingTag": "Why Choose Our Talent Acquisition?",
             "content": "Our talent acquisition specialists combine deep industry knowledge with innovative sourcing strategies. We build strong employer brands and create exceptional candidate experiences that attract top performers.",
             "chips": [

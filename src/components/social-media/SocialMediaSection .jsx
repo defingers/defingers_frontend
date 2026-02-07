@@ -40,43 +40,39 @@ const SocialMediaSection = () => {
                 )}
               </div>
               {/* Content */}
-              <div className="relative z-10 px-8 py-16 flex flex-col items-center justify-center min-h-[300px] text-center">
-                {/* Title */}
-                <h2
-                  className="text-3xl md:text-4xl font-bold mb-6 tracking-wide"
-                  style={{ color: social.textColor || '#FFFFFF' }}
-                >
-                  {social.title}
-                </h2>
-                {/* Description */}
-                <p
-                  className="text-sm md:text-base mb-8 max-w-xs leading-relaxed opacity-90"
-                  style={{ color: social.textColor || '#FFFFFF' }}
-                >
-                  {social.description}
-                </p>
+              <div className="relative z-10 px-6 py-12 md:px-8 md:py-14 flex flex-col items-center min-h-[350px] lg:min-h-[320px] text-center">
+                <div className="flex-grow flex flex-col items-center justify-center">
+                  {/* Title */}
+                  <h2
+                    className="text-2xl md:text-3xl lg:text-2xl xl:text-3xl font-bold mb-4 tracking-wide leading-tight"
+                    style={{ color: social.textColor || '#FFFFFF' }}
+                  >
+                    {social.title}
+                  </h2>
+                  {/* Description */}
+                  <p
+                    className="text-xs md:text-sm lg:text-xs xl:text-sm mb-6 max-w-[280px] leading-relaxed opacity-90 line-clamp-3"
+                    style={{ color: social.textColor || '#FFFFFF' }}
+                  >
+                    {social.description}
+                  </p>
+                </div>
                 {/* Button */}
                 <button
-                  className="border-2 px-8 py-3 rounded hover:opacity-80 transition-all duration-300 font-semibold text-sm tracking-wide flex items-center gap-2"
+                  className="border-2 px-6 py-2.5 md:px-8 md:py-3 rounded hover:bg-[#FF8C00] hover:text-white transition-all duration-300 font-semibold text-xs md:text-sm tracking-wide flex items-center gap-2 mt-auto whitespace-nowrap"
                   style={{
-                    borderColor: social.buttonColor || '#FFFFFF',
-                    color: social.buttonColor || '#FFFFFF',
+                    borderColor: '#FF8C00',
+                    color: '#FF8C00',
                     backgroundColor: 'transparent'
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.backgroundColor = social.buttonColor || '#FFFFFF';
-                    e.currentTarget.style.color = social.textColor === '#333333' ? '#FFFFFF' : '#333333';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = 'transparent';
-                    e.currentTarget.style.color = social.buttonColor || '#FFFFFF';
                   }}
                   onClick={(e) => {
                     e.stopPropagation();
                     handleSocialClick(social.link);
                   }}
                 >
-                  <span>{social.buttonIcon}</span>
+                  {social.buttonIcon && iconMap[social.buttonIcon] && 
+                    React.createElement(iconMap[social.buttonIcon], { size: 16, color: '#000000' })
+                  }
                   {social.buttonText}
                 </button>
               </div>

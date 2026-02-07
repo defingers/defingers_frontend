@@ -34,7 +34,7 @@
             ]
         },
         "WhyChooseConsultancy": {
-            "consultancyAdvantageImage": "contentAdvantageImage",
+            "consultancyAdvantageImage": "digitalMarketingCartoon",
             "headingTag": "Why Choose Our Content Services?",
             "content": "Our content marketing team combines creative storytelling with data-driven strategies. We understand your audience and create content that resonates, ranks, and delivers ROI.",
             "chips": [
@@ -60,7 +60,7 @@
     },
     {
         "id": 2,
-        "consultancyImage": "socialMediaManagement",
+        "consultancyImage": "SocialMediaManagement",
         "consultancyName": "Social Media Management",
         "consultancyDescription": "Build a powerful social media presence that engages your audience.",
         "consultancyFocused": {
@@ -93,7 +93,7 @@
             ]
         },
         "WhyChooseConsultancy": {
-            "consultancyAdvantageImage": "socialAdvantageImage",
+            "consultancyAdvantageImage": "socialMedia2Cartoon",
             "headingTag": "Why Choose Our Social Media Services?",
             "content": "We combine creative content with data-driven strategies to grow your social media presence. Our team stays ahead of platform trends and algorithm changes to maximize your reach and engagement.",
             "chips": [
@@ -119,7 +119,7 @@
     },
     {
         "id": 3,
-        "consultancyImage": "seoOptimization",
+        "consultancyImage": "WebSEOOptimization",
         "consultancyName": "Web & SEO Optimization",
         "consultancyDescription": "Improve search rankings and drive organic traffic to your website.",
         "consultancyFocused": {
@@ -152,7 +152,7 @@
             ]
         },
         "WhyChooseConsultancy": {
-            "consultancyAdvantageImage": "seoAdvantageImage",
+            "consultancyAdvantageImage": "web1Cartoon",
             "headingTag": "Why Choose Our SEO Services?",
             "content": "Our SEO experts use proven strategies and white-hat techniques to improve your search rankings. We stay updated with search engine algorithm changes and deliver sustainable, long-term results.",
             "chips": [
@@ -178,7 +178,7 @@
     },
     {
         "id": 4,
-        "consultancyImage": "digitalAdvertising",
+        "consultancyImage": "DigitalAdvertising",
         "consultancyName": "Digital Advertising",
         "consultancyDescription": "Maximize ROI with targeted digital advertising campaigns.",
         "consultancyFocused": {
@@ -211,7 +211,7 @@
             ]
         },
         "WhyChooseConsultancy": {
-            "consultancyAdvantageImage": "advertisingAdvantageImage",
+            "consultancyAdvantageImage": "web2Cartoon",
             "headingTag": "Why Choose Our Advertising Services?",
             "content": "We combine creative excellence with analytical precision to deliver advertising campaigns that convert. Our certified advertising specialists continuously optimize campaigns for maximum performance and ROI.",
             "chips": [

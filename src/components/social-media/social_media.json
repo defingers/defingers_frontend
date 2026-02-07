@@ -3,14 +3,14 @@
     "id": 1,
     "platform": "EMAIL",
     "title": "EMAIL",
-    "description": "Write us a few lines about your ideas, your projects and let's connect",
+    "description": "Write us a few lines about your ideas, your projects",
     "buttonText": "EMAIL US",
     "link": "mailto:hr@dfingers.com",
     "icon": "MdEmail",
     "bgColor": "#e2e8f0",
     "textColor": "#000000",
     "buttonColor": "rgba(255, 140, 0, 0.8)",
-    "buttonIcon": "✉"
+    "buttonIcon": "MdEmail"
   },
   {
     "id": 2,
@@ -23,46 +23,46 @@
     "bgColor": "#f3f4f6",
     "textColor": "#000000",
     "buttonColor": "rgba(255, 215, 0, 0.8)",
-    "buttonIcon": "𝕏"
+    "buttonIcon": "FaTwitter"
   },
   {
     "id": 3,
     "platform": "FACEBOOK",
     "title": "FACEBOOK",
-    "description": "Like our page and send us message directly from our brand new FB page.",
+    "description": "Like our page and send us your message.",
     "buttonText": "LIKE OUR PAGE",
     "link": "https://www.facebook.com/digitization.fingers.1/",
     "icon": "FaFacebook",
     "bgColor": "#f3f4f6",
     "textColor": "#1e293b",
     "buttonColor": "rgba(255, 140, 0, 0.8)",
-    "buttonIcon": "f"
+    "buttonIcon": "FaFacebook"
   },
   {
     "id": 4,
     "platform": "LINKEDIN",
     "title": "LINKEDIN",
-    "description": "Connect with us to find IT services tailored to your business needs.",
+    "description": "Connect with us to find IT services to your business.",
     "buttonText": "CONNECT",
     "link": "https://www.linkedin.com/company/definger",
     "icon": "FaLinkedin",
     "bgColor": "#e2e8f0",
     "textColor": "#1e293b",
     "buttonColor": "rgba(255, 215, 0, 0.8)",
-    "buttonIcon": "in"
+    "buttonIcon": "FaLinkedin"
   },
   {
     "id": 5,
     "platform": "YOUTUBE",
     "title": "YOUTUBE",
-    "description": "Subscribe to our channel for tutorials, demos, and tech insights.",
+    "description": "Subscribe to our channel for our tech insights.",
     "buttonText": "SUBSCRIBE NOW",
     "link": "https://www.youtube.com/@DEFINGERS-720",
     "icon": "FaYoutube",
     "bgColor": "#f3f4f6",
     "textColor": "#000000",
     "buttonColor": "rgba(255, 140, 0, 0.8)",
-    "buttonIcon": ""
+    "buttonIcon": "FaYoutube"
   },
   {
     "id": 6,
@@ -75,6 +75,6 @@
     "bgColor": "#e2e8f0",
     "textColor": "#1e293b",
     "buttonColor": "rgba(255, 215, 0, 0.8)",
-    "buttonIcon": "💬"
+    "buttonIcon": "FaWhatsapp"
   }
 ]

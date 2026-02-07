@@ -32,10 +32,10 @@ export const categories = [
     name: "AI and Data Services",
     icon: FaServer,
     items: [
-      { name: "Data Engineering & Management", icon: FaCloud, navigationEndpoint: "/ai-data/1" },
-      { name: "Data Analytics & Visualization", icon: FaNetworkWired, navigationEndpoint: "/ai-data/2" },
+      { name: "Data Engineering", icon: FaCloud, navigationEndpoint: "/ai-data/1" },
+      { name: "Analytics & Visualization", icon: FaNetworkWired, navigationEndpoint: "/ai-data/2" },
       { name: "Generative AI/ML", icon: FaDatabase, navigationEndpoint: "/ai-data/3" },
-      { name: "Enterprise Data Management", icon: FaRocket, navigationEndpoint: "/ai-data/4" },
+      { name: "Enterprise Management", icon: FaRocket, navigationEndpoint: "/ai-data/4" },
     ],
   },
   {
@@ -72,16 +72,16 @@ export const categories = [
     name: "Staffing and Consulting Services",
     icon: IoPersonSharp,
     items: [
-      { name: "IT Staffing", icon: FaUsers, navigationEndpoint: "/staffing/1" },
-      { name: "Pay-role Management", icon: FaMoneyBillWave, navigationEndpoint: "/staffing/2" },
+      { name: "Resource Consulting", icon: FaUsers, navigationEndpoint: "/staffing/1" },
+      { name: "Payroll Management", icon: FaMoneyBillWave, navigationEndpoint: "/staffing/2" },
       { name: "Bench Management", icon: FaClipboardList, navigationEndpoint: "/staffing/3" },
       { name: "Talent Acquisition", icon: FaUserPlus, navigationEndpoint: "/staffing/4" },
     ],
   },
 ];
 export const contentData = {
-  "Data Engineering & Management": {
-    title: "Data Engineering & Management",
+  "Data Engineering": {
+    title: "Data Engineering",
     description:
       "Build robust data pipelines and infrastructure to process, transform, and manage large-scale data efficiently. Our data engineering solutions ensure reliable data flow, quality, and accessibility for analytics and AI initiatives.",
     buttonText: "Learn More",
@@ -92,8 +92,8 @@ export const contentData = {
       label: "Data Processing Speed",
     },
   },
-  "Data Analytics & Visualization": {
-    title: "Data Analytics & Visualization",
+  "Analytics & Visualization": {
+    title: "Analytics & Visualization",
     description:
       "Transform raw data into actionable insights with advanced analytics and intuitive visualizations. Make data-driven decisions that propel your business forward with comprehensive analytics solutions.",
     buttonText: "Discover Insights",
@@ -116,8 +116,8 @@ export const contentData = {
       label: "Productivity Boost",
     },
   },
-  "Enterprise Data Management": {
-    title: "Enterprise Data Management",
+  "Enterprise Management": {
+    title: "Enterprise Management",
     description:
       "Centralize and manage your enterprise data with robust governance, quality controls, and security. Ensure data accuracy, consistency, and compliance across the organization.",
     buttonText: "Manage Data",
@@ -337,8 +337,8 @@ export const contentData = {
     },
   },
   // Staffing and Consulting Services
-  "IT Staffing": {
-    title: "IT Staffing",
+  "Resource Consulting": {
+    title: "Resource Consulting",
     description:
       "Connect with top IT talent to drive your technology initiatives. We source, vet, and place highly skilled professionals who match your technical requirements and company culture.",
     buttonText: "Find Talent",
@@ -349,7 +349,7 @@ export const contentData = {
       label: "Professionals Placed",
     },
   },
-  "Pay-role Management": {
+  "Payroll Management": {
     title: "Payroll Management",
     description:
       "Streamline payroll processing with comprehensive management services. Automated systems ensure accurate, on-time payments with full tax compliance and reporting.",

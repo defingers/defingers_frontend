@@ -2,7 +2,7 @@
     {
         "id": 1,
         "serviceImage": "dataEngineeringAndManagement",
-        "serviceName": "Data Engineering & Management",
+        "serviceName": "Data Engineering",
         "serviceDescription": "Build robust data pipelines and infrastructure to process, transform, and manage large-scale data efficiently.",
         "serviceTransition": {
             "serviceTransitionImage": "dataEngineeringTransition",
@@ -76,7 +76,7 @@
     {
         "id": 2,
         "serviceImage": "dataAnalytics",
-        "serviceName": "Data Analytics & Visualization",
+        "serviceName": "Analytics & Visualization",
         "serviceDescription": "Transform raw data into actionable insights with advanced analytics and intuitive visualizations.",
         "serviceTransition": {
             "serviceTransitionImage": "analyticsTransition",
@@ -224,7 +224,7 @@
     {
         "id": 4,
         "serviceImage": "EnterpriseDataManagement",
-        "serviceName": "Enterprise Data Management",
+        "serviceName": "Enterprise Management",
         "serviceDescription": "Centralize and manage your enterprise data with robust governance, quality controls, and security.",
         "serviceTransition": {
             "serviceTransitionImage": "dataManagementTransition",
@@ -232,7 +232,7 @@
             "HeadingTag": "Master Your Enterprise Data",
             "content": {
                 "checkmarkIcon": "checkmark",
-                "phase1": "Enterprise data management is critical for maintaining data accuracy, consistency, and compliance across your organization. Our comprehensive EDM solutions establish data governance frameworks, master data management, and data quality processes that ensure your data is a trusted asset.",
+                "phase1": "Enterprise Management is critical for maintaining data accuracy, consistency, and compliance across your organization. Our comprehensive EDM solutions establish data governance frameworks, master data management, and data quality processes that ensure your data is a trusted asset.",
                 "phase2": "We help you break down data silos, establish single sources of truth, and implement policies that govern data access, usage, and lifecycle. Our solutions ensure compliance with regulations like GDPR, CCPA, and industry-specific standards while enabling data-driven innovation."
             },
             "bulletContent": [
@@ -242,7 +242,7 @@
             ]
         },
         "serviceBenefits": {
-            "headingTag": "Enterprise Data Management Benefits",
+            "headingTag": "Enterprise Management Benefits",
             "content": [
                 {
                     "benefiticons": "thunder",

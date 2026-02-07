@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, User, Phone, Mail, MessageSquare, Briefcase, CheckCircle, List, Globe } from 'lucide-react';
+import { Send, User, Phone, Mail, MessageSquare, Briefcase, CheckCircle, List, Globe, MapPin, Building2 } from 'lucide-react';
 import * as Yup from 'yup';
 import InputField from './InputField';
 import Button from '../../ui/Button';
@@ -21,6 +21,26 @@ const COUNTRY_CODES = [
   { code: '+49', country: 'Germany' },
   { code: '+81', country: 'Japan' },
   { code: '+86', country: 'China' }
+];
+
+const OFFICE_LOCATIONS = [
+  {
+    id: 1,
+    type: 'Corporate Office',
+    name: 'DE FINGERS',
+    address: '20, Street Number 4, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081',
+    mapUrl: 'https://maps.app.goo.gl/zQktWmHawBtnN6YD6',
+    country: 'India',
+    icon: Building2
+  },
+  {
+    id: 2,
+    type: 'UK Office',
+    address: '26, Monarch Street, Hemel Hampsted, hp2 7bu, United Kingdom',
+    mapUrl: 'https://maps.app.goo.gl/gGAtmQ1PcoV4mUjH7',
+    country: 'United Kingdom',
+    icon: Globe
+  }
 ];
 
 const ContactForm = () => {
@@ -145,7 +165,7 @@ const ContactForm = () => {
 
   if (isSubmitted) {
     return (
-      <div className="max-w-2xl mx-auto p-8 mt-12">
+      <div className="max-w-7xl mx-auto p-4 sm:p-8 mt-12">
         <div className="max-w-2xl mx-auto p-8 min-h-[80vh] flex items-center justify-center">
           <div className="bg-gradient-to-br from-green-50 to-emerald-50 border border-green-200 rounded-2xl p-8 text-center shadow-lg">
             <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
@@ -158,8 +178,74 @@ const ContactForm = () => {
   }
 
   return (
-    <div className="max-w-4xl mx-auto p-6 mt-12 min-h-[90vh] flex items-center">
-      <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 w-full">
+    <div className="max-w-7xl mx-auto p-4 sm:p-6 mt-8 sm:mt-12 min-h-[90vh]">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 lg:gap-8 pt-4">
+        
+        {/* Left Section - Office Locations */}
+        <div className="lg:col-span-2 space-y-6">
+          <div className="mb-6">
+            <h2 className="text-2xl sm:text-3xl font-bold text-gray-800 mb-2">Our Offices</h2>
+            <p className="text-gray-600">Visit us at our locations worldwide</p>
+          </div>
+          
+          {OFFICE_LOCATIONS.map((office) => {
+            const IconComponent = office.icon;
+            return (
+              <a
+                key={office.id}
+                href={office.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 hover:border-orange-300 cursor-pointer group"
+              >
+                <div className="flex items-start gap-4">
+                  <div className="bg-gradient-to-br from-orange-500 to-amber-500 text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <IconComponent className="w-6 h-6" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-lg font-bold text-gray-800 mb-1 group-hover:text-orange-500 transition-colors">
+                      {office.type}
+                    </h3>
+                    {office.name && (
+                      <p className="text-sm font-semibold text-gray-700 mb-2">{office.name}</p>
+                    )}
+                    <div className="flex items-start gap-2 text-gray-600">
+                      <MapPin className="w-4 h-4 mt-1 flex-shrink-0 text-orange-500" />
+                      <p className="text-sm leading-relaxed">{office.address}</p>
+                    </div>
+                    <div className="mt-3 inline-flex items-center text-sm text-orange-500 font-medium group-hover:gap-2 gap-1 transition-all">
+                      <span>View on Map</span>
+                      <span className="group-hover:translate-x-1 transition-transform">→</span>
+                    </div>
+                  </div>
+                </div>
+              </a>
+            );
+          })}
+          
+          {/* Contact Info */}
+          <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 border border-orange-100">
+            <h3 className="text-lg font-bold text-gray-800 mb-4">Quick Contact</h3>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3 text-gray-700">
+                <Mail className="w-5 h-5 text-orange-500" />
+                <a href="mailto:hr@dfingers.com" className="hover:text-orange-500 transition-colors">
+                  hr@dfingers.com
+                </a>
+              </div>
+              <div className="flex items-center gap-3 text-gray-700">
+                <Phone className="w-5 h-5 text-orange-500" />
+                <a href="tel:+917981218151" className="hover:text-orange-500 transition-colors">
+                  +91 7981 218151
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Right Section - Contact Form */}
+        <div className="lg:col-span-3">
+          <div className="bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 w-full">
         {/* Header */}
         <div className="bg-gradient-to-r from-orange-500 to-amber-500 p-8 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-black opacity-5"></div>
@@ -295,6 +381,8 @@ const ContactForm = () => {
           </p>
         </form>
       </div>
+    </div>
+    </div>
     </div>
   );
 };

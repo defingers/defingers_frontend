@@ -1,12 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import CTASection from './CTASection.jsx';
 import ServiceCard from './ServiceCard.jsx';
 import { categories, contentData } from '../Navbar/data.js';
 
 const ServicesLayout = () => {
-  const [activeTab, setActiveTab] = useState('ai-data');
+  const [activeTab, setActiveTab] = useState(() => {
+    // Initialize from localStorage or default to 'ai-data'
+    return localStorage.getItem('servicesActiveTab') || 'ai-data';
+  });
   const navigate = useNavigate();
+
+  // Persist activeTab to localStorage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('servicesActiveTab', activeTab);
+  }, [activeTab]);
 
   // Get categories from data.js
   const aiDataServices = categories.find(cat => cat.name === 'AI and Data Services')?.items || [];
