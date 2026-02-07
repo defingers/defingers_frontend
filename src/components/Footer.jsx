@@ -13,9 +13,10 @@ const footerData = {
     logo: "DF",
     tagline: "Trusted partner in IT Journey.",
     email: "hr@dfingers.com",
-    phone: "+91-7981 218151",
+    phone: "+91 7981 218151",
     address: "DE FINGERS 20, Street Number 4, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081",
-    copyright: `© ${new Date().getFullYear()} De Fingers. All rights reserved.`
+    copyright: `© ${new Date().getFullYear()} DE FINGERS  All rights reserved.
+.`
   },
   socialLinks: [
     {
@@ -67,7 +68,7 @@ const footerData = {
       title: "Resources",
       links: [
         { name: "Blog", href: "#" },
-        { name: "Case Studies", href: "#" }
+        { name: "Case Studies", href: "#testimonials" }
       ]
     },
     company: {
@@ -81,11 +82,7 @@ const footerData = {
   map: {
     embedUrl: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d475.7856478649322!2d78.3848692!3d17.4460593!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb910011a0bbff%3A0x1b073dbc2588b5cf!2sDE%20FINGERS!5e0!3m2!1sen!2sin!4v1769850397110!5m2!1sen!2sin",
     directUrl: "https://maps.app.goo.gl/zQktWmHawBtnN6YD6"
-  },
-  legal: [
-    { name: "Terms & Conditions", href: "#" },
-    { name: "Privacy Policy", href: "#" }
-  ]
+  }
 };
 
 const Footer = () => {
@@ -97,7 +94,7 @@ const Footer = () => {
           {/* Company Info Section */}
           <div className="lg:col-span-1">
             {/* Logo */}
-            <div className="flex items-center mb-4">
+            <div className="flex items-center mb-4 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <div className="w-8 h-8 rounded-full overflow-hidden flex items-center justify-center mr-3">
                 <img 
                   src={logo} 
@@ -105,7 +102,9 @@ const Footer = () => {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <span className="text-gray-800 font-semibold text-sm">{footerData.company.name}</span>
+              <span className="text-gray-800 font-semibold text-sm hover:text-[#FF8C00] transition-colors">
+                {footerData.company.name}
+              </span>
             </div>
             
             {/* Tagline */}
@@ -129,11 +128,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-gray-600">
                 <Mail className="w-4 h-4 mr-3" />
-                <span className="text-sm">{footerData.company.email}</span>
+                <a href={`mailto:${footerData.company.email}`} className="text-sm hover:text-gray-900 transition-colors">
+                  {footerData.company.email}
+                </a>
               </div>
               <div className="flex items-center text-gray-600">
                 <Phone className="w-4 h-4 mr-3" />
-                <span className="text-sm">{footerData.company.phone}</span>
+                <a href={`tel:${footerData.company.phone.replace(/\s/g, '')}`} className="text-sm hover:text-gray-900 transition-colors">
+                  {footerData.company.phone}
+                </a>
               </div>
             </div>
           </div>
@@ -166,6 +169,16 @@ const Footer = () => {
                 <li key={index}>
                   {link.href === "#" ? (
                     <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+                      {link.name}
+                    </a>
+                  ) : link.href.startsWith("#") ? (
+                    <a href={link.href} className="text-gray-600 text-sm hover:text-gray-900 transition-colors" onClick={(e) => {
+                      e.preventDefault();
+                      const element = document.querySelector(link.href);
+                      if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                      }
+                    }}>
                       {link.name}
                     </a>
                   ) : (
@@ -242,19 +255,6 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-500 text-sm mb-4 md:mb-0">
               {footerData.company.copyright}
-            </div>
-            <div className="flex space-x-6">
-              {footerData.legal.map((link, index) => (
-                link.href === "#" ? (
-                  <a key={index} href={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    {link.name}
-                  </a>
-                ) : (
-                  <Link key={index} to={link.href} className="text-gray-500 text-sm hover:text-gray-700 transition-colors" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
-                    {link.name}
-                  </Link>
-                )
-              ))}
             </div>
           </div>
         </div>

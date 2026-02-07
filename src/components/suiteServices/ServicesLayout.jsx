@@ -29,7 +29,7 @@ const ServicesLayout = () => {
             Our Service Portfolio
           </h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-1xl mx-auto">
-            We provide end-to-end cloud and IT solutions designed to support and scale your business
+            We provide end to end IT and Cloud Solutions designed to support and scale your business
           </p>
         </div>
 

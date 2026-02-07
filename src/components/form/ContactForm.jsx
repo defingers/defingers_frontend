@@ -26,7 +26,7 @@ const COUNTRY_CODES = [
 const ContactForm = () => {
   const [formData, setFormData] = useState({
     name: '',
-    countryCode: '+1',
+    countryCode: '+91',
     mobile: '',
     email: '',
     company: '',
@@ -117,7 +117,7 @@ const ContactForm = () => {
       setIsSubmitted(true);
       setFormData({
         name: '',
-        countryCode: '+1',
+        countryCode: '+91',
         mobile: '',
         email: '',
         company: '',
@@ -165,7 +165,7 @@ const ContactForm = () => {
           <div className="absolute inset-0 bg-black opacity-5"></div>
           <div className="relative z-10">
             <h2 className="text-3xl font-bold text-white mb-2">Get in Touch</h2>
-            <p className="text-orange-100">Let's discuss how we can help transform your business</p>
+            <p className="text-orange-100">Let's discuss how we can help to transform your IT needs</p>
           </div>
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-white opacity-10 rounded-full"></div>
           <div className="absolute -bottom-5 -left-5 w-24 h-24 bg-white opacity-10 rounded-full"></div>

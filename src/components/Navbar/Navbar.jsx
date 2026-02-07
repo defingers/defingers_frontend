@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
 import logo from "../../assets/images/logo.jpg";
 import { IoChevronForward } from "react-icons/io5";
@@ -42,7 +42,7 @@ const Navbar = () => {
       event.preventDefault();
     }
     setActiveSection(section);
-    
+
     // Handle smooth scroll to section for Partners
     if (section === "partners") {
       const element = document.getElementById("trusted-companies-section");
@@ -57,7 +57,7 @@ const Navbar = () => {
         }, 100);
       }
     }
-    
+
     // Handle smooth scroll to section for Industries
     if (section === "industries") {
       const element = document.getElementById("industries-section");
@@ -92,7 +92,7 @@ const Navbar = () => {
         }, 200);
       }
     }
-    
+
     if (pendingScrollToIndustries.current && location.pathname === "/") {
       const element = document.getElementById("industries-section");
       if (element) {
@@ -139,7 +139,10 @@ const Navbar = () => {
                 <div className="logo-wrapper">
                   <img src={logo} alt="DE FINGERS" className="logo-image" />
                 </div>
-                <Link to="/" className="no-underline">  
+                <Link to="/" className="no-underline" onClick={() => {
+                  setActiveSection("");
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}>
                   <span className="brand-name">DE FINGERS</span>
                 </Link>
               </div>
@@ -149,9 +152,10 @@ const Navbar = () => {
             <div className="navbar-center">
               <nav className="desktop-nav">
                 <div className={`nav-item ${activeSection === "" ? "active" : ""}`}>
-                  <Link to="/" className="nav-link" onClick={() => setActiveSection("")}>
+                  <Link to="/" className="nav-link" onClick={() => { setActiveSection(""); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                     Home
                   </Link>
+                  
                 </div>
                 <div
                   className={`nav-item dropdown ${activeSection === "services" ? "active" : ""}`}
@@ -161,9 +165,8 @@ const Navbar = () => {
                   <a href="#" className="nav-link" onClick={(e) => handleNavClick("services", e)}>
                     Services
                     <IoChevronForward
-                      className={`dropdown-arrow ${
-                        isServicesOpen ? "dropdown-arrow-open" : ""
-                      }`}
+                      className={`dropdown-arrow ${isServicesOpen ? "dropdown-arrow-open" : ""
+                        }`}
                     />
                   </a>
                 </div>
@@ -176,7 +179,7 @@ const Navbar = () => {
                     About Us
                   </Link>
                 </div>
-                
+
                 <div className={`nav-item ${activeSection === "industries" ? "active" : ""}`}>
                   <a
                     href="#industries-section"
@@ -220,7 +223,7 @@ const Navbar = () => {
                   </a>
                 </div>
                 <div className={`nav-item ${activeSection === "contacts" ? "active" : ""}`}>
-                  <Link to="/contact" className="nav-link" onClick={() => setActiveSection("contacts")}> 
+                  <Link to="/contact" className="nav-link" onClick={() => setActiveSection("contacts")}>
                     Contact Us
                   </Link>
                 </div>
@@ -279,7 +282,7 @@ const Navbar = () => {
                   onClick={() => setCanvasServicesOpen((open) => !open)}
                   aria-expanded={canvasServicesOpen}
                 >
-                   <span className="font-medium" style={{ color: '#ff8c00' }}>Services</span>
+                  <span className="font-medium" style={{ color: '#ff8c00' }}>Services</span>
                   <IoChevronForward className={`transition-transform ${canvasServicesOpen ? 'rotate-90' : ''}`} />
                 </button>
                 {canvasServicesOpen && (

@@ -42,7 +42,7 @@ const TestimonialSection = () => {
 
   return (
   <>
-    <section className="bg-gray-50 pb-4 ">
+    <section className="bg-gray-50 pb-4 " id='testimonials'>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16 py-10">

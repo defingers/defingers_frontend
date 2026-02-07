@@ -4,24 +4,29 @@ import groupImage from "../../assets/group_pic.jpg"
 const StoryAchievementSection = () => {
   const milestones = [
     {
-      number: "1",
-      title: "Founded 2017",
-      description: " Started our career journey in 2017."
+      number: "2017",
+      title: "Foundation & Vision ",
+      description: "Founded by visionary IT experts to transform and advance India’s technology market."
     },
     {
-      number: "2", 
-      title: "Certified in OCR and AWS",
-      description: " Certified in OCR and AWS technologies."
+      number: "2021", 
+      title: "Ecosystem Integration",
+      description: "Joined T-Hub as a corporate member, strengthening our innovation network with startups, enterprises, and investors."
     },
     {
-      number: "3",
-      title: "Healthcare Data Platforms", 
-      description: "Enabled data platforms for healthcare solutions."
+      number: "2024",
+      title: "Strategic Partnerships & Market Leadership", 
+      description: "Earned AWS Partner and Microsoft Certified Partner status, proving our technical excellence and industry expertise."
     },
     {
-      number: "4",
-      title: "Cloud Migration",
-      description: "Delivered successful cloud migration projects."
+      number: "2025",
+      title: "Scaled Consulting Excellenc",
+      description: "Scaled DE FINGERS into a 100+ expert consultancy with 50+ services and an ISTQB-certified QA team."
+    },
+     {
+      number: "2026",
+      title: "NextGen Tecqhnology Adoption",
+      description: "Driving advanced analytics and next-gen AI adoption to stay on par with global technological trends."
     }
   ];
 
@@ -55,7 +60,7 @@ const StoryAchievementSection = () => {
         </div>
 
         {/* Milestone Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto relative z-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8 max-w-8xl mx-auto relative z-20">
           {milestones.map((milestone, index) => (
             <MilestoneCard
               key={index}
