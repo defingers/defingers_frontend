@@ -128,12 +128,12 @@ const Footer = () => {
             </div>
             
             {/* Tagline */}
-            <p className="text-gray-600 text-sm mb-6 leading-relaxed">
+            <p className="text-gray-600 text-sm mb-6 leading-relaxed text-justify">
               {footerData.company.tagline}
             </p>
-            
+
             {/* Social Icons */}
-            <div className="flex space-x-4 mb-8">
+            <div className="flex space-x-2 mb-8 max-w-fit">
               {footerData.socialLinks.map((social, index) => {
                 const IconComponent = social.icon;
                 return (
@@ -308,7 +308,7 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="border-t border-gray-200 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center">
+          <div className="flex md:flex-row justify-center items-center">
             <div className="text-gray-500 text-sm mb-4 md:mb-0">
               {footerData.company.copyright}
             </div>
