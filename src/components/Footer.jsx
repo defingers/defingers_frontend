@@ -16,8 +16,7 @@ const footerData = {
     email: "hr@dfingers.com",
     phone: "+91 7981 218151",
     address: "DE FINGERS 20, Street Number 4, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081",
-    copyright: `© ${new Date().getFullYear()} DE FINGERS  All rights reserved.
-.`
+    copyright: `© ${new Date().getFullYear()} DE FINGERS  All rights reserved.`
   },
   socialLinks: [
      {

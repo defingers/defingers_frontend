@@ -1,6 +1,6 @@
 import MilestoneCard from "./MilestoneCard"
 import "./StoryAchievementSection.css"
-import groupImage from "../../assets/team_members/groupphoto.png"
+import groupImage from "../../assets/group_pic.svg"
 const StoryAchievementSection = () => {
   const milestones = [
     {
