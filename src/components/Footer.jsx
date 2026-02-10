@@ -92,7 +92,9 @@ const footerData = {
         { name: "About Us", href: "/about" },
         { name: "Contact Us", href: "/contact" },
         { name: "Our Offices", href: "/contact" },
-        { name: "Our Team", href: "/about/#our-team" }
+        { name: "Our Team", href: "/about/#our-team" },
+        { name: "Client Feedback", href: "/#testimonials" },
+        { name: "Internal", href: "https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin=shell&origin=NeoPortalPage&subpage=design&id=Y-5iOJfsAUqtEANzUgBJRsgDgNqBtRJFtPtTI26HJm5UQTRKMktGWFZIQThETUJXUVMwVUM3RUsxTy4u" }
       ]
     },
     partners: {
@@ -315,8 +317,11 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="border-t border-gray-200 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex md:flex-row justify-center items-center">
-            <div className="text-gray-500 text-sm mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-4 md:gap-0">
+            <div className="text-gray-500 text-sm">
+              GST: 36AADCF1908N1ZH | SAC/HSN: 998313
+            </div>
+            <div className="text-gray-500 text-sm">
               {footerData.company.copyright}
             </div>
           </div>
