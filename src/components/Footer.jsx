@@ -271,8 +271,11 @@ const Footer = () => {
             <h3 className="text-gray-900 font-semibold text-base mb-4">Address</h3>
             <div className="flex items-start mb-4">
               <MapPin className="w-4 h-4 mr-3 mt-1 text-gray-400 flex-shrink-0" />
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {footerData.company.address}
+              <p className="text-gray-600 text-sm leading-relaxed w-full ">
+                DE FINGERS <br />
+                20, Street Number 4, <br /> 
+                HUDA Techno Enclave, HITEC City, <br />
+                Hyderabad, Telangana - India - 500081
               </p>
             </div>
             
