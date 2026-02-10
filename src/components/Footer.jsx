@@ -81,9 +81,9 @@ const footerData = {
         { name: "Case Studies", href: "#testimonials" },
         { name: "IT Latest News", href: "https://www.techtarget.com/news/" },
         { name: "Events", href: "https://t-hub.co/" },
-        { name: "Careers", href: "https://forms.office.com/Pages/ShareFormPage.aspx?id=Y-5iOJfsAUqtEANzUgBJRsgDgNqBtRJFtPtTI26HJm5UMlkyUVNNTFBPS1NGTFpZTzVENjlWODZaUy4u&sharetoken=eBj41atXtZDV3LISQc3y" },
         { name: "Downloads", href: "#" },
-        { name: "Employee Onboarding", href: "https://forms.office.com/r/nNF0Kuk8J8?origin=lprLink" },
+        { name: "Employ Onboard", href: "https://forms.office.com/r/nNF0Kuk8J8?origin=lprLink" },
+        { name: "Job Search", href: "https://forms.office.com/Pages/ShareFormPage.aspx?id=Y-5iOJfsAUqtEANzUgBJRsgDgNqBtRJFtPtTI26HJm5UMlkyUVNNTFBPS1NGTFpZTzVENjlWODZaUy4u&sharetoken=eBj41atXtZDV3LISQc3y" },
       ]
     },
     company: {
