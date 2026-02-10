@@ -15,7 +15,12 @@ const footerData = {
     tagline: "DE FINGERS Specialized in Cloud Data Modernization AI & Advanced Analytics Solutions Expert Consulting & Strategic Staffing Flexible Talent Delivery Model",
     email: "hr@dfingers.com",
     phone: "+91 7981 218151",
-    address: "DE FINGERS 20, Street Number 4, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081",
+    address: [
+      "DE FINGERS",
+      "20, Street Number 4",
+      "HUDA Techno Enclave, Hitech-City",
+      "Hyderabad, Telangana - India - 500081"
+    ],
     copyright: `© ${new Date().getFullYear()} DE FINGERS  All rights reserved.`
   },
   socialLinks: [
@@ -74,10 +79,11 @@ const footerData = {
       links: [
         { name: "Blog", href: "https://www.linkedin.com/company/definger" },
         { name: "Case Studies", href: "#testimonials" },
-        { name: "IT Latest News", href: "#" },
+        { name: "IT Latest News", href: "https://www.techtarget.com/news/" },
         { name: "Events", href: "https://t-hub.co/" },
-        { name: "Careers", href: "#" },
+        { name: "Careers", href: "https://forms.office.com/Pages/ShareFormPage.aspx?id=Y-5iOJfsAUqtEANzUgBJRsgDgNqBtRJFtPtTI26HJm5UMlkyUVNNTFBPS1NGTFpZTzVENjlWODZaUy4u&sharetoken=eBj41atXtZDV3LISQc3y" },
         { name: "Downloads", href: "#" },
+        { name: "Employee Onboarding", href: "https://forms.office.com/r/nNF0Kuk8J8?origin=lprLink" },
       ]
     },
     company: {
@@ -271,9 +277,11 @@ const Footer = () => {
             <h3 className="text-gray-900 font-semibold text-base mb-4">Address</h3>
             <div className="flex items-start mb-4">
               <MapPin className="w-4 h-4 mr-3 mt-1 text-gray-400 flex-shrink-0" />
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {footerData.company.address}
-              </p>
+              <div className="text-gray-600 text-sm leading-relaxed">
+                {footerData.company.address.map((line, index) => (
+                  <div key={index}>{line}</div>
+                ))}
+              </div>
             </div>
             
             {/* Map */}
