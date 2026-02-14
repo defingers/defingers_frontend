@@ -56,7 +56,7 @@ const HeroSection = () => (
                             180° – One side of the coin
                         </h3>
                         <p className="text-sm sm:text-base text-gray-600 font-outfit leading-relaxed">
-                            Seeing only a single perspective. Partial truth, limited understanding, and one-sided judgment.
+                            Seeing only a single perspective.
                         </p>
                     </div>
                 </div>
@@ -68,10 +68,10 @@ const HeroSection = () => (
                     </div>
                     <div>
                         <h3 className="font-bold text-lg sm:text-xl text-black font-poppins mb-1">
-                            360° – Two-dimensional view
+                            360° – Two dimensional view
                         </h3>
                         <p className="text-sm sm:text-base text-gray-600 font-outfit leading-relaxed">
-                            Looking at all sides of the same issue. Complete awareness within a single plane—balanced, but still limited to what's visible.
+                            Looking at all sides of the same issue. Complete awareness within a single view.
                         </p>
                     </div>
                 </div>
@@ -83,10 +83,10 @@ const HeroSection = () => (
                     </div>
                     <div>
                         <h3 className="font-bold text-lg sm:text-xl text-black font-poppins mb-1">
-                            720° – Multi-dimensional insight
+                            720° – Multi dimensional insight
                         </h3>
                         <p className="text-sm sm:text-base text-gray-600 font-outfit leading-relaxed">
-                            Going beyond the obvious. Understanding context, intent, impact, time, emotions, and unseen layers. This is wisdom—thinking deeper, broader, and higher.
+                            Going beyond the obvious. Understanding context, intent, impact, time, emotions, and unseen layers.
                         </p>
                     </div>
                 </div>

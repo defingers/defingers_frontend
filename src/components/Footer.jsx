@@ -15,7 +15,12 @@ const footerData = {
     tagline: "DE FINGERS Specialized in Cloud Data Modernization AI & Advanced Analytics Solutions Expert Consulting & Strategic Staffing Flexible Talent Delivery Model",
     email: "hr@dfingers.com",
     phone: "+91 7981 218151",
-    address: "DE FINGERS 20, Street Number 4, HUDA Techno Enclave, HITEC City, Hyderabad, Telangana 500081",
+    address: [
+      "DE FINGERS",
+      "20, Street Number 4",
+      "HUDA Techno Enclave, Hitech-City",
+      "Hyderabad, Telangana - India - 500081"
+    ],
     copyright: `© ${new Date().getFullYear()} DE FINGERS  All rights reserved.`
   },
   socialLinks: [
@@ -74,10 +79,11 @@ const footerData = {
       links: [
         { name: "Blog", href: "https://www.linkedin.com/company/definger" },
         { name: "Case Studies", href: "#testimonials" },
-        { name: "IT Latest News", href: "#" },
+        { name: "IT Latest News", href: "https://www.techtarget.com/news/" },
         { name: "Events", href: "https://t-hub.co/" },
-        { name: "Careers", href: "#" },
-        { name: "Downloads", href: "#" },
+        { name: "Downloads", href: "https://www.techspot.com/downloads/" },
+        { name: "Employ Onboard", href: "https://forms.office.com/r/nNF0Kuk8J8?origin=lprLink" },
+        { name: "Job Search", href: "https://forms.office.com/Pages/ShareFormPage.aspx?id=Y-5iOJfsAUqtEANzUgBJRsgDgNqBtRJFtPtTI26HJm5UMlkyUVNNTFBPS1NGTFpZTzVENjlWODZaUy4u&sharetoken=eBj41atXtZDV3LISQc3y" },
       ]
     },
     company: {
@@ -86,7 +92,9 @@ const footerData = {
         { name: "About Us", href: "/about" },
         { name: "Contact Us", href: "/contact" },
         { name: "Our Offices", href: "/contact" },
-        { name: "Our Team", href: "/about/#our-team" }
+        { name: "Our Team", href: "/about/#our-team" },
+        { name: "Client Feedback", href: "/#testimonials" },
+        { name: "Internal", href: "https://forms.office.com/Pages/DesignPageV2.aspx?prevorigin=shell&origin=NeoPortalPage&subpage=design&id=Y-5iOJfsAUqtEANzUgBJRsgDgNqBtRJFtPtTI26HJm5UQTRKMktGWFZIQThETUJXUVMwVUM3RUsxTy4u" }
       ]
     },
     partners: {
@@ -271,12 +279,11 @@ const Footer = () => {
             <h3 className="text-gray-900 font-semibold text-base mb-4">Address</h3>
             <div className="flex items-start mb-4">
               <MapPin className="w-4 h-4 mr-3 mt-1 text-gray-400 flex-shrink-0" />
-              <p className="text-gray-600 text-sm leading-relaxed w-full ">
-                DE FINGERS <br />
-                20, Street Number 4, <br /> 
-                HUDA Techno Enclave, HITEC City, <br />
-                Hyderabad, Telangana - India - 500081
-              </p>
+              <div className="text-gray-600 text-sm leading-relaxed">
+                {footerData.company.address.map((line, index) => (
+                  <div key={index}>{line}</div>
+                ))}
+              </div>
             </div>
             
             {/* Map */}
@@ -310,8 +317,11 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="border-t border-gray-200 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex md:flex-row justify-center items-center">
-            <div className="text-gray-500 text-sm mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row justify-between items-center md:items-center gap-4 md:gap-0">
+            <div className="text-gray-500 text-sm">
+              GST: 36AADCF1908N1ZH | SAC/HSN: 998313
+            </div>
+            <div className="text-gray-500 text-sm">
               {footerData.company.copyright}
             </div>
           </div>
