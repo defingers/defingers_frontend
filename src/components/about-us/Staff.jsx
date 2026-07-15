@@ -1,57 +1,57 @@
 import React from "react";
 import { FaLinkedin } from "react-icons/fa";
-import staff1 from "../../assets/team_members/Shahanaz_photo.jpg";
-import staff2 from "../../assets/team_members/richard.jpeg";
-import staff3 from "../../assets/team_members/Manjari1.jpg";
-import staff4 from "../../assets/team_members/Maheshwari.jpeg";
-import staff5 from "../../assets/team_members/Harshini.jpg";
-import staff6 from "../../assets/team_members/Tharshith1.jpg";
-import staff7 from "../../assets/team_members/Akkshay.jpeg";
+// import staff1 from "../../assets/team_members/Shahanaz_photo.jpg";
+// import staff2 from "../../assets/team_members/richard.jpeg";
+// import staff3 from "../../assets/team_members/Manjari1.jpg";
+// import staff4 from "../../assets/team_members/Maheshwari.jpeg";
+// import staff5 from "../../assets/team_members/Harshini.jpg";
+// import staff6 from "../../assets/team_members/Tharshith1.jpg";
+// import staff7 from "../../assets/team_members/Akkshay.jpeg";
 
 // Staff data
 const STAFF = [
-  {
-    name: "Shahanaz",
-    title: "Sr Talent Acquisition",
-    image: staff1,
-    linkedin: "https://www.linkedin.com/in/shahanaz-shaik-686002339/"
-  },
-  {
-    name: "Richard",
-    title: "Cloud Specilist",
-    image: staff2,
-    linkedin: "https://www.linkedin.com/in/richard-boaz/"
-  },
-  {
-    name: "Manjari",
-    title: "Business Development",
-    image: staff3,
-    linkedin: "https://www.linkedin.com/in/manjarichava/"
-  },
-  {
-    name: "Maheshwari",
-    title: "Business Development",
-    image: staff4,
-    linkedin: "https://www.linkedin.com/in/maheshwari-madana-162486254"
-  },
-  {
-    name: "Harshini",
-    title: "Talent Acquisition",
-    image: staff5,
-    linkedin: "https://www.linkedin.com/in/harshini-thota-51b058256"
-  },
-  {
-    name: "Tharshith",
-    title: "Talent Acquisition",
-    image: staff6,
-    linkedin: "https://www.linkedin.com/in/sai-tharshith-karneedi-1b649b205"
-  },
-  {
-    name: "Akshay",
-    title: "Talent Acquisition",
-    image: staff7,
-    linkedin: " https://www.linkedin.com/in/akshay-deolankar-a26455385"
-  },
+  // {
+  //   name: "Shahanaz",
+  //   title: "Sr Talent Acquisition",
+  //   image: staff1,
+  //   linkedin: "https://www.linkedin.com/in/shahanaz-shaik-686002339/"
+  // },
+  // {
+  //   name: "Richard",
+  //   title: "Cloud Specilist",
+  //   image: staff2,
+  //   linkedin: "https://www.linkedin.com/in/richard-boaz/"
+  // },
+  // {
+  //   name: "Manjari",
+  //   title: "Business Development",
+  //   image: staff3,
+  //   linkedin: "https://www.linkedin.com/in/manjarichava/"
+  // },
+  // {
+  //   name: "Maheshwari",
+  //   title: "Business Development",
+  //   image: staff4,
+  //   linkedin: "https://www.linkedin.com/in/maheshwari-madana-162486254"
+  // },
+  // {
+  //   name: "Harshini",
+  //   title: "Talent Acquisition",
+  //   image: staff5,
+  //   linkedin: "https://www.linkedin.com/in/harshini-thota-51b058256"
+  // },
+  // {
+  //   name: "Tharshith",
+  //   title: "Talent Acquisition",
+  //   image: staff6,
+  //   linkedin: "https://www.linkedin.com/in/sai-tharshith-karneedi-1b649b205"
+  // },
+  // {
+  //   name: "Akshay",
+  //   title: "Talent Acquisition",
+  //   image: staff7,
+  //   linkedin: " https://www.linkedin.com/in/akshay-deolankar-a26455385"
+  // },
 ];
 
 // Card component
