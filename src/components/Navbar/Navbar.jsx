@@ -150,6 +150,7 @@ const Navbar = () => {
       '/': '',
       '/#social-media-section': 'contacts',
       '/about': 'about',
+      '/security': 'security',
       '/services': 'services',
       '/partners': 'partners',
       '/industries': 'industries',
@@ -202,7 +203,8 @@ const Navbar = () => {
                         }`}
                     />
                   </a>
-                </div><div className={`nav-item ${activeSection === "security" ? "active" : ""}`}>
+                </div>
+                <div className={`nav-item ${activeSection === "security" ? "active" : ""}`}>
                   <Link
                     to="/security"
                     className="nav-link"
