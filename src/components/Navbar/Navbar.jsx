@@ -188,7 +188,7 @@ const Navbar = () => {
                   <Link to="/" className="nav-link" onClick={() => { setActiveSection(""); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
                     Home
                   </Link>
-                  
+
                 </div>
                 <div
                   className={`nav-item dropdown ${activeSection === "services" ? "active" : ""}`}
@@ -202,6 +202,14 @@ const Navbar = () => {
                         }`}
                     />
                   </a>
+                </div><div className={`nav-item ${activeSection === "security" ? "active" : ""}`}>
+                  <Link
+                    to="/security"
+                    className="nav-link"
+                    onClick={() => setActiveSection("security")}
+                  >
+                   Security
+                  </Link>
                 </div>
                 <div className={`nav-item ${activeSection === "about" ? "active" : ""}`}>
                   <Link
@@ -209,7 +217,7 @@ const Navbar = () => {
                     className="nav-link"
                     onClick={() => setActiveSection("about")}
                   >
-                    About Us
+                    About
                   </Link>
                 </div>
 
@@ -273,7 +281,7 @@ const Navbar = () => {
                       }
                     }}
                   >
-                    Contact Us
+                    Contact
                   </a>
                 </div>
               </nav>

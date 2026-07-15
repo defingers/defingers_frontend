@@ -14,6 +14,7 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
 import ConsultancyPage from "./pages/consultancyPage.js";
 import AboutPage from "./pages/AboutUsPage.jsx";
+import SecurityPage from "./pages/security.jsx";
 import ContactForm from "./components/form/ContactForm.jsx";
 
 function AiDataRoutePage() {
@@ -95,6 +96,9 @@ function App() {
         <Route
           path="/about"
           element={<AboutPage />}
+        /> <Route
+          path="/security"
+          element={<SecurityPage />}
         />
         <Route
           path="/contact"
