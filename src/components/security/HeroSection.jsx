@@ -18,7 +18,7 @@ const HeroSection = () => {
                         <h1 className="font-poppins text-left text-4xl font-extrabold leading-[1.05] tracking-[-0.04em] text-black sm:text-5xl lg:text-5xl">
                             Cybersecurity that
                             <span className="block sm:inline"> stays </span>
-                            <br />
+                            <br className="hidden lg:block" />
                             <span className="block mr-3 sm:inline italic text-[#ff9a15]">one move</span>
                             <span className="block sm:inline"> ahead.</span>
                         </h1>
