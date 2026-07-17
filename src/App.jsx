@@ -14,7 +14,7 @@ import Navbar from './components/Navbar/Navbar.jsx'
 import ServicesPage from './pages/ServicesPage.jsx'
 import ConsultancyPage from "./pages/consultancyPage.js";
 import AboutPage from "./pages/AboutUsPage.jsx";
-import SecurityPage from "./pages/security.jsx";
+import SecurityPage from "./pages/SecurityPage.jsx";
 import ContactForm from "./components/form/ContactForm.jsx";
 
 function AiDataRoutePage() {

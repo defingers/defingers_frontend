@@ -369,7 +369,11 @@ const Navbar = () => {
                     ))}
                   </div>
                 )}
+              
               </div>
+              {/* Security */}
+              <Link to="/security" className="canvas-nav-link font-semibold text-lg" onClick={closeMenu}>Security</Link>
+              
               {/* Industries */}
               <a
                 href="#industries-section"
