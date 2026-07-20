@@ -14,6 +14,7 @@ const AboutUsPage = () => {
             <OurVisionandMission />
             <CoreValues />
             <Leadership />
+            <Staff />
             <WhyChoose />
             <SecondCta />
         </div>

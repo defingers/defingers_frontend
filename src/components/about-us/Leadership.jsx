@@ -41,7 +41,7 @@ const Leadership = () => (
                         key={idx}
                         className="bg-white rounded-[20px] border-1 border-yellow-400 overflow-hidden flex flex-col w-[270px] shadow-sm"
                     >
-                        <div className="w-full h-[180px] bg-gray-200">
+                        <div className="w-full h-[250px] bg-gray-200">
                             <img
                                 src={leader.image}
                                 alt={leader.name}
